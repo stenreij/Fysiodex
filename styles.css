@@ -15,6 +15,10 @@
   --dark-bg: #0d1b2a;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +31,7 @@ body {
 
 .container {
   width: 100%;
+  flex:1;
 }
 
 .container-content{

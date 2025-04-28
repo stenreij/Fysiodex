@@ -71,7 +71,6 @@
 
 .nav-links li a.active {
     color: var(--white);
-    font-weight: 550;
 }
 
 .nav-links li a.active::before {
