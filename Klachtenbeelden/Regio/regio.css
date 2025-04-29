@@ -36,13 +36,13 @@ h1 {
 .cards-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 0.5rem;
+  position: relative;
 }
 
 /* Card layout */
 .card {
   background: var(--card-bg);
-  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   overflow: hidden;
   padding: 0;
@@ -50,7 +50,7 @@ h1 {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 280px;
+  min-height: 350px;
   transition: var(--transition);
 }
 
@@ -106,10 +106,10 @@ h1 {
   width: 100%;
   max-width: 240px;
   text-align: left;
+  line-height: 1.5rem;
 }
 
 .subtopics li {
-  color: var(--dark);
   display: flex;
   align-items: center;
   transition: var(--transition);
@@ -117,7 +117,7 @@ h1 {
 
 .subtopics li:hover {
   color: var(--primary);
-  transform: translateX(5px);
+  transform: translateX(10px);
 }
 
 .subtopics li::before {
@@ -137,7 +137,63 @@ h1 {
 }
 
 /* Achtergrondkleuren per kaart */
-.card-1 { background: linear-gradient(135deg, #ebf8ff, #bee3f8); }
-.card-2 { background: linear-gradient(135deg, #f0fff4, #c6f6d5); }
-.card-3 { background: linear-gradient(135deg, #faf5ff, #e9d8fd); }
-.card-4 { background: linear-gradient(135deg, #fff5f7, #fed7e2); }
+.card-1 {
+  background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+}
+
+.card-2 {
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+}
+
+.card-3 {
+  background: linear-gradient(135deg, #faf5ff, #e9d8fd);
+}
+
+.card-4 {
+  background: linear-gradient(135deg, #fff5f7, #fed7e2);
+}
+
+.card-1:hover {
+  background: linear-gradient(135deg, #fff5f7, #fed7e2);
+}
+
+.card-2:hover {
+  background: linear-gradient(135deg, #faf5ff, #e9d8fd);
+}
+
+.card-3:hover {
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+}
+
+.card-4:hover {
+  background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+}
+
+
+/* Middenvlak voor "De Knie" */
+.centered-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  /* doorzichtig wit */
+  border-radius: 50%;
+  /* maakt het rond */
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark);
+  /* of zwart */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* optioneel voor subtiele schaduw */
+}
+
+
+.centered-box h3 {
+  font-size: 40px !important;
+}
