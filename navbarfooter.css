@@ -89,7 +89,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(5px);
     background: var(--primary-blue);
-    min-width: 150px;
+    width: 12rem;
     padding: 0;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     opacity: 0;
@@ -115,7 +115,7 @@
 .submenu li a {
     display: block;
     padding: 12px 20px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
     transition: all 0.2s ease;
     text-align: left;
