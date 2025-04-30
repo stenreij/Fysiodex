@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #2b6cb0;
+  --secondary: #2c5282;
+  --accent: #4299e1;
+  --light: #f7fafc;
+  --dark: #1a202c;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+/* 2 cards per row */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* Card layout */
+.card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 350px;
+  transition: var(--transition);
+  border-radius: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Titel wrapper gecentreerd */
+.card-title-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: var(--transition);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Titel stijl */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary);
+  padding: 1rem;
+}
+
+/* Subtopics wrapper gecentreerd */
+.subtopics-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Subtopics lijst stijl */
+.subtopics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 240px;
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+.subtopics li {
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.subtopics li:hover {
+  color: var(--primary);
+  transform: translateX(10px);
+}
+
+.subtopics li::before {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Hover-overgangen */
+.card:hover .card-title-wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card:hover .subtopics-wrapper {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Achtergrondkleuren per kaart */
+.card-1 {
+  background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+  border-top-left-radius: var(--border-radius);
+}
+
+.card-2 {
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+  border-top-right-radius: var(--border-radius);
+}
+
+.card-3 {
+  background: linear-gradient(135deg, #faf5ff, #e9d8fd);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.card-4 {
+  background: linear-gradient(135deg, #fff5f7, #fed7e2);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.card-1:hover {
+  background: linear-gradient(135deg, #fff5f7, #fed7e2);
+}
+
+.card-2:hover {
+  background: linear-gradient(135deg, #faf5ff, #e9d8fd);
+}
+
+.card-3:hover {
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+}
+
+.card-4:hover {
+  background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+}
+
+
+/* Middenvlak voor "De Knie" */
+.centered-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  /* doorzichtig wit */
+  border-radius: 50%;
+  /* maakt het rond */
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark);
+  /* of zwart */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* optioneel voor subtiele schaduw */
+}
+
+
+.centered-box h3 {
+  font-size: 40px !important;
+}
