@@ -12,12 +12,6 @@
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   max-width: 1200px;
   margin: 3rem auto;
@@ -52,6 +46,7 @@ h1 {
   position: relative;
   min-height: 350px;
   transition: var(--transition);
+  border-radius: 0;
 }
 
 .card:hover {
@@ -139,18 +134,22 @@ h1 {
 /* Achtergrondkleuren per kaart */
 .card-1 {
   background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+  border-top-left-radius: var(--border-radius);
 }
 
 .card-2 {
   background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+  border-top-right-radius: var(--border-radius);
 }
 
 .card-3 {
   background: linear-gradient(135deg, #faf5ff, #e9d8fd);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 .card-4 {
   background: linear-gradient(135deg, #fff5f7, #fed7e2);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .card-1:hover {

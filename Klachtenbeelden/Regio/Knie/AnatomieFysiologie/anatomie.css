@@ -1,0 +1,179 @@
+/* ====== BASIS STYLING ====== */
+.container-theorie {
+    max-width: 1200px;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+.text-section {
+    font-size: 1.1rem;
+}
+
+/* ====== KOPJES ====== */
+.text-section h1 {
+    color: #1766aa;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;  
+}
+
+.text-section h2 {
+    color: #1766aa;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+/* ====== UITKLAPBARE SECTIES - CLEAN VERSIE ====== */
+.test-item-info {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ccdef6;
+    padding-bottom: 1rem;
+}
+
+.test-toggle-info {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: #1766aa;
+    font-size: 1.4rem;  /* Zelfde als de h2 bovenaan */
+    font-weight: 600;   /* Zelfde als de h2 bovenaan */
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.test-toggle-info .toggle-text {
+    transition: transform 0.2s ease;
+}
+
+.test-toggle-info:hover {
+    color: #115490;
+}
+
+.test-toggle-info:hover .toggle-text {
+    transform: translateX(12px);
+}
+
+.test-toggle-info h2 {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.test-content-info {
+    padding: 1rem 0 0 0;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.test-item-info.active .test-content-info {
+    display: block;
+}
+
+/* Pijl icoon */
+.test-toggle-info .arrow {
+    color: #1766aa;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.test-item-info.active .test-toggle-info .arrow {
+    transform: rotate(180deg);
+}
+
+/* ====== INHOUD STYLING ====== */
+.text-section p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.7;
+}
+
+.text-section ul {
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.text-section li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.text-section li::before {
+    content: "•";
+    color: #1766aa;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.benadrukking {
+    color: #1766aa;
+    font-style: italic;
+}
+
+/* ====== TABELLEN ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead tr {
+    background-color: #1766aa;
+    color: #ffffff;
+}
+
+table th, table td {
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* ====== ANIMATIES ====== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .container-theorie {
+        width: 90%;
+        padding: 0 1rem;
+    }
+    
+    .text-section h2 {
+        font-size: 1.25rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
