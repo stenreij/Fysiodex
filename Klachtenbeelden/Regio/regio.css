@@ -110,6 +110,15 @@ h1 {
   transition: var(--transition);
 }
 
+.subtopics a {
+  text-decoration: none;
+  color: black;
+}
+
+.subtopics a:hover {
+  color: var(--primary);
+}
+
 .subtopics li:hover {
   color: var(--primary);
   transform: translateX(10px);
@@ -176,9 +185,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.7);
-  /* doorzichtig wit */
   border-radius: 50%;
-  /* maakt het rond */
   width: 200px;
   height: 200px;
   display: flex;
@@ -187,9 +194,7 @@ h1 {
   font-weight: bold;
   text-align: center;
   color: var(--dark);
-  /* of zwart */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  /* optioneel voor subtiele schaduw */
 }
 
 
