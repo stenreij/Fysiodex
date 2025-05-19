@@ -344,23 +344,32 @@
     font-size: 0.9rem;
 }
 
-.footer-links {
-    margin-top: 10px;
+
+
+.footer-section.links ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
-.footer-links a {
+.footer-section.links li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.footer-section.links a {
     color: var(--white);
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.85rem;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-block;
+    line-height: 1.4;
 }
 
-.footer-links a:hover {
-    opacity: 1;
-    text-decoration: underline;
+.footer-section.links a:hover {
+    color: var(--footer-hover);
+    transform: translateX(0.5rem);
 }
+
 
 /* Responsive aanpassingen */
 @media (max-width: 768px) {
