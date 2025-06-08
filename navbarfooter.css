@@ -222,7 +222,6 @@
     margin-top: 20px;
 }
 
-/* Aanpassing voor social media iconen */
 .footer-social a {
     display: flex;
     align-items: center;
@@ -234,22 +233,15 @@
     color: var(--white);
     transition: all 0.3s ease;
     position: relative;
-    /* Toegevoegd voor perfecte centering */
 }
 
 .footer-social a i {
     position: absolute;
-    /* Nieuwe regel */
     top: 50%;
-    /* Nieuwe regel */
     left: 50%;
-    /* Nieuwe regel */
     transform: translate(-50%, -50%);
-    /* Nieuwe regel */
     margin: 0;
-    /* Nieuwe regel */
     width: auto;
-    /* Nieuwe regel */
 }
 
 .footer-social a:hover {
@@ -271,21 +263,18 @@
     color: var(--white);
     text-decoration: none;
     opacity: 0.9;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, padding-left 0.3s ease;
     display: block;
-    padding: 0px 0;
+    padding-left: 0;
 }
 
 .footer-section ul li a:hover {
     opacity: 1;
-    padding-left: 5px;
-    /* Subtiele verschuiving */
+    padding-left: 12px;
 }
 
-/* Verwijder het pijltje-effect */
 .footer-section ul li a::before {
     content: none;
-    /* Verwijder het pijltje volledig */
 }
 
 .footer-section ul li a:hover::before {
@@ -344,8 +333,6 @@
     font-size: 0.9rem;
 }
 
-
-
 .footer-section.links ul {
     padding: 0;
     margin: 0;
@@ -360,16 +347,9 @@
 .footer-section.links a {
     color: var(--white);
     text-decoration: none;
-    transition: all 0.3s ease;
     display: inline-block;
     line-height: 1.4;
 }
-
-.footer-section.links a:hover {
-    color: var(--footer-hover);
-    transform: translateX(0.5rem);
-}
-
 
 /* Responsive aanpassingen */
 @media (max-width: 768px) {
