@@ -43,9 +43,7 @@
 .test-item-info {
     margin-bottom: 2rem;
     border-bottom: 2px solid #ccdef6;
-    border-top: 2px solid #ccdef6;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 .test-toggle-info {
