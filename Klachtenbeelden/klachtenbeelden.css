@@ -2,8 +2,13 @@
   text-align: center;
 }
 
+.intro {
+  text-align: center;
+}
+
 .intro .container {
-  padding: 4rem 0 4rem 0;
+  margin: 0 auto;
+  padding: 4rem 0rem;
 }
 
 .intro h2 {
