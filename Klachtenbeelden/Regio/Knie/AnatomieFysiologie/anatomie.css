@@ -110,6 +110,7 @@
 }
 
 .text-section li {
+    list-style: none;
     margin-bottom: 0.75rem;
     position: relative;
 }
