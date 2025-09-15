@@ -39,6 +39,29 @@
     position: relative;
 }
 
+.symptomen {
+  background-color: var(--blue-light);
+  padding: 1rem 0;
+}
+
+.symptomen ul{
+    font-size: 1.1rem;
+}
+
+.symptomen-container {
+    max-width: 1200px;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 0;
+    color: #1a1a1a;
+}
+
+.symptomen-container ul {
+    padding-left: 1.5rem;
+    line-height: 2.5;
+}
+
+
 /* ====== UITKLAPBARE SECTIES - CLEAN VERSIE ====== */
 .test-item-info {
     margin-bottom: 2rem;

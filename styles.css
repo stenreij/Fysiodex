@@ -3,6 +3,7 @@
   --blue-hover: #1a7bc7;
   --blue-active: #12548d;
   --blue-light: #e6f0f8;
+  --blue-light2: #b4d4f8;
   --light-bg: #f0f9ff;
   --white: #ffffff;
   --dark-text: #1a1a1a;
@@ -97,6 +98,40 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none; 
   color: inherit; 
+}
+
+.card h3::before {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 12px;
+  display: inline-block;
+  background: var(--blue-light);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+    transition: all 0.3s ease;
+
+}
+
+.card:nth-child(1) h3::before {
+  content: '\f2e7';
+  color: var(--primary-blue);
+}
+
+.card:nth-child(2) h3::before {
+  content: '\f481';
+  color: var(--primary-blue);
+}
+
+.card:nth-child(3) h3::before {
+  content: '\f5dc';
+  color: var(--primary-blue);
+}
+
+.card:hover h3::before {
+  transform: rotate(10deg) scale(1);
 }
 
 .card h3{
