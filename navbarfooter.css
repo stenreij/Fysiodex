@@ -226,8 +226,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: var(--white);
@@ -252,6 +252,7 @@
 }
 
 .footer-section ul {
+    font-size: 1.2rem;
     list-style: none;
     padding: 0;
 }
@@ -263,15 +264,13 @@
 .footer-section ul li a {
     color: var(--white);
     text-decoration: none;
-    opacity: 0.9;
     transition: opacity 0.3s ease, padding-left 0.3s ease;
     display: block;
     padding-left: 0;
 }
 
 .footer-section ul li a:hover {
-    opacity: 1;
-    padding-left: 12px;
+    padding-left: 15px;
 }
 
 .footer-section ul li a::before {
