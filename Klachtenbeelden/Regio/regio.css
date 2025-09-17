@@ -51,7 +51,7 @@ h1 {
 
 /* Achtergrondkleuren per kaart */
 .card-1 {
-  background: var(--blue-light);
+  border-top-left-radius: var(--border-radius);
 }
 
 .card-2 {
