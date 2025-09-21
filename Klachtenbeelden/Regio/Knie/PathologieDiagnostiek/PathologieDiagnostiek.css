@@ -347,8 +347,7 @@ table tbody tr:nth-child(even) {
 .tab-nav {
   display: flex;
   justify-content: center;
-  margin: 2.5rem auto 2rem;
-  padding: 0 1rem;
+  margin: 1rem auto 1rem;
   position: relative;
 }
 
