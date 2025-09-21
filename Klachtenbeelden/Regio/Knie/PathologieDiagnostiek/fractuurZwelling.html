@@ -32,96 +32,90 @@
 </nav>
 
 <body>
-  <!-- Fractuur -->
-  <div class="container-theorie">
-    <div class="text-section">
-      <h2>Fractuur</h2>
-      <h3>Pathologie</h3>
-      <p>
-        Een fractuur van de knie kan verschillende structuren treffen,
-        waaronder het distale femur, proximale tibia of de patella.
-        Hoogenergetisch trauma (zoals verkeersongevallen of valpartijen) is
-        vaak de oorzaak.
-      </p>
-    </div>
+  <!-- Tabs navigatie -->
+  <div class="tab-nav">
+    <button class="tab-link active" data-tab="fractuur">Fractuur</button>
+    <button class="tab-link" data-tab="zwelling">Zwelling</button>
+    <button class="tab-link" data-tab="bursitis">Bursitis</button>
   </div>
 
-  <!-- Full-width Symptomen sectie -->
-  <div class="symptomen">
-    <div class="symptomen-container">
-      <h2>Symptomen</h2>
-      <p>
-        Bij een fractuur rond de knie kunnen diverse klachten optreden. De
-        onderstaande symptomen kunnen optreden bij een fractuur.
-      </p>
-      <ul>
-        <li>Directe zwelling</li>
-        <li>Bewegingsbeperking</li>
-        <li>Soms standsafwijking</li>
-        <li>Lokale drukpijn</li>
-      </ul>
+  <!-- Tab Fractuur -->
+  <div id="fractuur" class="tab-content active">
+    <div class="container-theorie">
+      <div class="text-section">
+        <h2>Fractuur</h2>
+        <h3>Pathologie</h3>
+        <p>
+          Een fractuur van de knie kan verschillende structuren treffen,
+          waaronder het distale femur, proximale tibia of de patella.
+          Hoogenergetisch trauma (zoals verkeersongevallen of valpartijen) is
+          vaak de oorzaak.
+        </p>
+      </div>
     </div>
-  </div>
 
+    <div class="symptomen">
+      <div class="symptomen-container">
+        <h2>Symptomen</h2>
+        <p>
+          Bij een fractuur rond de knie kunnen diverse klachten optreden. De
+          onderstaande symptomen kunnen optreden bij een fractuur.
+        </p>
+        <ul>
+          <li>Directe zwelling</li>
+          <li>Bewegingsbeperking</li>
+          <li>Soms standsafwijking</li>
+          <li>Lokale drukpijn</li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- Testen Fractuur -->
-  <div class="container-theorie">
-    <div class="text-section">
-      <h2>Testen Fractuur</h2>
-      <div class="test-item-info">
-        <button class="test-toggle-info">
-          <span class="toggle-text">Ottawa Knee Rules</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="test-content-info">
-          <ul>
-            <li>55 jaar of ouder</li>
-            <li>Lokale drukpijn fibula kopje</li>
-            <li>Geïsoleerde drukpijn <strong>patella</strong></li>
-            <li>90 graden flexie lukt niet</li>
-            <li>Patiënt is niet in staat om 4 stappen te zetten</li>
-          </ul>
-          <p>
-            Patiënten die aan twee of meer van deze criteria voldoen, hebben een
-            verhoogde kans op een fractuur en moeten worden doorverwezen voor beeldvormend onderzoek.
-          </p>
+    <div class="container-theorie">
+      <div class="text-section">
+        <h2>Testen Fractuur</h2>
+        <div class="test-item-info">
+          <button class="test-toggle-info">
+            <span class="toggle-text">Ottawa Knee Rules</span>
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="test-content-info">
+            <ul>
+              <li>55 jaar of ouder</li>
+              <li>Lokale drukpijn fibula kopje</li>
+              <li>Geïsoleerde drukpijn <strong>patella</strong></li>
+              <li>90 graden flexie lukt niet</li>
+              <li>Patiënt is niet in staat om 4 stappen te zetten</li>
+            </ul>
+            <p>
+              Patiënten die aan twee of meer van deze criteria voldoen, hebben een
+              verhoogde kans op een fractuur en moeten worden doorverwezen voor beeldvormend onderzoek.
+            </p>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-
-      <!-- Zwelling -->
+  <!-- Tab Zwelling -->
+  <div id="zwelling" class="tab-content">
+    <div class="container-theorie">
       <div class="text-section">
         <h2>Zwelling</h2>
         <h3>Pathologie</h3>
         <p>
           Zwelling rond de knie kan verschillende oorzaken hebben, variërend van
-          acute blessures tot chronische aandoeningen. Het is belangrijk om de
-          aard en het tijdstip van de zwelling te beoordelen om de onderliggende
-          pathologie te begrijpen.
+          acute blessures tot chronische aandoeningen.
         </p>
-
         <p>Zwelling bij kniepathologieën kent verschillende vormen:</p>
         <ul>
-          <li>
-            <strong>Haemarthros</strong>: Bloed in het gewricht, typisch bij
-            VKB-, AKB- en kraakbeenletsels. Zwelling ontstaat binnen 1-2 uur.
+          <li><strong>Haemarthros</strong>: Bloed in het gewricht, typisch bij VKB-, AKB- en kraakbeenletsels.
           </li>
-          <li>
-            <strong>Hydrops</strong>: Latere, meer verplaatsbare zwelling
-            zoals bij meniscusletsel of artrose.
+          <li><strong>Hydrops</strong>: Latere, meer verplaatsbare zwelling zoals bij meniscusletsel of artrose.
           </li>
-          <li>
-            <strong>Haematoom</strong>: Bloeding in weke delen, vaak bij
-            collaterale bandletsels (MCL/LCL) of postero-complexen.
-          </li>
-          <li>
-            <strong>Synovitis</strong>: Inflammatoire zwelling door irritatie
-            of overbelasting van het synoviale membraan.
-          </li>
-          <li>
-            <strong>Oedeem</strong>: Diffuse vochtophoping in periarticulaire
-            structuren.
-          </li>
+          <li><strong>Haematoom</strong>: Bloeding in weke delen, vaak bij collaterale bandletsels (MCL/LCL).</li>
+          <li><strong>Synovitis</strong>: Inflammatoire zwelling door irritatie of overbelasting van het synoviale
+            membraan.</li>
+          <li><strong>Oedeem</strong>: Diffuse vochtophoping in periarticulaire structuren.</li>
         </ul>
 
         <table>
@@ -168,231 +162,205 @@
         </table>
       </div>
     </div>
-  </div>
 
-  <!-- Full-width Symptomen sectie -->
-  <div class="symptomen">
-    <div class="symptomen-container">
-      <h2>Symptomen</h2>
-      <p>
-        Bij een fractuur of zwelling rond de knie kunnen diverse klachten
-        optreden. De onderstaande symptomen helpen om het onderscheid te maken
-        tussen de verschillende oorzaken.
-      </p>
-      <ul>
-        <li>Pijn en drukgevoeligheid rondom het gewricht</li>
-        <li>Zwelling en warmte ter plaatse</li>
-        <li>Bewegingsbeperking of onvermogen om te belasten</li>
-        <li>Blauwe verkleuring of standsafwijking bij ernstige letsels</li>
-      </ul>
+    <div class="symptomen">
+      <div class="symptomen-container">
+        <h2>Symptomen</h2>
+        <p>
+          Bij een fractuur of zwelling rond de knie kunnen diverse klachten optreden.
+        </p>
+        <ul>
+          <li>Pijn en drukgevoeligheid rondom het gewricht</li>
+          <li>Zwelling en warmte ter plaatse</li>
+          <li>Bewegingsbeperking of onvermogen om te belasten</li>
+          <li>Blauwe verkleuring of standsafwijking bij ernstige letsels</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
+    <div class="container-theorie">
+      <div class="text-section">
+        <h2>Testen Zwelling</h2>
+        <div class="test-item-info">
+          <button class="test-toggle-info">
+            <span class="toggle-text">Strijktesten</span>
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="test-content-info">
+            <div class="test-content">
+              <div class="grid-tests">
+                <!-- Vak 1: Uitgangshouding -->
+                <div class="vak">
+                  <h4>Uitgangshouding</h4>
+                  <p>
+                    De patiënt ligt in ruglig op de onderzoeksbank met de benen gestrekt. Tijdens het
+                    rotatieonderzoek
+                    kan
+                    de knie in lichte
+                    flexie worden gebracht.
+                  </p>
+                  <img src="../../../../img/voeding.jpg" alt="Uitgangshouding strijktest" class="img-vak1" />
+                </div>
 
-  <!-- Testen Zwelling -->
-  <div class="container-theorie">
-    <div class="text-section">
-      <h2>Testen Zwelling</h2>
-      <div class="test-item-info">
-        <button class="test-toggle-info">
-          <span class="toggle-text">Strijktesten</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="test-content-info">
-          <div class="test-content">
-            <div class="grid-tests">
-              <!-- Vak 1: Uitgangshouding -->
-              <div class="vak">
-                <h4>Uitgangshouding</h4>
-                <p>
-                  De patiënt ligt in ruglig op de onderzoeksbank met de benen gestrekt. Tijdens het rotatieonderzoek
-                  kan
-                  de knie in lichte
-                  flexie worden gebracht.
-                </p>
-                <img src="../../../../img/voeding.jpg" alt="Uitgangshouding strijktest" class="img-vak1" />
-              </div>
+                <!-- Vak 2: Uitvoering -->
+                <div class="vak">
+                  <h4>Uitvoering</h4>
+                  <p>
+                    De strijktest wordt uitgevoerd om zwelling in de knie te
+                    beoordelen:
+                  </p>
+                  <ul>
+                    <li>
+                      Strijk met de hand eerst het mediale kniekapsel naar
+                      proximaal leeg <strong class="benadrukking">(a)</strong>.
+                    </li>
+                    <li>
+                      Strijk daarna met de hand de laterale zijde naar proximaal
+                      leeg <strong class="benadrukking">(b)</strong>.
+                    </li>
+                  </ul>
+                  <p>
+                    De test is positief als het kuiltje aan de mediale zijde
+                    zich opnieuw vult.
+                  </p>
+                </div>
 
-              <!-- Vak 2: Uitvoering -->
-              <div class="vak">
-                <h4>Uitvoering</h4>
-                <p>
-                  De strijktest wordt uitgevoerd om zwelling in de knie te
-                  beoordelen:
-                </p>
-                <ul>
-                  <li>
-                    Strijk met de hand eerst het mediale kniekapsel naar
-                    proximaal leeg <strong class="benadrukking">(a)</strong>.
-                  </li>
-                  <li>
-                    Strijk daarna met de hand de laterale zijde naar proximaal
-                    leeg <strong class="benadrukking">(b)</strong>.
-                  </li>
-                </ul>
-                <p>
-                  De test is positief als het kuiltje aan de mediale zijde
-                  zich opnieuw vult.
-                </p>
-              </div>
+                <!-- Vak 3: Interpretatie -->
+                <div class="vak">
+                  <h4>Positieve test</h4>
+                  <ul class="icon-list">
+                    <li>
+                      <i class="fa-solid fa-check icon"></i>Niet verplaatsbare
+                      zwelling →
+                      <strong class="benadrukking">synovitis</strong>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-check icon"></i>Wel verplaatsbare
+                      zwelling → <strong class="benadrukking">hydrops</strong>,
+                      wijst op meniscusletsel
+                    </li>
+                  </ul>
+                </div>
 
-              <!-- Vak 3: Interpretatie -->
-              <div class="vak">
-                <h4>Positieve test</h4>
-                <ul class="icon-list">
-                  <li>
-                    <i class="fa-solid fa-check icon"></i>Niet verplaatsbare
-                    zwelling →
-                    <strong class="benadrukking">synovitis</strong>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-check icon"></i>Wel verplaatsbare
-                    zwelling → <strong class="benadrukking">hydrops</strong>,
-                    wijst op meniscusletsel
-                  </li>
-                </ul>
-              </div>
-
-              <div class="vak">
-                <h4>Filmpje</h4>
-                <video width="100%" height="200" controls>
-                  <source src="../../../../video/VID-20201128-WA0009.mp4" type="video/mp4" />
-                  Je browser ondersteunt dit videoformaat niet.
-                </video>
+                <div class="vak">
+                  <h4>Filmpje</h4>
+                  <video width="100%" height="200" controls>
+                    <source src="../../../../video/VID-20201128-WA0009.mp4" type="video/mp4" />
+                    Je browser ondersteunt dit videoformaat niet.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Bursitis -->
-    <div class="text-section">
-      <h2>Bursitis</h2>
-      <h3>Pathologie</h3>
-      <p>
-        Een bursa is een met synoviale vloeistof gevuld zakje, dat als stootkussen en glijvlak fungeert tussen bot,
-        pezen, spieren en huid. Ze verminderen wrijving en verdelen drukbelasting.
-      </p>
-      <p>
-        De knie heeft 11–14 bursae (slijmbeurzen), maar klinisch zijn vooral deze relevant:
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Bursa / Bursitis</th>
-            <th>Plek</th>
-            <th>Kenmerk</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Bursa prepatellaris</td>
-            <td>Op de patella, tussen huid en knieschijf</td>
-            <td>Bekend als “housemaid’s knee”, zwelling voorop de knie</td>
-          </tr>
-          <tr>
-            <td>Bursa infrapatellaris superficialis</td>
-            <td>Tussen huid en lig. patellae (net onder de knie)</td>
-            <td>Zwelling vaak zichtbaar vlak onder de knieschijf</td>
-          </tr>
-          <tr>
-            <td>Bursa infrapatellaris profunda</td>
-            <td>Dieper, tussen tibia en lig. patellae</td>
-            <td>Moeilijker klinisch te onderscheiden</td>
-          </tr>
-          <tr>
-            <td>Bursa anserina (pes anserinus-bursa)</td>
-            <td>Mediaal, onder de aanhechting van m. sartorius, gracilis en semitendinosus</td>
-            <td>Vaak geïrriteerd bij hardlopers of patiënten met valgusknieën</td>
-          </tr>
-          <tr>
-            <td>Bursa semimembranosa (Baker’s cyste bij expansie)</td>
-            <td>Posteromediaal, tussen m. semimembranosus en de mediale gastrocnemiuskop</td>
-            <td>Kan opzwellen en naar de kuit doorlopen</td>
-          </tr>
-          <tr>
-            <td>Bursa gastrocnemius (mediaal en lateraal)</td>
-            <td>Tussen de gastrocnemiuskoppen en het femur</td>
-            <td>Minder vaak klinisch geïrriteerd</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>
-        Wanneer een bursa geïrriteerd raakt door mechanische overbelasting, trauma of infectie, treedt er een
-        ontstekingsreactie op. Een bursitis is een ontsteking van een bursa.
-        We onderscheiden bursitis door 2 vormen:
-      </p>
-      <p><strong>Aseptische bursitis (niet-bacterieel):</strong></p>
-      <p>
-        Vaak door repetitieve compressie, frictie of microtrauma. Hierdoor neemt de doorbloeding en permeabiliteit van
-        de synoviale wand toe. Het gevolg is toename van vocht, verdikking van de bursa en pijn door nociceptieve
-        prikkeling.
-      </p>
-      <p><strong>Septische bursitis (wel bacterieel):</strong></p>
-      <p>
-        Meestal veroorzaakt door Staphylococcus aureus of streptokokken. Het komt binnen via een huidlaesie of
-        hematogeen. Dat kan leiden tot pusvorming en systemische ziekteverschijnselen.
-      </p>
-
-    </div>
   </div>
 
-  <!-- Full-width Symptomen sectie -->
-  <div class="symptomen">
-    <div class="symptomen-container">
-      <h2>Symptomen</h2>
-      <p>
-        Bij bursitis rond de knie kunnen diverse klachten optreden. De
-        onderstaande symptomen helpen om het onderscheid te maken tussen de
-        verschillende oorzaken.
-      </p>
-      <ul>
-        <li>Lokale zwelling</li>
-        <li>Warmte</li>
-        <li>Roodheid</li>
-        <li>Drukpijn</li>
-      </ul>
+  <!-- Tab Bursitis -->
+  <div id="bursitis" class="tab-content">
+    <div class="container-theorie">
+      <div class="text-section">
+        <h2>Bursitis</h2>
+        <h3>Pathologie</h3>
+        <p>
+          Een bursa is een met synoviale vloeistof gevuld zakje dat als stootkussen fungeert.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Bursa / Bursitis</th>
+              <th>Plek</th>
+              <th>Kenmerk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bursa prepatellaris</td>
+              <td>Op de patella, tussen huid en knieschijf</td>
+              <td>Bekend als “housemaid’s knee”, zwelling voorop de knie</td>
+            </tr>
+            <tr>
+              <td>Bursa infrapatellaris superficialis</td>
+              <td>Tussen huid en lig. patellae (net onder de knie)</td>
+              <td>Zwelling vaak zichtbaar vlak onder de knieschijf</td>
+            </tr>
+            <tr>
+              <td>Bursa infrapatellaris profunda</td>
+              <td>Dieper, tussen tibia en lig. patellae</td>
+              <td>Moeilijker klinisch te onderscheiden</td>
+            </tr>
+            <tr>
+              <td>Bursa anserina (pes anserinus-bursa)</td>
+              <td>Mediaal, onder de aanhechting van m. sartorius, gracilis en semitendinosus</td>
+              <td>Vaak geïrriteerd bij hardlopers of patiënten met valgusknieën</td>
+            </tr>
+            <tr>
+              <td>Bursa semimembranosa (Baker’s cyste bij expansie)</td>
+              <td>Posteromediaal, tussen m. semimembranosus en de mediale gastrocnemiuskop</td>
+              <td>Kan opzwellen en naar de kuit doorlopen</td>
+            </tr>
+            <tr>
+              <td>Bursa gastrocnemius (mediaal en lateraal)</td>
+              <td>Tussen de gastrocnemiuskoppen en het femur</td>
+              <td>Minder vaak klinisch geïrriteerd</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Aseptische bursitis</strong>: vaak door compressie of microtrauma.</p>
+        <p><strong>Septische bursitis</strong>: meestal door bacteriële infectie.</p>
+      </div>
     </div>
-  </div>
 
+    <div class="symptomen">
+      <div class="symptomen-container">
+        <h2>Symptomen</h2>
+        <ul>
+          <li>Lokale zwelling</li>
+          <li>Warmte</li>
+          <li>Roodheid</li>
+          <li>Drukpijn</li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- Testen Bursitis -->
-  <div class="container-theorie">
-    <div class="text-section">
-      <h2>Testen Bursitis</h2>
-      <h3>Anamnese</h3>
-      <p>Maak bij verdenking van bursitis onderscheid tussen aseptisch en septisch. Bij septisch is de anamnese met name
-        van belang. Vraag ziekteverschijnselen uit en algehele malaise. Bij aseptisch kan je het volgende doen:
-      </p>
-      <h3>Inspectie en palpatie</h3>
-      <ul>
-        <li>Lokale zwelling (fluctuerend, zacht)</li>
-        <li>Warmte, roodheid, drukpijn (wijst op ontsteking)</li>
-        <li>Exacte lokalisatie helpt onderscheid maken</li>
-        <li>Drukpijn op bursa</li>
-      </ul>
+    <div class="container-theorie">
+      <div class="text-section">
+        <h2>Testen Bursitis</h2>
+        <h3>Anamnese</h3>
+        <p>Maak bij verdenking van bursitis onderscheid tussen aseptisch en septisch. Bij septisch is de
+          anamnese met name
+          van belang. Vraag ziekteverschijnselen uit en algehele malaise. Bij aseptisch kan je het volgende
+          doen:
+        </p>
+        <h3>Inspectie en palpatie</h3>
+        <ul>
+          <li>Lokale zwelling (fluctuerend, zacht)</li>
+          <li>Warmte, roodheid, drukpijn (wijst op ontsteking)</li>
+          <li>Exacte lokalisatie helpt onderscheid maken</li>
+          <li>Drukpijn op bursa</li>
+        </ul>
 
-      <h3>AFO & PFO</h3>
-      <p>Actieve en passieve knie-ROM zijn meestal relatief goed.
-      </p>
-      <p>Bij diepe bursae (bv. anserina) kan eindstandige flexie pijnlijk zijn.</p>
-      <h3>Beeldvorming</h3>
-      <ul>
-        <li>Echografie → eerste keus; laat vochtcollectie of verdikte bursa zien.</li>
-        <li>MRI bij twijfel of diepgelegen bursitis.</li>
-      </ul>
+        <h3>AFO & PFO</h3>
+        <p>Actieve en passieve knie-ROM zijn meestal relatief goed.
+        </p>
+        <p>Bij diepe bursae (bv. anserina) kan eindstandige flexie pijnlijk zijn.</p>
+        <h3>Beeldvorming</h3>
+        <ul>
+          <li>Echografie → eerste keus; laat vochtcollectie of verdikte bursa zien.</li>
+          <li>MRI bij twijfel of diepgelegen bursitis.</li>
+        </ul>
 
-      <h3>Punctie</h3>
-      <p>Bij verdenking op septische bursitis</p>
+        <h3>Punctie</h3>
+        <p>Bij verdenking op septische bursitis</p>
 
+      </div>
     </div>
   </div>
 
 
-  <script src="../tekst.js"></script>
+  <script src="../../../../scripts/tabs.js"></script>
+  <script src="../../../../scripts/tekst.js"></script>
 </body>
 
 <footer class="site-footer">
