@@ -15,31 +15,44 @@
     <div class="nav-container">
         <a href="../../../../index.html" class="nav-logo">Fysiodex</a>
         <ul class="nav-links">
-                <li class="has-submenu">
-                    <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">Gezonde voeding</a></li>
-                        <li><a href="#">Supplementen</a></li>
-                        <li><a href="#">Dieetadvies</a></li>
-                    </ul>
-                </li>
+            <li class="has-submenu">
+                <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Gezonde voeding</a></li>
+                    <li><a href="#">Supplementen</a></li>
+                    <li><a href="#">Dieetadvies</a></li>
+                </ul>
+            </li>
 
-                <li><a href="../../../klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
-                <li><a href="#">Psychosociaal</a></li>
-            </ul>
+            <li><a href="../../../klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
+            <li><a href="#">Psychosociaal</a></li>
+        </ul>
     </div>
 </nav>
 
 
 <body>
-    <div class="container-theorie">
-        <!-- PMC -->
-        <div class="text-section">
-            <div>
+    <!-- Tabs navigatie -->
+    <div class="tab-nav">
+        <button class="tab-link active" data-tab="PMC">Posteriomediaal Complex (PMC)</button>
+        <button class="tab-link" data-tab="PLC">Posteriolateraal Complex (PLC)</button>
+    </div>
+
+    <!-- TAB PMC -->
+    <div id="PMC" class="tab-content active">
+        <div class="container-theorie">
+            <div class="text-section">
                 <h2>Posteromediaal Complex (PMC)</h2>
                 <h3>Pathologie</h3>
                 <P>Tekst moet nog.....
                 </P>
+            </div>
+        </div>
+
+
+        <!-- Full-width Symptomen sectie -->
+        <div class="symptomen">
+            <div class="symptomen-container">
                 <h2>Symptomen</h2>
                 <ul>
                     <li>Traumamoment</li>
@@ -49,185 +62,212 @@
                     <li>Vaak samen met kruisband of meniscus letsel</li>
                 </ul>
             </div>
+        </div>
 
-            <h2>Testen PMC</h2>
 
-            <!-- Eerste Test -->
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Valgusstresstest in 0°</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig op de onderzoeksbank met de knie in 0° extensie.</p>
-                                <img src="../../../../img/bewegen.jpg" alt="Lachman Test Uitgangshouding"
-                                    class="img-vak1">
+        <!-- Testen PMC -->
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Testen PMC</h2>
+                <div class="test-item-info">
+                    <button class="test-toggle-info">
+                        <span class="toggle-text">Valgusstresstest in 0°</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <div class="test-content-info">
+                        <div class="test-content">
+                            <div class="grid-tests">
+                                <!-- Vak 1: Uitgangshouding -->
+                                <div class="vak">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig op de onderzoeksbank met de knie in 0° extensie.</p>
+                                    <img src="../../../../img/bewegen.jpg" alt="Lachman Test Uitgangshouding"
+                                        class="img-vak1">
+                                </div>
+
+                                <!-- Vak 2: Uitvoering -->
+                                <div class="vak">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut voert passief de volgende beweging uit:</p>
+                                    <ul>
+                                        <li><strong class="benadrukking">Valusbeweging:</strong> Het onderbeen wordt
+                                            naar
+                                            mediaal geduwd, waarbij
+                                            de
+                                            mediale
+                                            collaterale band (MCL) wordt getest door een valgus- of abductiebeweging ten
+                                            opzichte
+                                            van
+                                            het bovenbeen.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Vak 3: Interpretatie -->
+                                <div class="vak">
+                                    <h4>Positieve test</h4>
+                                    <ul class="icon-list">
+                                        <li><i class="fa-solid fa-check icon"></i>Opening van de mediale gewrichtslijn
+                                            bij
+                                            valgusdruk</li>
+                                        <li><i class="fa-solid fa-check icon"></i>Pijn tijdens de mediale duwbeweging
+                                        </li>
+                                        <li><i class="fa-solid fa-check icon"></i>Instabiliteit of overmatige beweging
+                                            in
+                                            het
+                                            mediale gewricht</li>
+                                    </ul>
+                                    <div class="test-parameters">
+                                        <h4>Sensitiviteit</h4>
+                                        <span class="value">Onbekend</span>
+                                        <h4>Specificiteit</h4>
+                                        <span class="value">Onbekend</span>
+                                    </div>
+                                </div>
+
+                                <div class="vak">
+                                    <h4>Filmpje</h4>
+                                    <video width="100%" height="200" controls>
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut voert passief de volgende beweging uit:</p>
-                                <ul>
-                                    <li><strong class="benadrukking">Valusbeweging:</strong> Het onderbeen wordt naar mediaal geduwd, waarbij
-                                        de
-                                        mediale
-                                        collaterale band (MCL) wordt getest door een valgus- of abductiebeweging ten
-                                        opzichte
+                <!-- Tweede Test -->
+                <div class="test-item-info">
+                    <button class="test-toggle-info">
+                        <span class="toggle-text">Test voor AMRI</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <div class="test-content-info">
+                        <div class="test-content">
+                            <div class="grid-tests">
+                                <!-- Vak 1: Uitgangshouding -->
+                                <div class="vak">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig met de knie 90° gebogen en de voet in 15° exorotatie
+                                        (of
+                                        maximale
+                                        exorotatie). De fysiotherapeut plaatst de duimen op de tuberositas tibiae.</p>
+                                    <img src="../../../../img/voeding.jpg" alt="Voorste Schuiflade Test"
+                                        class="img-vak1">
+                                </div>
+                                <div class="vak">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut trekt het onderbeen rustig naar voren, waarbij de nadruk ligt
+                                        op de
+                                        voorwaartse beweging van de tibia ten opzichte van het femur. De test is
+                                        positief
+                                        wanneer
+                                        een verschil met de contralaterale knie wordt waargenomen in bewegingsuitslag
+                                        en/of
+                                        eindgevoel.</p>
+                                </div>
+                                <div class="vak">
+                                    <h4>Positieve test</h4>
+                                    <ul class="icon-list">
+                                        <li><i class="fa-solid fa-check icon"></i>Subluxatie van het mediale
+                                            compartiment
+                                            naar voren
+                                        </li>
+                                        <li><i class="fa-solid fa-check icon"></i>Vergelijking met de contralaterale
+                                            knie:
+                                            verschil
+                                            in bewegingsuitslag of eindgevoel</li>
+                                    </ul>
+                                    <div class="test-parameters">
+                                        <h4>Sensitiviteit</h4>
+                                        <span class="value">Onbekend</span>
+                                        <h4>Specificiteit</h4>
+                                        <span class="value">Onbekend</span>
+                                    </div>
+                                </div>
+                                <div class="vak">
+                                    <h4>Filmpje</h4>
+                                    <video width="100%" height="200" controls>
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Derde Test -->
+                <div class="test-item-info">
+                    <button class="test-toggle-info">
+                        <span class="toggle-text">Dial-test 30°</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <div class="test-content-info">
+                        <div class="test-content">
+                            <div class="grid-tests">
+                                <!-- Vak 1: Uitgangshouding -->
+                                <div class="vak">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt in ruglig op de onderzoeksbank met het been volledig in extensie.
+                                        De
+                                        therapeut pakt de voet en de buitenkant van de knie vast.</p>
+                                    <img src="../../../../img/voeding.jpg" alt="Pivot-shift Test" class="img-vak1">
+                                </div>
+                                <div class="vak">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut draait de voeten in exorotatie terwijl de knie in 30° flexie
+                                        wordt
+                                        gehouden. De test is positief wanneer er een vergrote exorotatie is ten opzichte
                                         van
-                                        het bovenbeen.</li>
-                                </ul>
-                            </div>
-
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Opening van de mediale gewrichtslijn bij
-                                        valgusdruk</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn tijdens de mediale duwbeweging</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Instabiliteit of overmatige beweging in
-                                        het
-                                        mediale gewricht</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">Onbekend</span>
-                                    <h4>Specificiteit</h4>
-                                    <span class="value">Onbekend</span>
+                                        de
+                                        contralaterale knie.</p>
                                 </div>
-                            </div>
-
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tweede Test -->
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Test voor AMRI</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig met de knie 90° gebogen en de voet in 15° exorotatie (of
-                                    maximale
-                                    exorotatie). De fysiotherapeut plaatst de duimen op de tuberositas tibiae.</p>
-                                <img src="../../../../img/voeding.jpg" alt="Voorste Schuiflade Test" class="img-vak1">
-                            </div>
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut trekt het onderbeen rustig naar voren, waarbij de nadruk ligt op de
-                                    voorwaartse beweging van de tibia ten opzichte van het femur. De test is positief
-                                    wanneer
-                                    een verschil met de contralaterale knie wordt waargenomen in bewegingsuitslag en/of
-                                    eindgevoel.</p>
-                            </div>
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Subluxatie van het mediale compartiment
-                                        naar voren
-                                    </li>
-                                    <li><i class="fa-solid fa-check icon"></i>Vergelijking met de contralaterale knie:
-                                        verschil
-                                        in bewegingsuitslag of eindgevoel</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">Onbekend</span>
-                                    <h4>Specificiteit</h4>
-                                    <span class="value">Onbekend</span>
+                                <div class="vak">
+                                    <h4>Positieve test</h4>
+                                    <ul class="icon-list">
+                                        <li><i class="fa-solid fa-check icon"></i>Vergrote exorotatie van de knie in 30°
+                                            flexie</li>
+                                        <li><i class="fa-solid fa-check icon"></i>Kan duiden op een letsel van het
+                                            posterolaterale
+                                            complex (PLC)</li>
+                                    </ul>
+                                    <div class="test-parameters">
+                                        <h4>Sensitiviteit</h4>
+                                        <span class="value">Onbekend</span>
+                                        <h4>Specificiteit</h4>
+                                        <span class="value">Onbekend</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Derde Test -->
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Dial-test 30°</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig op de onderzoeksbank met het been volledig in extensie. De
-                                    therapeut pakt de voet en de buitenkant van de knie vast.</p>
-                                <img src="../../../../img/voeding.jpg" alt="Pivot-shift Test" class="img-vak1">
-                            </div>
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut draait de voeten in exorotatie terwijl de knie in 30° flexie wordt
-                                    gehouden. De test is positief wanneer er een vergrote exorotatie is ten opzichte van
-                                    de
-                                    contralaterale knie.</p>
-                            </div>
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Vergrote exorotatie van de knie in 30°
-                                        flexie</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Kan duiden op een letsel van het
-                                        posterolaterale
-                                        complex (PLC)</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">Onbekend</span>
-                                    <h4>Specificiteit</h4>
-                                    <span class="value">Onbekend</span>
+                                <div class="vak">
+                                    <h4>Filmpje</h4>
+                                    <video width="100%" height="200" controls>
+                                        <source src="../../../../img/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
                                 </div>
-                            </div>
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../img/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- PLC -->
-        <div class="text-section">
-            <div>
+    <!-- TAB PLC -->
+    <div id="PLC" class="tab-content">
+        <div class="container-theorie">
+            <div class="text-section">
                 <h2>Posteriolateraal Complex (PLC)</h2>
                 <h3>Pathologie</h3>
                 <p>Ook hier ontbreekt de tekst...
                 </p>
+            </div>
+        </div>
+
+
+        <div class="symptomen">
+            <div class="symptomen-container">
                 <h2>Symptomen</h2>
                 <ul>
                     <li>Traumamoment (vaak bij kracht naar dorsolateraal)</li>
@@ -237,138 +277,162 @@
                     <li>Vaak samen met kruisband of meniscus letsel</li>
                 </ul>
             </div>
+        </div>
 
-            <h2>Testen PLC </h2>
 
-            <!-- Eerste Test -->
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Test voor Opening Laterale Gewrichtslijn in 0° (Varustest)</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt zit op de onderzoeksbank met het been op de schoot en de knie in 0°
-                                    extensie. Het
-                                    bovenbeen is gestrekt, terwijl het onderbeen in lichte adductie wordt gehouden.</p>
-                                <img src="../../../../img/bewegen.jpg" alt="Lachman Test Uitgangshouding"
-                                    class="img-vak1">
-                            </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut voert passief de volgende beweging uit:</p>
-                                <ul>
-                                    <li><strong class="benadrukking">Varusbeweging:</strong> Het onderbeen wordt lateraal geduwd, waarbij de
-                                        laterale
-                                        collaterale band (LCL) wordt getest door een varus- of adductiebeweging ten
-                                        opzichte van
-                                        het bovenbeen.</li>
-                                </ul>
-                            </div>
+        <!-- Eerste Test -->
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Testen PLC </h2>
+                <div class="test-item-info">
+                    <button class="test-toggle-info">
+                        <span class="toggle-text">Test voor Opening Laterale Gewrichtslijn in 0° (Varustest)</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <div class="test-content-info">
+                        <div class="test-content">
+                            <div class="grid-tests">
+                                <!-- Vak 1: Uitgangshouding -->
+                                <div class="vak">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt zit op de onderzoeksbank met het been op de schoot en de knie in 0°
+                                        extensie. Het
+                                        bovenbeen is gestrekt, terwijl het onderbeen in lichte adductie wordt gehouden.
+                                    </p>
+                                    <img src="../../../../img/bewegen.jpg" alt="Lachman Test Uitgangshouding"
+                                        class="img-vak1">
+                                </div>
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Opening van de laterale gewrichtslijn bij
-                                        varusdruk</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn tijdens de laterale duwbeweging</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Instabiliteit of overmatige beweging in
-                                        het
-                                        laterale gewricht</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">Onbekend</span>
-                                    <h4>Specificiteit</h4>
-                                    <span class="value">Onbekend</span>
+                                <!-- Vak 2: Uitvoering -->
+                                <div class="vak">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut voert passief de volgende beweging uit:</p>
+                                    <ul>
+                                        <li><strong class="benadrukking">Varusbeweging:</strong> Het onderbeen wordt
+                                            lateraal
+                                            geduwd, waarbij de
+                                            laterale
+                                            collaterale band (LCL) wordt getest door een varus- of adductiebeweging ten
+                                            opzichte van
+                                            het bovenbeen.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Vak 3: Interpretatie -->
+                                <div class="vak">
+                                    <h4>Positieve test</h4>
+                                    <ul class="icon-list">
+                                        <li><i class="fa-solid fa-check icon"></i>Opening van de laterale gewrichtslijn
+                                            bij
+                                            varusdruk</li>
+                                        <li><i class="fa-solid fa-check icon"></i>Pijn tijdens de laterale duwbeweging
+                                        </li>
+                                        <li><i class="fa-solid fa-check icon"></i>Instabiliteit of overmatige beweging
+                                            in
+                                            het
+                                            laterale gewricht</li>
+                                    </ul>
+                                    <div class="test-parameters">
+                                        <h4>Sensitiviteit</h4>
+                                        <span class="value">Onbekend</span>
+                                        <h4>Specificiteit</h4>
+                                        <span class="value">Onbekend</span>
+                                    </div>
+                                </div>
+
+                                <div class="vak">
+                                    <h4>Filmpje</h4>
+                                    <video width="100%" height="200" controls>
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
+                <!-- Tweede Test -->
+                <div class="test-item-info">
+                    <button class="test-toggle-info">
+                        <span class="toggle-text">Dial-test 30° en 90°</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <div class="test-content-info">
+                        <div class="test-content">
+                            <div class="grid-tests">
+                                <!-- Vak 1: Uitgangshouding -->
+                                <div class="vak">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>De patiënt ligt op de buik met de knieën tegen elkaar aan. De fysiotherapeut
+                                        staat
+                                        aan het
+                                        eind van de onderzoekstafel, omvat de voeten en houdt deze in dorsaalflexie
+                                        vast.
+                                    </p>
+                                    <img src="../../../../img/voeding.jpg" alt="Voorste Schuiflade Test"
+                                        class="img-vak1">
+                                </div>
+                                <div class="vak">
+                                    <h4>Uitvoering</h4>
+                                    <p>De fysiotherapeut draait de voeten in exorotatie en beoordeelt de
+                                        bewegingsuitslag
+                                        van de
+                                        voeten. De test wordt tweemaal uitgevoerd, eenmaal met de knie in 30° flexie en
+                                        de
+                                        tweede
+                                        keer met de knie in 90° flexie.</p>
+                                    <ul>
+                                        <li><strong class="benadrukking">30° flexie:</strong> De test is positief
+                                            wanneer er
+                                            een
+                                            toegenomen
+                                            exorotatie
+                                            is, wat kan wijzen op een geïsoleerd letsel van de posterolaterale complex
+                                            (PLC).</li>
+                                        <li><strong class="benadrukking">90° flexie:</strong> Een toegenomen exorotatie
+                                            wijst op
+                                            een gecombineerd
+                                            letsel
+                                            van de PLC en het achterste kruisband (AKB).</li>
+                                    </ul>
+                                </div>
+                                <div class="vak">
+                                    <h4>Positieve test</h4>
+                                    <ul class="icon-list">
+                                        <li><i class="fa-solid fa-check icon"></i>Toegenomen exorotatie in 30° flexie
+                                            wijst
+                                            op een
+                                            geïsoleerd letsel van de PLC</li>
+                                        <li><i class="fa-solid fa-check icon"></i>Toegenomen exorotatie in 90° flexie
+                                            wijst
+                                            op een
+                                            gecombineerd letsel van de PLC en de AKB</li>
+                                    </ul>
+                                    <div class="test-parameters">
+                                        <h4>Sensitiviteit</h4>
+                                        <span class="value">Onbekend</span>
+                                        <h4>Specificiteit</h4>
+                                        <span class="value">Onbekend</span>
+                                    </div>
+                                </div>
+                                <div class="vak">
+                                    <h4>Filmpje</h4>
+                                    <video width="100%" height="200" controls>
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Tweede Test -->
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Dial-test 30° en 90°</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt op de buik met de knieën tegen elkaar aan. De fysiotherapeut staat
-                                    aan het
-                                    eind van de onderzoekstafel, omvat de voeten en houdt deze in dorsaalflexie vast.
-                                </p>
-                                <img src="../../../../img/voeding.jpg" alt="Voorste Schuiflade Test" class="img-vak1">
-                            </div>
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut draait de voeten in exorotatie en beoordeelt de bewegingsuitslag
-                                    van de
-                                    voeten. De test wordt tweemaal uitgevoerd, eenmaal met de knie in 30° flexie en de
-                                    tweede
-                                    keer met de knie in 90° flexie.</p>
-                                <ul>
-                                    <li><strong class="benadrukking">30° flexie:</strong> De test is positief wanneer er een toegenomen
-                                        exorotatie
-                                        is, wat kan wijzen op een geïsoleerd letsel van de posterolaterale complex
-                                        (PLC).</li>
-                                    <li><strong class="benadrukking">90° flexie:</strong> Een toegenomen exorotatie wijst op een gecombineerd
-                                        letsel
-                                        van de PLC en het achterste kruisband (AKB).</li>
-                                </ul>
-                            </div>
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Toegenomen exorotatie in 30° flexie wijst
-                                        op een
-                                        geïsoleerd letsel van de PLC</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Toegenomen exorotatie in 90° flexie wijst
-                                        op een
-                                        gecombineerd letsel van de PLC en de AKB</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">Onbekend</span>
-                                    <h4>Specificiteit</h4>
-                                    <span class="value">Onbekend</span>
-                                </div>
-                            </div>
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
+
+    <script src="../../../../scripts/tabs.js"></script>
     <script src="../../../../scripts/tekst.js"></script>
 </body>
 
