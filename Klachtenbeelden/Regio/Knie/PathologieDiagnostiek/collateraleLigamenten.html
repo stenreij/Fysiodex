@@ -2,13 +2,13 @@
 <html lang="nl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fysiodex - Collaterale Ligamenten</title>
-    <link rel="stylesheet" href="../../../../styles.css">
-    <link rel="stylesheet" href="../../../../navbarfooter.css">
-    <link rel="stylesheet" href="./PathologieDiagnostiek.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../../styles.css" />
+    <link rel="stylesheet" href="../../../../navbarfooter.css" />
+    <link rel="stylesheet" href="./PathologieDiagnostiek.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <nav class="navbar">
@@ -24,27 +24,57 @@
                 </ul>
             </li>
 
-            <li><a href="../../../klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
+            <li>
+                <a href="../../../klachtenbeelden.html" class="active">Klachtenbeelden</a>
+            </li>
             <li><a href="#">Psychosociaal</a></li>
         </ul>
     </div>
 </nav>
 
-
 <body>
-    <div class="container-theorie">
-        <!-- sMCL -->
-        <div class="text-section">
-            <div>
+    <!-- Tabs navigatie -->
+    <div class="tab-nav">
+        <button class="tab-link active" data-tab="MCL">Collateraal Ligament (MCL)</button>
+        <button class="tab-link" data-tab="LCL">Lateraal Collateraal Ligament (LCL)</button>
+    </div>
+
+    <!-- TAB MCL -->
+    <div id="MCL" class="tab-content active">
+        <div class="container-theorie">
+            <div class="text-section">
                 <h2>Collateraal Ligament (MCL)</h2>
                 <h3>Pathologie</h3>
                 <p>De mediale anatomie van de knie bestaat uit drie lagen:</p>
                 <ul>
                     <li>De oppervlakkigste laag is de fascie.</li>
-                    <li>Het oppervlakkige collaterale ligament (superficiale (s)MCL) ligt daaronder en heeft als functie de valgusstabiliteit in 20° flexie te handhaven.</li>
-                    <li>De diepe kapsellaag bestaat uit het diepe MCL (deep (d)MCL) en het PMC. Het PMC bestaat uit de achterhoorn van de mediale meniscus (intra-articulair), het posteriore oblique ligament (POL), de semimembranosus expansies, de meniscotibiale (coronaire) ligamenten en het ligamentum popliteum obliquus, met als functie een valgusstabiliteit in 0° flexie.</li>
+                    <li>
+                        Het oppervlakkige collaterale ligament (superficiale (s)MCL) ligt
+                        daaronder en heeft als functie de valgusstabiliteit in 20° flexie
+                        te handhaven.
+                    </li>
+                    <li>
+                        De diepe kapsellaag bestaat uit het diepe MCL (deep (d)MCL) en het
+                        PMC. Het PMC bestaat uit de achterhoorn van de mediale meniscus
+                        (intra-articulair), het posteriore oblique ligament (POL), de
+                        semimembranosus expansies, de meniscotibiale (coronaire)
+                        ligamenten en het ligamentum popliteum obliquus, met als functie
+                        een valgusstabiliteit in 0° flexie.
+                    </li>
                 </ul>
-                <p>Letsel aan de binnennband (MCL/mediale collaterale ligament) ontstaat door een valguskracht op de knie. Het is het meest voorkomende bandletsel van de knie. Gradering loopt van lichte rek (graad I) tot volledige ruptuur (graad III). De MCL geneest meestal goed met conservatieve behandeling.</p>
+                <p>
+                    Letsel aan de binnennband (MCL/mediale collaterale ligament)
+                    ontstaat door een valguskracht op de knie. Het is het meest
+                    voorkomende bandletsel van de knie. Gradering loopt van lichte rek
+                    (graad I) tot volledige ruptuur (graad III). De MCL geneest meestal
+                    goed met conservatieve behandeling.
+                </p>
+            </div>
+        </div>
+
+        <!-- Full-width Symptomen sectie -->
+        <div class="symptomen">
+            <div class="symptomen-container">
                 <h2>Symptomen</h2>
                 <ul>
                     <li>Pijn aan de binnenkant van de knie</li>
@@ -53,81 +83,16 @@
                     <li>Stijfheid van de knie</li>
                 </ul>
             </div>
-
-            <h2>Testen MCL</h2>
-
-            <!-- Valgusstresstest in 20° -->
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Valgusstresstest in 20°</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig waarbij het bovenbeen op de behandelbank ligt en het onderbeen iets afhangt (20°) aan de lange zijde van de behandelbank.
-                                </p>
-                            </div>
-
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut fixeert met één hand het femur en geeft met de andere hand een valgiserende druk distaal op het onderbeen, waarbij gelet wordt op het al dan niet wegdraaien van de knie of knieschijf. Voor gradering: zie kader over IKDC. Dus naast patiënt staan en bij de enkel en boven de knie pakken. De hand op het bovenbeen is fixerend, de hand op de enkel is mobiliserend. Belangrijk is om bij de enkel te pakken, omdat je anders het onderbeen transleert ten opzichte van het bovenbeen i.p.v. valgiseert.</p>
-                            </div>
-
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Positief bij vergrote bewegingsuitslag en pijn</li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">0.87</span>
-                                    <h4>Specificiteit</h4>
-                                    <span class="value">Onbekend</span>
-                                </div>                      
-                                <p><em><strong>*Opmerking:</strong> Deze test is sneller positief dan de varusstresstest in 20 graden omdat de MCL in het kapsel zit en de LCL niet.</em></p>
-                            </div>
-
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
 
 
-            <!-- Lateraal Collateraal Ligament (LCL) -->
+        <!-- Testen MCL -->
+        <div class="container-theorie">
             <div class="text-section">
-                <div>
-                    <h2>Lateraal Collateraal Ligament (LCL)</h2>
-                    <h3>Pathologie</h3>
-                    <p>Tekst over LCL</p>
-                    <h2>Symptomen</h2>
-                    <ul>
-                        <li>Instabiliteit</li>
-                        <li>Zwelling & blauwe verkleuring</li>
-                        <li>Pijn aan buitenkant van de knie</li>
-                        <li>Stijfheid</li>
-                        <li>Tintelend gevoel aan de onderkant van de been</li>
-                    </ul>
-                </div>
-
-                <h2>Testen LCL </h2>
-
-                <!-- Varus Test -->
+                <h2>Testen MCL</h2>
                 <div class="test-item-info">
                     <button class="test-toggle-info">
-                        <span class="toggle-text">Varustest (Opening Laterale Gewrichtslijn in 20°)</span>
+                        <span class="toggle-text">Valgusstresstest in 20°</span>
                         <span class="arrow">&#9660;</span>
                     </button>
                     <div class="test-content-info">
@@ -136,23 +101,135 @@
                                 <!-- Vak 1: Uitgangshouding -->
                                 <div class="vak">
                                     <h4>Uitgangshouding</h4>
-                                    <p>De patiënt ligt in ruglig op de onderzoeksbank met het onderzochte been in 20°
-                                        flexie. Het
-                                        bovenbeen is gestrekt, terwijl het onderbeen in een lichte adductie wordt
-                                        gehouden.</p>
+                                    <p>
+                                        De patiënt ligt in ruglig waarbij het bovenbeen op de
+                                        behandelbank ligt en het onderbeen iets afhangt (20°) aan de
+                                        lange zijde van de behandelbank.
+                                    </p>
+                                    <img src="../../../../img/voeding.jpg" alt="Uitgangshouding strijktest"
+                                        class="img-vak1" />
                                 </div>
 
                                 <!-- Vak 2: Uitvoering -->
                                 <div class="vak">
                                     <h4>Uitvoering</h4>
-                                    <p>De fysiotherapeut voert passief de volgende beweging uit:</p>
+                                    <p>
+                                        De fysiotherapeut fixeert met één hand het femur en geeft
+                                        met de andere hand een valgiserende druk distaal op het
+                                        onderbeen, waarbij gelet wordt op het al dan niet wegdraaien
+                                        van de knie of knieschijf. Voor gradering: zie kader over
+                                        IKDC. Dus naast patiënt staan en bij de enkel en boven de
+                                        knie pakken. De hand op het bovenbeen is fixerend, de hand
+                                        op de enkel is mobiliserend. Belangrijk is om bij de enkel
+                                        te pakken, omdat je anders het onderbeen transleert ten
+                                        opzichte van het bovenbeen i.p.v. valgiseert.
+                                    </p>
+                                </div>
+
+                                <!-- Vak 3: Interpretatie -->
+                                <div class="vak">
+                                    <h4>Positieve test</h4>
+                                    <ul class="icon-list">
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Positief bij
+                                            vergrote bewegingsuitslag en pijn
+                                        </li>
+                                    </ul>
+                                    <div class="test-parameters">
+                                        <h4>Sensitiviteit</h4>
+                                        <span class="value">0.87</span>
+                                        <h4>Specificiteit</h4>
+                                        <span class="value">Onbekend</span>
+                                    </div>
+                                    <p>
+                                        <em><strong>*Opmerking:</strong> Deze test is sneller
+                                            positief dan de varusstresstest in 20 graden omdat de
+                                            MCL
+                                            in het kapsel zit en de LCL niet.</em>
+                                    </p>
+                                </div>
+
+                                <div class="vak">
+                                    <h4>Filmpje</h4>
+                                    <video width="100%" height="200" controls>
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4" />
+                                        Je browser ondersteunt dit videoformaat niet.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TAB Lateraal Collateraal Ligament (LCL) -->
+    <div id="LCL" class="tab-content">
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Lateraal Collateraal Ligament (LCL)</h2>
+                <h3>Pathologie</h3>
+                <p>Tekst over LCL</p>
+            </div>
+        </div>
+
+        <div class="symptomen">
+            <div class="symptomen-container">
+                <h2>Symptomen</h2>
+                <ul>
+                    <li>Instabiliteit</li>
+                    <li>Zwelling & blauwe verkleuring</li>
+                    <li>Pijn aan buitenkant van de knie</li>
+                    <li>Stijfheid</li>
+                    <li>Tintelend gevoel aan de onderkant van de been</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- Varus Test -->
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Testen LCL</h2>
+                <div class="test-item-info">
+                    <button class="test-toggle-info">
+                        <span class="toggle-text">Varustest (Opening Laterale Gewrichtslijn in
+                            20°)</span>
+                        <span class="arrow">&#9660;</span>
+                    </button>
+                    <div class="test-content-info">
+                        <div class="test-content">
+                            <div class="grid-tests">
+                                <!-- Vak 1: Uitgangshouding -->
+                                <div class="vak">
+                                    <h4>Uitgangshouding</h4>
+                                    <p>
+                                        De patiënt ligt in ruglig op de onderzoeksbank met het
+                                        onderzochte been in 20° flexie. Het bovenbeen is
+                                        gestrekt,
+                                        terwijl het onderbeen in een lichte adductie wordt
+                                        gehouden.
+                                    </p>
+                                </div>
+
+                                <!-- Vak 2: Uitvoering -->
+                                <div class="vak">
+                                    <h4>Uitvoering</h4>
+                                    <p>
+                                        De fysiotherapeut voert passief de volgende beweging
+                                        uit:
+                                    </p>
                                     <ul>
-                                        <li><strong class="benadrukking">Varusbeweging:</strong> Het onderbeen wordt
-                                            lateraal geduwd, waarbij
-                                            de laterale
-                                            collaterale band (LCL) wordt getest door een varus- of adductiebeweging ten
-                                            opzichte van
-                                            het bovenbeen.</li>
+                                        <li>
+                                            <strong class="benadrukking">Varusbeweging:</strong>
+                                            Het
+                                            onderbeen wordt lateraal geduwd, waarbij de laterale
+                                            collaterale band (LCL) wordt getest door een varus-
+                                            of
+                                            adductiebeweging ten opzichte van het bovenbeen.
+                                        </li>
                                     </ul>
                                 </div>
 
@@ -160,16 +237,23 @@
                                 <div class="vak">
                                     <h4>Positieve test</h4>
                                     <ul class="icon-list">
-                                        <li><i class="fa-solid fa-check icon"></i>Opening van de laterale gewrichtslijn
-                                            bij
-                                            varusdruk</li>
-                                        <li><i class="fa-solid fa-check icon"></i>Pijn tijdens de laterale duwbeweging
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Opening van de
+                                            laterale gewrichtslijn bij varusdruk
                                         </li>
-                                        <li><i class="fa-solid fa-check icon"></i>Instabiliteit of overmatige beweging
-                                            in het
-                                            laterale gewricht</li>
-                                        <li><i class="fa-solid fa-check icon"></i>Evt. zwelling (hydrops) in het
-                                            laterale gebied
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Pijn tijdens
+                                            de
+                                            laterale duwbeweging
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Instabiliteit
+                                            of
+                                            overmatige beweging in het laterale gewricht
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Evt. zwelling
+                                            (hydrops) in het laterale gebied
                                         </li>
                                     </ul>
                                     <div class="test-parameters">
@@ -183,7 +267,7 @@
                                 <div class="vak">
                                     <h4>Filmpje</h4>
                                     <video width="100%" height="200" controls>
-                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4" />
                                         Je browser ondersteunt dit videoformaat niet.
                                     </video>
                                 </div>
@@ -195,7 +279,8 @@
                 <!-- Varustest (Opening Laterale Gewrichtslijn in 0°) -->
                 <div class="test-item-info">
                     <button class="test-toggle-info">
-                        <span class="toggle-text">Varustest (Opening Laterale Gewrichtslijn in 0°)</span>
+                        <span class="toggle-text">Varustest (Opening Laterale Gewrichtslijn in
+                            0°)</span>
                         <span class="arrow">&#9660;</span>
                     </button>
                     <div class="test-content-info">
@@ -204,37 +289,50 @@
                                 <!-- Vak 1: Uitgangshouding -->
                                 <div class="vak">
                                     <h4>Uitgangshouding</h4>
-                                    <p>De patiënt zit met het onderzochte been op de schoot of ligt op de onderzoeksbank
-                                        met de knie
-                                        in 0° extensie.</p>
+                                    <p>
+                                        De patiënt zit met het onderzochte been op de schoot of
+                                        ligt op de onderzoeksbank met de knie in 0° extensie.
+                                    </p>
                                 </div>
                                 <!-- Vak 2: Uitvoering -->
                                 <div class="vak">
                                     <h4>Uitvoering</h4>
-                                    <p>De fysiotherapeut voert passief de volgende beweging uit:</p>
+                                    <p>
+                                        De fysiotherapeut voert passief de volgende beweging
+                                        uit:
+                                    </p>
                                     <ul>
-                                        <li><strong class="benadrukking">Varusbeweging:</strong> Het onderbeen wordt
-                                            lateraal geduwd, waarbij
-                                            de laterale
-                                            collaterale band (LCL) wordt getest door een varus- of adductiebeweging ten
-                                            opzichte van
-                                            het bovenbeen.</li>
+                                        <li>
+                                            <strong class="benadrukking">Varusbeweging:</strong>
+                                            Het
+                                            onderbeen wordt lateraal geduwd, waarbij de laterale
+                                            collaterale band (LCL) wordt getest door een varus-
+                                            of
+                                            adductiebeweging ten opzichte van het bovenbeen.
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- Vak 3: Interpretatie -->
                                 <div class="vak">
                                     <h4>Positieve test</h4>
                                     <ul class="icon-list">
-                                        <li><i class="fa-solid fa-check icon"></i>Opening van de laterale gewrichtslijn
-                                            bij
-                                            varusdruk</li>
-                                        <li><i class="fa-solid fa-check icon"></i>Pijn tijdens de laterale duwbeweging
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Opening van de
+                                            laterale gewrichtslijn bij varusdruk
                                         </li>
-                                        <li><i class="fa-solid fa-check icon"></i>Instabiliteit of overmatige beweging
-                                            in het
-                                            laterale gewricht</li>
-                                        <li><i class="fa-solid fa-check icon"></i>Evt. zwelling (hydrops) in het
-                                            laterale gebied
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Pijn tijdens
+                                            de
+                                            laterale duwbeweging
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Instabiliteit
+                                            of
+                                            overmatige beweging in het laterale gewricht
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Evt. zwelling
+                                            (hydrops) in het laterale gebied
                                         </li>
                                     </ul>
                                     <div class="test-parameters">
@@ -247,7 +345,7 @@
                                 <div class="vak">
                                     <h4>Filmpje</h4>
                                     <video width="100%" height="200" controls>
-                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4" />
                                         Je browser ondersteunt dit videoformaat niet.
                                     </video>
                                 </div>
@@ -268,34 +366,51 @@
                                 <!-- Vak 1: Uitgangshouding -->
                                 <div class="vak">
                                     <h4>Uitgangshouding</h4>
-                                    <p>De patiënt ligt op de buik met de knieën tegen elkaar aan. De fysiotherapeut
-                                        staat aan het
-                                        eind van de onderzoekstafel en houdt de voeten vast in dorsaalflexie.</p>
+                                    <p>
+                                        De patiënt ligt op de buik met de knieën tegen elkaar
+                                        aan.
+                                        De fysiotherapeut staat aan het eind van de
+                                        onderzoekstafel en houdt de voeten vast in
+                                        dorsaalflexie.
+                                    </p>
                                 </div>
                                 <!-- Vak 2: Uitvoering -->
                                 <div class="vak">
                                     <h4>Uitvoering</h4>
                                     <p>De fysiotherapeut voert de volgende bewegingen uit:</p>
                                     <ul>
-                                        <li><strong class="benadrukking">Exorotatie:</strong> De fysiotherapeut draait
-                                            beide onderbenen in
+                                        <li>
+                                            <strong class="benadrukking">Exorotatie:</strong> De
+                                            fysiotherapeut draait beide onderbenen in
                                             exorotatie,
-                                            eerst met de knie in 30° flexie en daarna met de knie in 90° flexie.</li>
+                                            eerst met de knie in 30° flexie en daarna met de
+                                            knie in
+                                            90° flexie.
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- Vak 3: Interpretatie -->
                                 <div class="vak">
                                     <h4>Positieve test</h4>
                                     <ul class="icon-list">
-                                        <li><i class="fa-solid fa-check icon"></i>Toegenomen exorotatie in 30° flexie
-                                            duidt op
-                                            geïsoleerd letsel van het posterolaterale complex (PLC)</li>
-                                        <li><i class="fa-solid fa-check icon"></i>Toegenomen exorotatie in 90° flexie
-                                            wijst op een
-                                            gecombineerd letsel van het PLC en de anterior kruisband (AKB)</li>
-                                        <li><i class="fa-solid fa-check icon"></i>Bij een ernstig letsel is er meer dan
-                                            20° verschil
-                                            met de contralaterale zijde</li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Toegenomen
+                                            exorotatie in 30° flexie duidt op geïsoleerd letsel
+                                            van
+                                            het posterolaterale complex (PLC)
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Toegenomen
+                                            exorotatie in 90° flexie wijst op een gecombineerd
+                                            letsel van het PLC en de anterior kruisband (AKB)
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-check icon"></i>Bij een
+                                            ernstig
+                                            letsel is er meer dan 20° verschil met de
+                                            contralaterale
+                                            zijde
+                                        </li>
                                     </ul>
                                     <div class="test-parameters">
                                         <h4>Sensitiviteit</h4>
@@ -307,7 +422,7 @@
                                 <div class="vak">
                                     <h4>Filmpje</h4>
                                     <video width="100%" height="200" controls>
-                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
+                                        <source src="../../../../../video/VID-20201128-WA0009.mp4" type="video/mp4" />
                                         Je browser ondersteunt dit videoformaat niet.
                                     </video>
                                 </div>
@@ -316,9 +431,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+
+    <script src="../../../../scripts/tabs.js"></script>
     <script src="../../../../scripts/tekst.js"></script>
 </body>
 
@@ -328,7 +444,10 @@
     <div class="footer-content">
         <div class="footer-section">
             <h3>Fysiodex</h3>
-            <p>Professionele zorg met een persoonlijke touch. Samen werken we aan uw herstel.</p>
+            <p>
+                Professionele zorg met een persoonlijke touch. Samen werken we aan uw
+                herstel.
+            </p>
             <div class="footer-social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -348,7 +467,9 @@
 
         <div class="footer-section">
             <h3>Contact</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Straatnaam 123, 1234 AB Stad</p>
+            <p>
+                <i class="fas fa-map-marker-alt"></i> Straatnaam 123, 1234 AB Stad
+            </p>
             <p><i class="fas fa-phone"></i> (012) 345 6789</p>
             <p><i class="fas fa-envelope"></i> info@fysiodex.nl</p>
         </div>
