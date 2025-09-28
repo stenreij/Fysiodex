@@ -16,6 +16,9 @@
 }
 
 .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 2rem;
     font-weight: 700;
     color: var(--white);
@@ -23,6 +26,14 @@
     position: relative;
     z-index: 101;
 }
+
+.nav-logo img.hero-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 
 .nav-logo.active::before {
     content: '';
@@ -350,6 +361,16 @@
     display: inline-block;
     line-height: 1.4;
 }
+
+.site-footer a[href^="tel:"] {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.site-footer a[href^="tel:"]:hover {
+  transform: translateX(15px);
+}
+
 
 /* Responsive aanpassingen */
 @media (max-width: 768px) {
