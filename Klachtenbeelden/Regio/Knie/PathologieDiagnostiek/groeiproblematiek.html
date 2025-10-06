@@ -11,133 +11,170 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="../../../../index.html" class="nav-logo">Fysiodex</a>
-        <ul class="nav-links">
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="#">Gezonde voeding</a></li>
-                    <li><a href="#">Supplementen</a></li>
-                    <li><a href="#">Dieetadvies</a></li>
-                </ul>
-            </li>
-
-            <li><a href="../../../klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
-            <li><a href="#">Psychosociaal</a></li>
-        </ul>
-    </div>
-</nav>
-
-
 <body>
-    <!-- groeiproblematiek -->
-    <div class="container-theorie">
-        <div class="text-section">
-            <h2>Groeiproblematiek</h2>
-            <h3>Pathologie</h3>
-            <p>Groeiproblematiek verwijst naar een reeks aandoeningen die de normale groei en ontwikkeling van
-                het skelet beïnvloeden. Het wordt gekenmerkt door pijn aan de buitenkant van de knie,
-                veroorzaakt door irritatie van de iliotibiaalband.</p>
-        </div>
-    </div>
-
-    <!-- Full-width Symptomen sectie -->
-    <div class="symptomen">
-        <div class="symptomen-container">
-            <h2>Symptomen</h2>
-            <ul>
-                <li>....</li>
-                <li>....</li>
-                <li>....</li>
-                <li>....</li>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="nav-logo">Fysiodex</a>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Gezonde voeding</a></li>
+                        <li><a href="#">Supplementen</a></li>
+                        <li><a href="#">Dieetadvies</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../../klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
+                <li><a href="#">Psychosociaal</a></li>
             </ul>
         </div>
+    </nav>
+
+    <!-- GEMEENSCHAPPELIJKE PATHOLOGIE -->
+    <section class="container-theorie">
+        <div class="text-section">
+            <h2>Groeiproblematiek van de knie</h2>
+            <h3>Algemene pathologie</h3>
+            <p>
+                Groeiproblematiek verwijst naar een reeks aandoeningen die de normale groei en ontwikkeling van het
+                skelet beïnvloeden.
+                Bij kinderen en adolescenten vormen groeischijven vaak een kwetsbare plek door de snelle veranderingen
+                in lengte en belasting.
+            </p>
+            <p>
+                In de knie zijn de volgende vormen te onderscheiden:
+            </p>
+            <ul>
+                <li><strong>Osgood-Schlatter:</strong> Irritatie van de tuberositas tibiae door tractie van de
+                    patellapees.</li>
+                <li><strong>Sinding-Larsen-Johansson:</strong> Irritatie van de onderzijde van de patella.</li>
+            </ul>
+            <p>
+                Beide aandoeningen uiten zich in pijnklachten tijdens of na sportactiviteiten en verdwijnen meestal
+                spontaan na het einde van de groeispurt.
+            </p>
+        </div>
+    </section>
+
+    <!-- TABS NAVIGATIE -->
+    <div class="tab-nav">
+        <button class="tab-link active" data-tab="osgood">Osgood-Schlatter</button>
+        <button class="tab-link" data-tab="slj">Sinding-Larsen-Johansen</button>
     </div>
 
-    <!-- Passieve Bewegingsonderzoeken (ROM) -->
-    <div class="container-theorie">
-        <div class="text-section">
-            <h2>Testen *ontbreekt*</h2>
-            <div class="test-item-info">
-                <button class="test-toggle-info">
-                    <span class="toggle-text">Passieve Bewegingsonderzoeken (ROM)</span>
-                    <span class="arrow">&#9660;</span>
-                </button>
-                <div class="test-content-info">
-                    <div class="test-content">
-                        <div class="grid-tests">
-                            <!-- Vak 1: Uitgangshouding -->
-                            <div class="vak">
-                                <h4>Uitgangshouding</h4>
-                                <p>De patiënt ligt in ruglig op de onderzoeksbank met de benen gestrekt. De knie kan
-                                    tijdens
-                                    rotatieonderzoek in lichte flexie gebracht worden.</p>
-                                <img src="../../../../img/voeding.jpg" alt="Passieve Bewegingsonderzoeken"
-                                    class="img-vak1">
-                            </div>
+    <!-- OSGOOD-SCHLATTER -->
+    <div id="osgood" class="tab-content active">
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Osgood-Schlatter</h2>
+                <h3>Pathologie</h3>
+                <p>
+                    Osgood-Schlatter is een overbelastingsreactie van de tuberositas tibiae door repetitieve tractie van
+                    de patellapees.
+                    Het komt vooral voor bij sportieve adolescenten tijdens groeispurten.
+                </p>
+            </div>
+        </div>
 
-                            <!-- Vak 2: Uitvoering -->
-                            <div class="vak">
-                                <h4>Uitvoering</h4>
-                                <p>De fysiotherapeut voert passief de volgende bewegingen uit:</p>
-                                <ul>
-                                    <li><strong class="benadrukking">Extensie:</strong> gestrekt been wordt verder naar
-                                        extensie gebracht,
-                                        evt. met
-                                        lichte overdruk</li>
-                                    <li><strong class="benadrukking">Flexie:</strong> hiel richting bil, knie buigt
-                                        maximaal (normaal tot
-                                        160°)</li>
-                                    <li><strong class="benadrukking">Endorotatie:</strong> onderbeen wordt naar binnen
-                                        gedraaid (met knie
-                                        licht
-                                        gebogen)</li>
-                                    <li><strong class="benadrukking">Exorotatie:</strong> onderbeen wordt naar buiten
-                                        gedraaid (met knie
-                                        licht
-                                        gebogen)</li>
-                                </ul>
-                                <p>Let op eventuele beperkingen, pijnprovocatie, stijfheid of een stug eindgevoel.</p>
-                            </div>
+        <div class="symptomen">
+            <div class="symptomen-container">
+                <h2>Risicofactoren</h2>
+                <ul>
+                    <li><strong>Leeftijd:</strong> Meestal jongens 10–15 jaar, meisjes 8–13 jaar (groeispurt).</li>
+                    <li><strong>Geslacht:</strong> Vaker bij jongens, al neemt het bij meisjes toe door
+                        sportparticipatie.</li>
+                    <li><strong>Snelle groei:</strong> Mismatch tussen botlengtegroei en spier-peesaanpassing.</li>
+                    <li><strong>Sporten:</strong> Activiteiten met veel springen/sprinten en richtingsveranderingen
+                        (voetbal, basketbal, volleybal, atletiek).</li>
+                    <li><strong>Spierflexibiliteit:</strong> Strakke quadriceps en hamstrings verhogen trekkracht op de
+                        peesaanhechting.</li>
+                    <li><strong>Bilateraliteit:</strong> In 20–30% bilateraal aanwezig.</li>
+                </ul>
+            </div>
+        </div>
 
-                            <!-- Vak 3: Interpretatie -->
-                            <div class="vak">
-                                <h4>Positieve test</h4>
-                                <ul class="icon-list">
-                                    <li><i class="fa-solid fa-check icon"></i>Bewegingsbeperking (vaak in extensie of
-                                        flexie)
-                                    </li>
-                                    <li><i class="fa-solid fa-check icon"></i>Pijn tijdens eindstand of bij overdruk
-                                    </li>
-                                    <li><i class="fa-solid fa-check icon"></i>Stijf eindgevoel (benig of kapsulair)</li>
-                                    <li><i class="fa-solid fa-check icon"></i>Mogelijke zwelling (hydrops) of weerstand
-                                    </li>
-                                </ul>
-                                <div class="test-parameters">
-                                    <h4>Sensitiviteit</h4>
-                                    <span class="value">3</span>
-                                    <h4>Specifiteit</h4>
-                                    <span class="value">0.5</span>
-                                </div>
-                            </div>
+        <div class="symptomen">
+            <div class="symptomen-container">
+                <h2>Symptomen</h2>
+                <ul>
+                    <li>Pijn en drukgevoeligheid aan de tuberositas tibiae</li>
+                    <li>Verergering bij springen, sprinten of traplopen</li>
+                    <li>Lokale zwelling of palpabele verdikking</li>
+                    <li>Startpijn en belastinggerelateerde pijn</li>
+                </ul>
+            </div>
+        </div>
 
-                            <div class="vak">
-                                <h4>Filmpje</h4>
-                                <video width="100%" height="200" controls>
-                                    <source src="../../../../video/VID-20201128-WA0009.mp4" type="video/mp4">
-                                    Je browser ondersteunt dit videoformaat niet.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Testen</h2>
+                <p>
+                    De diagnose wordt meestal klinisch gesteld op basis van anamnese en palpatie van de tuberositas
+                    tibiae.
+                    Beeldvorming (röntgen of echografie) is zelden nodig.
+                </p>
             </div>
         </div>
     </div>
 
+    <!-- SINDING-LARSEN-JOHANSEN -->
+    <div id="slj" class="tab-content">
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Sinding-Larsen-Johansen (SLJ)</h2>
+                <h3>Pathologie</h3>
+                <p>
+                    Sinding-Larsen-Johansen betreft overbelasting en irritatie van de patellapeesaanhechting aan de
+                    onderzijde van de patella.
+                    Het is ook typisch voor sportieve jongeren tijdens groeifasen.
+                </p>
+            </div>
+        </div>
+
+        <div class="symptomen">
+            <div class="symptomen-container">
+                <h2>Risicofactoren</h2>
+                <ul>
+                    <li><strong>Leeftijd:</strong> Meestal 10–14 jaar.</li>
+                    <li><strong>Snelle groei:</strong> Groeispurt met mismatch van spier/peessysteem.</li>
+                    <li><strong>Sportbelasting:</strong> Activiteiten met explosieve quadricepsbelasting (springen,
+                        sprinten).</li>
+                    <li><strong>Spierfunctie:</strong> Strakke quadriceps of verkorte hamstrings verhogen belasting op
+                        de peesaanhechting.</li>
+                    <li><strong>Overbelasting:</strong> Herhaalde excentrische belasting van de quadriceps leidt tot
+                        irritatie.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="symptomen">
+            <div class="symptomen-container">
+                <h2>Symptomen</h2>
+                <ul>
+                    <li>Pijn aan de onderpool van de patella</li>
+                    <li>Toename van pijn bij springen, sprinten en excentrische quadricepsbelasting</li>
+                    <li>Drukpijn en soms zichtbare of palpabele verdikking</li>
+                    <li>Startpijn en progressieve pijn bij herhaalde belasting</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container-theorie">
+            <div class="text-section">
+                <h2>Testen</h2>
+                <p>
+                    De diagnose wordt voornamelijk klinisch gesteld op basis van anamnese en palpatie van de onderpool
+                    van de patella.
+                    Beeldvorming kan nuttig zijn bij atypische presentatie of ter uitsluiting van andere pathologie.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../../scripts/tabs.js"></script>
     <script src="../../../../scripts/tekst.js"></script>
+
 </body>
 
 <footer class="site-footer">
