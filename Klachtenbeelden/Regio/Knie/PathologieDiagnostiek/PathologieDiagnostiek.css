@@ -128,6 +128,45 @@
     transform: rotate(180deg);
 }
 
+/* NIET-UITKLAPBARE TEST (zelfde stijl als uitklapbare) */
+.test-static-info {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: #1766aa;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Zelfde spacing/structuur als de rest */
+.test-item-info.static {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ccdef6;
+    padding-bottom: 2rem;
+}
+
+/* Geen hover-effect of verplaatsing */
+.test-static-info:hover {
+    color: #1766aa;
+    cursor: default;
+}
+
+.test-static-info .toggle-text {
+    transform: none !important;
+}
+
+.test-static-info .arrow {
+    font-size: 0.9rem;
+    color: #1766aa;
+    opacity: 0.6;
+}
+
 /* 4 VAKKEN */
 .grid-tests {
     display: grid;
