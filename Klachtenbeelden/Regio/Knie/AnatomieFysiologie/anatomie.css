@@ -177,3 +177,125 @@ table tbody tr:nth-child(even) {
         overflow-x: auto;
     }
 }
+
+
+
+/* ====== LAYOUT & OPMAAK VOOR TEKST + AFBEELDING ====== */
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.text-content {
+    flex: 1 1 55%;
+    min-width: 280px;
+}
+
+.image-container {
+    flex: 1 1 40%;
+    text-align: center;
+    margin-top: 9.5rem;
+}
+
+.image-container + .text-content {
+    margin-top: -1.5rem;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #5f6f81;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+
+/* ====== INLINE AFBEELDINGEN BINNEN TEKST ====== */
+.image-container-intext {
+    text-align: center;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+.knie-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(23, 101, 170, 0.4);
+    animation: borderPulse 3s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 8px rgba(23, 101, 170, 0.4), 0 0 2px rgba(23, 101, 170, 0.2) inset;
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(23, 101, 170, 0.7), 0 0 4px rgba(23, 101, 170, 0.3) inset;
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(23, 101, 170, 0.4), 0 0 2px rgba(23, 101, 170, 0.2) inset;
+    }
+}
+
+.image-container-intext .image-caption {
+    font-size: 0.9rem;
+    color: #5f6f81;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ====== AFBEELDINGEN RECHTS ====== */
+.content-two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.text-column {
+    flex: 1 1 55%;
+    min-width: 280px;
+}
+
+.image-column {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.image-column .knie-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(23,101,170,0.4);
+    animation: borderPulse 3s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* CAROUSEL STYLING */
+.image-container-intext.side-by-side {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+    flex-wrap: wrap; 
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.image-block {
+    flex: 1 1 300px; 
+    text-align: center;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .content-inner {
+        flex-direction: column;
+    }
+}
