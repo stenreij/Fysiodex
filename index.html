@@ -11,28 +11,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo active"><img src="img/favicon/faviconfysiodex.png" alt="Fysiodex Logo" class="hero-logo">Fysiodex</a>
-        <ul class="nav-links">
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="#">Gezonde voeding</a></li>
-                    <li><a href="#">Supplementen</a></li>
-                    <li><a href="#">Dieetadvies</a></li>
-                </ul>
-            </li>
-
-            <li><a href="Klachtenbeelden/klachtenbeelden.html">Klachtenbeelden</a></li>
-            <li><a href="#">Psychosociaal</a></li>
-        </ul>
-    </div>
-</nav>
-
-
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo active"><img src="img/favicon/faviconfysiodex.png" alt="Fysiodex Logo" class="hero-logo">Fysiodex</a>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Gezonde voeding</a></li>
+                        <li><a href="#">Supplementen</a></li>
+                        <li><a href="#">Dieetadvies</a></li>
+                    </ul>
+                </li>
+                <li><a href="Klachtenbeelden/klachtenbeelden.html">Klachtenbeelden</a></li>
+                <li><a href="#">Psychosociaal</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="hero-banner">
         <div class="overlay"></div>
         <div class="hero-content">
@@ -40,8 +37,6 @@
             <p>De plek voor alles over fysiotherapie.</p>
         </div>
     </div>
-
-
 
     <div class="container-content">
         <div class="over-ons">
@@ -116,51 +111,40 @@
         <div class="keuze">
             <h2>Waarom kiezen voor Fysiodex?</h2>
             <p>Persoonlijke aandacht, wetenschappelijk onderbouwde behandelingen en een betrokken team maken ons
-                dé
-                keuze
-                voor jouw herstel en gezondheid.</p>
+                dé keuze voor jouw herstel en gezondheid.</p>
         </div>
     </div>
 
-</body>
-
-
-<footer class="site-footer">
-    <div class="footer-divider"></div>
-
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Fysiodex</h3>
-            <p>Professionele zorg met een persoonlijke touch. Samen werken we aan uw herstel.</p>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <footer class="site-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 id="footer-company-name"></h3>
+                <p id="footer-tagline"></p>
+                <div class="footer-social">
+                    <a href="#" id="footer-social-fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" id="footer-social-ig"><i class="fab fa-instagram"></i></a>
+                    <a href="#" id="footer-social-li"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Snelle links</h3>
+                <ul id="footer-quicklinks"></ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p id="footer-address"></p>
+                <p id="footer-phone1"></p>
+                <p id="footer-phone2"></p>
+                <p id="footer-email"></p>
             </div>
         </div>
-
-        <div class="footer-section links">
-            <h3>Snelle links</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Voeding</a></li>
-                <li><a href="./Klachtenbeelden/klachtenbeelden.html">Klachtenbeelden</a></li>
-                <li><a href="#">Psychosociaal</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p id="footer-copyright"></p>
         </div>
+    </footer>
 
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Straatnaam 123, 1234 AB Stad</p>
-            <p><i class="fas fa-phone"></i> (012) 345 6789</p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+31123456789" style="color: white; text-decoration: none;">+31 12 345 6789</a></p>
-            <p><i class="fas fa-envelope"></i> info@fysiodex.nl</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2026 Fysiodex. Alle rechten voorbehouden.</p>
-    </div>
-</footer>
+    <script src="../scripts/footer.js"></script>
+</body>
 
 </html>

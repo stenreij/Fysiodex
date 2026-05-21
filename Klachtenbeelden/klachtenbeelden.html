@@ -20,28 +20,25 @@
 </script>
 </head>
 
-
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="../index.html" class="nav-logo">Fysiodex</a>
-        <ul class="nav-links">
-            <li class="has-submenu">
-                <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
-                <ul class="submenu">
-                    <li><a href="#">Gezonde voeding</a></li>
-                    <li><a href="#">Supplementen</a></li>
-                    <li><a href="#">Dieetadvies</a></li>
-                </ul>
-            </li>
-
-            <li><a href="klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
-            <li><a href="#">Psychosociaal</a></li>
-        </ul>
-    </div>
-</nav>
-
-
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Fysiodex</a>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="#" class="submenu-trigger">Voeding<i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Gezonde voeding</a></li>
+                        <li><a href="#">Supplementen</a></li>
+                        <li><a href="#">Dieetadvies</a></li>
+                    </ul>
+                </li>
+                <li><a href="klachtenbeelden.html" class="active">Klachtenbeelden</a></li>
+                <li><a href="#">Psychosociaal</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="intro">
         <div class="container">
             <h2>Ontdek het lichaam</h2>
@@ -57,45 +54,40 @@
 
     <!-- Tooltip -->
     <div id="tooltip" class="tooltip"></div>
-    <script type="module" src="../scripts/model.js"></script>
-</body>
+    
+    <footer class="site-footer">
+        <div class="footer-divider"></div>
 
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 id="footer-company-name"></h3>
+                <p id="footer-tagline"></p>
+                <div class="footer-social">
+                    <a href="#" id="footer-social-fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" id="footer-social-ig"><i class="fab fa-instagram"></i></a>
+                    <a href="#" id="footer-social-li"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
 
-<footer class="site-footer">
-    <div class="footer-divider"></div>
+            <div class="footer-section">
+                <h3>Snelle links</h3>
+                <ul id="footer-quicklinks"></ul>
+            </div>
 
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Fysiodex</h3>
-            <p>Professionele zorg met een persoonlijke touch. Samen werken we aan uw herstel.</p>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p id="footer-address"></p>
+                <p id="footer-phone"></p>
+                <p id="footer-email"></p>
             </div>
         </div>
 
-        <div class="footer-section">
-            <h3>Snelle links</h3>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Voeding</a></li>
-                <li><a href="#">Klachtenbeelden</a></li>
-                <li><a href="#">Psychosociaal</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p id="footer-copyright"></p>
         </div>
-
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Straatnaam 123, 1234 AB Stad</p>
-            <p><i class="fas fa-phone"></i> (012) 345 6789</p>
-            <p><i class="fas fa-envelope"></i> info@fysiodex.nl</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2026 Fysiodex. Alle rechten voorbehouden.</p>
-    </div>
-</footer>
+    </footer>
+    <script type="module" src="../scripts/model.js"></script>
+    <script type="module" src="../scripts/footer.js"></script>
+</body>
 
 </html>

@@ -1,0 +1,23 @@
+{
+  "company": {
+    "name": "Fysiodex",
+    "tagline": "Professionele zorg met een persoonlijke touch. Samen werken we aan uw herstel.",
+    "copyright": "© 2026 Fysiodex. Alle rechten voorbehouden."
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "linkedin": "#"
+  },
+  "quickLinks": [
+    { "name": "Home", "url": "#" },
+    { "name": "Voeding", "url": "#" },
+    { "name": "Klachtenbeelden", "url": "/Klachtenbeelden/klachtenbeelden.html" },
+    { "name": "Psychosociaal", "url": "#" }
+  ],
+  "contact": {
+    "address": "Straatnaam 123, 1234 AB Stad [vanuit JSON :)]",
+    "phone": "(012) 345 6789",
+    "email": "info@fysiodex.nl"
+  }
+}
