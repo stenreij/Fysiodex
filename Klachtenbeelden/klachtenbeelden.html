@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../navbarfooter.css">
     <link rel="stylesheet" href="klachtenbeelden.css">
-    <link rel="stylesheet" href="model.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+  }
+}
+</script>
 </head>
 
 
@@ -42,22 +49,14 @@
         </div>
     </div>
 
-    <!-- Lichaam Afbeelding + Hotspots -->
-     <div class="image-container">
-        <model-viewer
-            src="../model/HumanAnatomyModel2.glb"
-            camera-controls
-            interaction-prompt="auto"
-            camera-orbit="90deg 90deg"
-            disable-zoom
-            disable-tap
-            style="width:100%; height:550px;">
-        </model-viewer>
-    </div>  
+    <!-- 3D Container -->
+    <div class="image-container">
+        <div id="model-container"></div>
+        <div id="hotspots"></div>
+    </div>
 
     <!-- Tooltip -->
     <div id="tooltip" class="tooltip"></div>
-    <script src="../scripts/klachtenbeelden.js"></script>
     <script type="module" src="../scripts/model.js"></script>
 </body>
 
