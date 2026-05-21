@@ -4,6 +4,21 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const container = document.getElementById("model-container");
 
+// Create tooltip element - Clean & Professioneel
+const tooltip = document.createElement("div");
+tooltip.style.position = "absolute";
+tooltip.style.backgroundColor = "rgba(126, 193, 255, 0.06)";
+tooltip.style.backdropFilter = "blur(1.5px)";
+tooltip.style.color = "#000000";
+tooltip.style.padding = "10px 14px";
+tooltip.style.borderRadius = "6px";
+tooltip.style.fontFamily = "'Inter', sans-serif";
+tooltip.style.fontSize = "14px";
+tooltip.style.fontWeight = "550";
+tooltip.style.zIndex = "1000";
+tooltip.style.whiteSpace = "nowrap";
+document.body.appendChild(tooltip);
+
 const scene = new THREE.Scene();
 scene.background = null;
 
@@ -32,8 +47,8 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enableZoom = true;
 controls.zoomSpeed = 1.0;
-controls.minDistance = 2.0;  // Max zoom IN (hoe dichterbij)
-controls.maxDistance = 2.8;  // Max zoom OUT
+controls.minDistance = 2.0;
+controls.maxDistance = 2.8;
 
 // Lights
 scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 2));
@@ -49,12 +64,12 @@ const mouse = new THREE.Vector2();
 let model = null;
 let hovered = null;
 
-// Drag detectie met muispositie
+// Drag detectie
 let mouseDownPos = null;
 let isDragging = false;
-const DRAG_THRESHOLD = 5; // pixels
+const DRAG_THRESHOLD = 5;
 
-// Mouse down - sla startpositie op
+// Mouse down
 container.addEventListener("mousedown", (event) => {
   mouseDownPos = {
     x: event.clientX,
@@ -63,7 +78,7 @@ container.addEventListener("mousedown", (event) => {
   isDragging = false;
 });
 
-// Mouse move - detecteer drag als muis meer dan threshold beweegt
+// Mouse move
 container.addEventListener("mousemove", (event) => {
   if (mouseDownPos) {
     const dx = Math.abs(event.clientX - mouseDownPos.x);
@@ -75,10 +90,9 @@ container.addEventListener("mousemove", (event) => {
   }
 });
 
-// Mouse up - reset drag state
+// Mouse up
 container.addEventListener("mouseup", () => {
   mouseDownPos = null;
-  // Reset isDragging na een korte vertraging
   setTimeout(() => {
     isDragging = false;
   }, 100);
@@ -95,13 +109,11 @@ loader.load(
 
     model.rotation.y = Math.PI / -2;
 
-    // Scale fix
     const box = new THREE.Box3().setFromObject(model);
     const size = box.getSize(new THREE.Vector3());
     const scale = 2 / Math.max(size.x, size.y, size.z);
     model.scale.setScalar(scale);
 
-    // Center fix
     const center = new THREE.Box3()
       .setFromObject(model)
       .getCenter(new THREE.Vector3());
@@ -112,16 +124,15 @@ loader.load(
     controls.target.set(0, 0, 0);
     controls.update();
 
-    // Clickable parts
     const clickableParts = {
-      "Hoofd&Hals": "./Regio/Hoofd/hoofd.html",
-      "Schouder&Bovenarm": "./Regio/Schouder/schouder.html",
-      "Wervelkolom": "./Regio/Wervelkolom/wervelkolom.html",
-      "Torax&Buik&Inwendigeorganen": "./Regio/Torax/torax.html",
-      "Elleboog&Hand": "./Regio/Elleboog/elleboog.html",
-      "Bekken&Bovenbeen": "./Regio/Bekken/bekken.html",
-      "Knie": "./Regio/Knie/knie.html",
-      "Onderbeen&Voet": "./Regio/Onderbeen/onderbeen.html",
+      "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd & Hals" },
+      "Schouder&Bovenarm": { route: "./Regio/Schouder/schouder.html", label: "Schouder & Bovenarm" },
+      "Wervelkolom": { route: "./Regio/Wervelkolom/wervelkolom.html", label: "Wervelkolom" },
+      "Torax&Buik&Inwendigeorganen": { route: "./Regio/Torax/torax.html", label: "Torax, Buik & Inwendige Organen" },
+      "Elleboog&Hand": { route: "./Regio/Elleboog/elleboog.html", label: "Elleboog & Hand" },
+      "Bekken&Bovenbeen": { route: "./Regio/Bekken/bekken.html", label: "Bekken & Bovenbeen" },
+      "Knie": { route: "./Regio/Knie/knie.html", label: "Knie" },
+      "Onderbeen&Voet": { route: "./Regio/Onderbeen/onderbeen.html", label: "Onderbeen & Voet" },
     };
 
     model.traverse((child) => {
@@ -132,8 +143,9 @@ loader.load(
 
       if (clickableParts[child.name]) {
         child.userData.clickable = true;
-        child.userData.route = clickableParts[child.name];
-        console.log("Clickable part found:", child.name);
+        child.userData.route = clickableParts[child.name].route;
+        child.userData.label = clickableParts[child.name].label;
+        console.log("Clickable part found:", child.name, "- Label:", child.userData.label);
       }
     });
 
@@ -147,17 +159,21 @@ loader.load(
 window.addEventListener("mousemove", (event) => {
   const rect = container.getBoundingClientRect();
   
-  // Check if mouse is inside container
   if (event.clientX >= rect.left && event.clientX <= rect.right &&
       event.clientY >= rect.top && event.clientY <= rect.bottom) {
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
+  
+  // Update tooltip positie
+  if (tooltip.style.display === "block") {
+    tooltip.style.left = (event.clientX + 15) + "px";
+    tooltip.style.top = (event.clientY - 35) + "px";
+  }
 });
 
-// Click handler - ONLY on real click (not drag)
+// Click handler
 container.addEventListener("click", (event) => {
-  // ALs er gedragged is, doe niks
   if (isDragging) {
     console.log("Drag detected, ignoring click");
     return;
@@ -168,7 +184,6 @@ container.addEventListener("click", (event) => {
     return;
   }
 
-  // Update mouse position for click
   const rect = container.getBoundingClientRect();
   mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
   mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
@@ -193,7 +208,7 @@ container.addEventListener("click", (event) => {
   }
 });
 
-// Hover effect
+// Hover effect with tooltip
 function checkHover() {
   if (!model) return;
 
@@ -210,6 +225,7 @@ function checkHover() {
     }
     hovered = null;
     container.style.cursor = "default";
+    tooltip.style.display = "none";
     return;
   }
 
@@ -227,6 +243,12 @@ function checkHover() {
   if (hit.material?.emissive) {
     hit.material.emissive.setHex(0x3b82f6);
     hit.material.emissiveIntensity = 0.3;
+  }
+
+  // Show tooltip with label
+  if (hit.userData.label) {
+    tooltip.textContent = hit.userData.label;
+    tooltip.style.display = "block";
   }
 
   container.style.cursor = "pointer";
