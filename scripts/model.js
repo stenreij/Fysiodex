@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const container = document.getElementById("model-container");
 
-// Create tooltip element - Clean & Professioneel
+// Create tooltip element
 const tooltip = document.createElement("div");
 tooltip.style.position = "absolute";
 tooltip.style.backgroundColor = "rgba(126, 193, 255, 0.06)";
@@ -42,13 +42,12 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 container.appendChild(renderer.domElement);
 
-// Controls met zoom limits
+// Controls + zoom limits
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.enableZoom = true;
-controls.zoomSpeed = 1.0;
-controls.minDistance = 2.0;
-controls.maxDistance = 2.8;
+controls.enableZoom = false;
+controls.enablePan = true;
+controls.rotateSpeed = 1.0;
 
 // Lights
 scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 2));
@@ -64,10 +63,14 @@ const mouse = new THREE.Vector2();
 let model = null;
 let hovered = null;
 
-// Drag detectie
+// Drag detection
 let mouseDownPos = null;
 let isDragging = false;
 const DRAG_THRESHOLD = 5;
+
+// Last mouseposition before scroll
+let lastMouseX = 0;
+let lastMouseY = 0;
 
 // Mouse down
 container.addEventListener("mousedown", (event) => {
@@ -124,6 +127,7 @@ loader.load(
     controls.target.set(0, 0, 0);
     controls.update();
 
+    // Define clickable parts with routes and labels
     const clickableParts = {
       "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd & Hals" },
       "Schouder&Bovenarm": { route: "./Regio/Schouder/schouder.html", label: "Schouder & Bovenarm" },
@@ -155,8 +159,11 @@ loader.load(
   (err) => console.error(err),
 );
 
-// Mouse tracking voor hover
+// Mouse tracking hover
 window.addEventListener("mousemove", (event) => {
+  lastMouseX = event.clientX;
+  lastMouseY = event.clientY;
+  
   const rect = container.getBoundingClientRect();
   
   if (event.clientX >= rect.left && event.clientX <= rect.right &&
@@ -165,10 +172,25 @@ window.addEventListener("mousemove", (event) => {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
   
-  // Update tooltip positie
+  // Tooltip position
   if (tooltip.style.display === "block") {
-    tooltip.style.left = (event.clientX + 15) + "px";
-    tooltip.style.top = (event.clientY - 35) + "px";
+    const containerRect = container.getBoundingClientRect();
+    const relativeX = event.clientX - containerRect.left;
+    const relativeY = event.clientY - containerRect.top;
+    tooltip.style.left = (relativeX + 100) + "px";
+    tooltip.style.top = (relativeY - -175) + "px";
+  }
+});
+
+// Scroll handler
+window.addEventListener("scroll", () => {
+  if (lastMouseX && lastMouseY) {
+    const rect = container.getBoundingClientRect();
+    if (lastMouseX >= rect.left && lastMouseX <= rect.right &&
+        lastMouseY >= rect.top && lastMouseY <= rect.bottom) {
+      mouse.x = ((lastMouseX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((lastMouseY - rect.top) / rect.height) * 2 + 1;
+    }
   }
 });
 

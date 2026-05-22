@@ -3,6 +3,7 @@ const jsonPath = '/json/footer-data.json';
 fetch(jsonPath)
   .then(response => response.json())
   .then(data => {
+    
     // Company info
     document.getElementById('footer-company-name').textContent = data.company.name;
     document.getElementById('footer-tagline').textContent = data.company.tagline;

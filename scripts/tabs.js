@@ -5,11 +5,11 @@ tabLinks.forEach(link => {
   link.addEventListener("click", () => {
     const tabId = link.getAttribute("data-tab");
 
-    // Active link wisselen
+    // Change active tab
     tabLinks.forEach(l => l.classList.remove("active"));
     link.classList.add("active");
 
-    // Content wisselen
+    // Change active content
     tabContents.forEach(content => {
       content.classList.remove("active");
       if (content.id === tabId) {
