@@ -3,8 +3,9 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const container = document.getElementById("model-container");
+container.style.position = "relative";
 
-// Create tooltip element
+// Create tooltip element - toegevoegd aan CONTAINER in plaats van body
 const tooltip = document.createElement("div");
 tooltip.style.position = "absolute";
 tooltip.style.backgroundColor = "rgba(126, 193, 255, 0.06)";
@@ -17,7 +18,9 @@ tooltip.style.fontSize = "14px";
 tooltip.style.fontWeight = "550";
 tooltip.style.zIndex = "1000";
 tooltip.style.whiteSpace = "nowrap";
-document.body.appendChild(tooltip);
+tooltip.style.pointerEvents = "none";
+tooltip.style.display = "none";
+container.appendChild(tooltip);  // <-- BELANGRIJK: aan container, niet aan body
 
 const scene = new THREE.Scene();
 scene.background = null;
@@ -159,7 +162,7 @@ loader.load(
   (err) => console.error(err),
 );
 
-// Mouse tracking hover
+// Mouse tracking hover - RESPONSIVE
 window.addEventListener("mousemove", (event) => {
   lastMouseX = event.clientX;
   lastMouseY = event.clientY;
@@ -172,13 +175,35 @@ window.addEventListener("mousemove", (event) => {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
   
-  // Tooltip position
+  // Responsieve tooltip positie
   if (tooltip.style.display === "block") {
     const containerRect = container.getBoundingClientRect();
     const relativeX = event.clientX - containerRect.left;
     const relativeY = event.clientY - containerRect.top;
-    tooltip.style.left = (relativeX + 100) + "px";
-    tooltip.style.top = (relativeY - -175) + "px";
+    
+    // Responsieve offsets (percentage van container)
+    const offsetX = Math.max(15, containerRect.width * 0.05);
+    const offsetY = Math.max(30, containerRect.height * 0.05);
+    
+    let leftPos = relativeX + offsetX;
+    let topPos = relativeY - offsetY;
+    
+    // Check of tooltip niet buiten container valt
+    const tooltipWidth = tooltip.offsetWidth;
+    const tooltipHeight = tooltip.offsetHeight;
+    
+    if (leftPos + tooltipWidth > containerRect.width) {
+      leftPos = relativeX - tooltipWidth - 10;
+    }
+    if (topPos < 0) {
+      topPos = relativeY + offsetY;
+    }
+    if (leftPos < 0) {
+      leftPos = 10;
+    }
+    
+    tooltip.style.left = leftPos + "px";
+    tooltip.style.top = topPos + "px";
   }
 });
 
