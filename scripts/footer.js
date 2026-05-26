@@ -1,6 +1,6 @@
-const jsonPath = '/json/footer-data.json';
+const jsonPathFooter = '/json/footer-data.json';
 
-fetch(jsonPath)
+fetch(jsonPathFooter)
   .then(response => response.json())
   .then(data => {
     
@@ -22,7 +22,7 @@ fetch(jsonPath)
     
     // Contact info
     document.getElementById('footer-address').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.contact.address}`;
-    document.getElementById('footer-phone').innerHTML = `<i class="fas fa-phone"></i> ${data.contact.phone1}`;
+    document.getElementById('footer-phone').innerHTML = `<i class="fas fa-phone"></i> ${data.contact.phone}`;
     document.getElementById('footer-email').innerHTML = `<i class="fas fa-envelope"></i> ${data.contact.email}`;
   })
   .catch(error => console.error('Error loading footer data:', error));
