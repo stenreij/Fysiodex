@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fysiodex - Knie Specialisatie</title>
+
     <link rel="stylesheet" href="../../../styles.css">
     <link rel="stylesheet" href="../../../navbarfooter.css">
     <link rel="stylesheet" href="../regio.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body>
+
     <nav class="navbar">
         <div class="nav-container"></div>
     </nav>
@@ -19,70 +23,51 @@
     <div class="container">
         <h1>Knie Specialisatie</h1>
 
-        <div class="cards-container">
-            <!-- Card 1 -->
-            <div class="card card-1">
-                <div class="card-title-wrapper">
-                    <div class="card-title">Anatomie & Fysiologie</div>
-                </div>
-                <div class="subtopics-wrapper">
-                    <ul class="subtopics">
-                        <li><a href="./AnatomieFysiologie/anatomie.html">Anatomie & Fysiologie</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="knee-wrapper">
+            <svg viewBox="-10 -10 120 120">
+                <!-- Part 1 - Top right (Pathology) -->
+                <g class="segment-group segment-group-1">
+                    <path class="segment segment-1"
+                        d="M50 50 L50 0 A50 50 0 0 1 93 75 Z" />
+                    <text class="segment-text" y="35" text-anchor="middle">
+                        <tspan x="75" dy="-4">Pathologie &</tspan>
+                        <tspan x="75" dy="4">Diagnostiek</tspan>
+                    </text>
+                    <text class="hover-text-inline hover-inline-1" y="35" text-anchor="middle">
+                        <tspan x="75" dy="-4">Pathologie &</tspan>
+                        <tspan x="75" dy="4">Diagnostiek</tspan>
+                    </text>
+                </g>
 
-            <!-- Card 2 -->
-            <div class="card card-2">
-                <div class="card-title-wrapper">
-                    <div class="card-title">Pathologie & Diagnostiek</div>
-                </div>
-                <div class="subtopics-wrapper">
-                    <ul class="subtopics">
-                        <li><a href="./PathologieDiagnostiek/fractuurZwelling.html"> Fractuur, Zwelling & Bursitis </a>
-                        </li>
-                        <li><a href="./PathologieDiagnostiek/vkbakb.html">Voorste & Achterste Kruisband (VKB & AKB)</a>
-                        </li>
-                        <li><a href="./PathologieDiagnostiek/meniscus.html">Meniscus</a></li>
-                        <li><a href="./PathologieDiagnostiek/collateraleLigamenten.html">Collaterale Ligamenten (SMCL &
-                                LLC)</a></li>
-                        <li><a href="./PathologieDiagnostiek/posteroComplexen.html">Postero Complexen (PMC, PLC)</a>
-                        </li>
-                        <li><a href="./PathologieDiagnostiek/gonartrose.html">Gonartrose</a></li>
-                        <li><a href="./PathologieDiagnostiek/jumperskneePD.html">Jumpersknee (Patellatendinopathie)</a>
-                        </li>
-                        <li><a href="./PathologieDiagnostiek/iliotibiaalbandsyndroom.html">Iliotibiaalbandsyndroom
-                                (ITBS)</a></li>
-                        <li><a
-                                href="./PathologieDiagnostiek/patellafemoraalpijnsyndroom.html">Patellafemoraalpijnsyndroom</a>
-                        </li>
-                        <li><a href="./PathologieDiagnostiek/groeiproblematiek.html">Groeiproblematiek</a></li>
-                    </ul>
-                </div>
-            </div>
+                <!-- Part 2 - Bottom middle (Treatment) -->
+                <g class="segment-group segment-group-2">
+                    <path class="segment segment-2"
+                        d="M50 50 L93 75 A50 50 0 0 1 7 75 Z" />
+                    <text class="segment-text" x="50" y="80" text-anchor="middle">Behandeling</text>
+                    <text class="hover-text-inline hover-inline-2" x="50" y="80" text-anchor="middle">Behandeling</text>
+                </g>
 
-            <!-- Card 3 -->
-            <div class="card card-3">
-                <div class="card-title-wrapper">
-                    <div class="card-title">Behandeling</div>
-                </div>
-                <div class="subtopics-wrapper">
-                    <ul class="subtopics">
-                        <li>Oefentherapie</li>
-                        <li>Therapie in de behandelkamer</li>
-                    </ul>
-                </div>
-            </div>
+                <!-- Part 3 - Top left (Anatomy) -->
+                <g class="segment-group segment-group-3">
+                    <path class="segment segment-3"
+                        d="M50 50 L7 75 A50 50 0 0 1 50 0 Z" />
+                    <text class="segment-text" y="35" text-anchor="middle">
+                        <tspan x="25" dy="-4">Anatomie &</tspan>
+                        <tspan x="25" dy="4">Fysiologie</tspan>
+                    </text>
+                    <text class="hover-text-inline hover-inline-3" y="35" text-anchor="middle">
+                        <tspan x="25" dy="-4">Anatomie &</tspan>
+                        <tspan x="25" dy="4">Fysiologie</tspan>
+                    </text>
+                </g>
+            </svg>
 
-            <div class="centered-box">
-                <h3>De Knie</h3>
-            </div>
+            <div class="center-text">De Knie</div>
         </div>
     </div>
 
     <footer class="site-footer">
         <div class="footer-divider"></div>
-
         <div class="footer-content">
             <div class="footer-section">
                 <h3 id="footer-company-name"></h3>
@@ -93,12 +78,10 @@
                     <a href="#" id="footer-social-li"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-
             <div class="footer-section">
                 <h3>Snelle links</h3>
                 <ul id="footer-quicklinks"></ul>
             </div>
-
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p id="footer-address"></p>
@@ -106,7 +89,6 @@
                 <p id="footer-email"></p>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p id="footer-copyright"></p>
         </div>
@@ -114,6 +96,7 @@
 
     <script src="../../../scripts/footer.js"></script>
     <script src="../../../scripts/navbar.js"></script>
+
 </body>
 
 </html>

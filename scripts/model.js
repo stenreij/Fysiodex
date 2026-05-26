@@ -5,7 +5,35 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 const container = document.getElementById("model-container");
 container.style.position = "relative";
 
-// Create tooltip element - toegevoegd aan CONTAINER in plaats van body
+// Cirkel loader
+const loaderCircle = document.createElement('div');
+loaderCircle.style.cssText = `
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 5px solid rgba(23, 102, 170, 0.2);
+  border-top: 5px solid #1766aa;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  z-index: 10;
+  pointer-events: none;
+`;
+
+// Voeg keyframes toe voor de spin animatie
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+`;
+document.head.appendChild(style);
+container.appendChild(loaderCircle);
+
+// Create tooltip element
 const tooltip = document.createElement("div");
 tooltip.style.position = "absolute";
 tooltip.style.backgroundColor = "rgba(126, 193, 255, 0.06)";
@@ -20,7 +48,7 @@ tooltip.style.zIndex = "1000";
 tooltip.style.whiteSpace = "nowrap";
 tooltip.style.pointerEvents = "none";
 tooltip.style.display = "none";
-container.appendChild(tooltip);  // <-- BELANGRIJK: aan container, niet aan body
+container.appendChild(tooltip);
 
 const scene = new THREE.Scene();
 scene.background = null;
@@ -45,7 +73,7 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 container.appendChild(renderer.domElement);
 
-// Controls + zoom limits
+// Controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enableZoom = false;
@@ -71,45 +99,20 @@ let mouseDownPos = null;
 let isDragging = false;
 const DRAG_THRESHOLD = 5;
 
-// Last mouseposition before scroll
 let lastMouseX = 0;
 let lastMouseY = 0;
 
-// Mouse down
-container.addEventListener("mousedown", (event) => {
-  mouseDownPos = {
-    x: event.clientX,
-    y: event.clientY
-  };
-  isDragging = false;
-});
-
-// Mouse move
-container.addEventListener("mousemove", (event) => {
-  if (mouseDownPos) {
-    const dx = Math.abs(event.clientX - mouseDownPos.x);
-    const dy = Math.abs(event.clientY - mouseDownPos.y);
-    
-    if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
-      isDragging = true;
-    }
-  }
-});
-
-// Mouse up
-container.addEventListener("mouseup", () => {
-  mouseDownPos = null;
-  setTimeout(() => {
-    isDragging = false;
-  }, 100);
-});
-
-// Load model
+// PRELOAD 
 const loader = new GLTFLoader();
+let modelLoaded = false;
+let loadStartTime = performance.now();
 
 loader.load(
   "../model/HumanModelV3.glb",
   (gltf) => {
+    const loadTime = (performance.now() - loadStartTime).toFixed(0);
+    console.log(`Model geladen in ${loadTime}ms`);
+    
     model = gltf.scene;
     scene.add(model);
 
@@ -130,7 +133,6 @@ loader.load(
     controls.target.set(0, 0, 0);
     controls.update();
 
-    // Define clickable parts with routes and labels
     const clickableParts = {
       "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd & Hals" },
       "Schouder&Bovenarm": { route: "./Regio/Schouder/schouder.html", label: "Schouder & Bovenarm" },
@@ -152,17 +154,19 @@ loader.load(
         child.userData.clickable = true;
         child.userData.route = clickableParts[child.name].route;
         child.userData.label = clickableParts[child.name].label;
-        console.log("Clickable part found:", child.name, "- Label:", child.userData.label);
       }
     });
 
-    console.log("Model loaded");
+    modelLoaded = true;
+
+    loaderCircle.remove();
+    console.log("Model ready");
   },
   undefined,
   (err) => console.error(err),
 );
 
-// Mouse tracking hover - RESPONSIVE
+// Mouse tracking
 window.addEventListener("mousemove", (event) => {
   lastMouseX = event.clientX;
   lastMouseY = event.clientY;
@@ -175,20 +179,17 @@ window.addEventListener("mousemove", (event) => {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
   
-  // Responsieve tooltip positie
   if (tooltip.style.display === "block") {
     const containerRect = container.getBoundingClientRect();
     const relativeX = event.clientX - containerRect.left;
     const relativeY = event.clientY - containerRect.top;
     
-    // Responsieve offsets (percentage van container)
-    const offsetX = Math.max(15, containerRect.width * 0.05);
-    const offsetY = Math.max(30, containerRect.height * 0.05);
+    const offsetX = Math.max(0, containerRect.width * 0.00); // Label X offset
+    const offsetY = Math.max(30, containerRect.height * 0.06); // Label Y offset
     
     let leftPos = relativeX + offsetX;
     let topPos = relativeY - offsetY;
     
-    // Check of tooltip niet buiten container valt
     const tooltipWidth = tooltip.offsetWidth;
     const tooltipHeight = tooltip.offsetHeight;
     
@@ -221,16 +222,11 @@ window.addEventListener("scroll", () => {
 
 // Click handler
 container.addEventListener("click", (event) => {
-  if (isDragging) {
-    console.log("Drag detected, ignoring click");
+  if (isDragging || !modelLoaded) {
+    if (!modelLoaded) console.log("Model nog aan het laden...");
     return;
   }
   
-  if (!model) {
-    console.log("Model not loaded yet");
-    return;
-  }
-
   const rect = container.getBoundingClientRect();
   mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
   mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
@@ -241,29 +237,43 @@ container.addEventListener("click", (event) => {
     .intersectObject(model, true)
     .filter((h) => h.object.userData.clickable);
 
-  if (hits.length === 0) {
-    console.log("No clickable part hit");
-    return;
-  }
+  if (hits.length === 0) return;
 
   const hit = hits[0].object;
-  console.log("Clicked on:", hit.name);
-
   if (hit.userData.route) {
-    console.log("Navigating to:", hit.userData.route);
     window.location.href = hit.userData.route;
   }
 });
 
-// Hover effect with tooltip
+// Mouse down
+container.addEventListener("mousedown", (event) => {
+  mouseDownPos = { x: event.clientX, y: event.clientY };
+  isDragging = false;
+});
+
+// Mouse move
+container.addEventListener("mousemove", (event) => {
+  if (mouseDownPos) {
+    const dx = Math.abs(event.clientX - mouseDownPos.x);
+    const dy = Math.abs(event.clientY - mouseDownPos.y);
+    if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
+      isDragging = true;
+    }
+  }
+});
+
+// Mouse up
+container.addEventListener("mouseup", () => {
+  mouseDownPos = null;
+  setTimeout(() => { isDragging = false; }, 100);
+});
+
+// Hover effect
 function checkHover() {
-  if (!model) return;
+  if (!model || !modelLoaded) return;
 
   raycaster.setFromCamera(mouse, camera);
-
-  const hits = raycaster
-    .intersectObject(model, true)
-    .filter((h) => h.object.userData.clickable);
+  const hits = raycaster.intersectObject(model, true).filter((h) => h.object.userData.clickable);
 
   if (hits.length === 0) {
     if (hovered?.material?.emissive) {
@@ -292,7 +302,6 @@ function checkHover() {
     hit.material.emissiveIntensity = 0.3;
   }
 
-  // Show tooltip with label
   if (hit.userData.label) {
     tooltip.textContent = hit.userData.label;
     tooltip.style.display = "block";
