@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "text": "Fysiodex",
+    "image": "/img/favicon/faviconfysiodex.png",
+    "url": "/index.html"
+  },
+  "navLinks": [
+    {
+      "type": "submenu",
+      "text": "Voeding",
+      "url": "#",
+      "submenu": [
+        { "text": "Gezonde voeding", "url": "#" },
+        { "text": "Supplementen", "url": "#" },
+        { "text": "Dieetadvies", "url": "#" }
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Klachtenbeelden",
+      "url": "/Klachtenbeelden/klachtenbeelden.html"
+    },
+    {
+      "type": "link",
+      "text": "Preventie",
+      "url": "#"
+    },
+    {
+      "type": "link",
+      "text": "Psychosociaal",
+      "url": "#"
+    }
+  ]
+}
