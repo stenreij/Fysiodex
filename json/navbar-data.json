@@ -29,6 +29,12 @@
       "type": "link",
       "text": "Psychosociaal",
       "url": "#"
+    },
+    {
+      "type": "toggle",
+      "text": "NL/LA",
+      "nlIcon": "fa-user-md",
+      "laIcon": "fa-language"
     }
   ]
 }

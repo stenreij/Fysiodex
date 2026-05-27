@@ -12,6 +12,7 @@
     padding: 0 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 80px;
 }
 
@@ -25,6 +26,7 @@
     text-decoration: none;
     position: relative;
     z-index: 101;
+    line-height: 1;
 }
 
 .nav-logo img.hero-logo {
@@ -33,7 +35,6 @@
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
-
 
 .nav-logo.active::before {
     content: '';
@@ -46,10 +47,18 @@
 
 .nav-links {
     display: flex;
-    margin-left: auto;
-    gap: 3.5rem;
+    align-items: center;
+    gap: 2rem;
     list-style: none;
     padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .nav-links li a {
@@ -57,9 +66,12 @@
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.5rem 0;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .nav-links li a::before {
@@ -67,7 +79,7 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     background: white;
     transform: scaleX(0);
@@ -80,10 +92,6 @@
     transform-origin: left;
 }
 
-.nav-links li a.active {
-    color: var(--white);
-}
-
 .nav-links li a.active::before {
     transform: scaleX(1);
     background: var(--white);
@@ -92,6 +100,9 @@
 /* SUBMENU */
 .has-submenu {
     position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .submenu {
@@ -121,6 +132,8 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    height: auto;
+    display: block;
 }
 
 .submenu li a {
@@ -167,9 +180,81 @@
     transform: rotate(180deg);
 }
 
+/* LANGUAGE TOGGLE - Animated Slider */
+.lang-toggle-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 0.5rem;
+}
 
+.lang-toggle-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    padding: 4px;
+    cursor: pointer;
+}
 
+/* De schuivende witte balk */
+.slider-bg {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: #d4e4f0;
+    border-radius: 40px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+    z-index: 0;
+}
 
+/* LA actief: schuif naar rechts */
+.lang-toggle-wrapper.la-active .slider-bg {
+    transform: translateX(100%);
+}
+
+/* Iconen standaard */
+.lang-icon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1;
+    color: white;
+}
+
+.lang-icon i {
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Actieve icoon (op de balk) - donkerder voor contrast */
+.lang-icon.active {
+    color: #1766aa;
+}
+
+/* Niet-actieve icoon */
+.lang-icon:not(.active) {
+    color: white;
+}
+
+/* Hover effect */
+.lang-icon:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect */
+.lang-toggle-wrapper:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
 
 /* Footer */
 .site-footer {
@@ -288,11 +373,6 @@
     content: none;
 }
 
-.footer-section ul li a:hover::before {
-    opacity: 1;
-    left: -5px;
-}
-
 .footer-section i {
     margin-right: 10px;
     width: 20px;
@@ -363,14 +443,13 @@
 }
 
 .site-footer a[href^="tel:"] {
-  display: inline-block;
-  transition: all 0.3s ease;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .site-footer a[href^="tel:"]:hover {
-  transform: translateX(15px);
+    transform: translateX(15px);
 }
-
 
 /* Responsive aanpassingen */
 @media (max-width: 768px) {

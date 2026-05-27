@@ -52,13 +52,30 @@ fetch(jsonPathNavbar)
         li.appendChild(a);
         li.appendChild(ul);
         navLinks.appendChild(li);
+      } else if (link.type === "toggle") {
+        const li = document.createElement("li");
+        li.className = "lang-toggle-item";
+
+        const toggleWrapper = document.createElement("div");
+        toggleWrapper.className = "lang-toggle-wrapper";
+        toggleWrapper.innerHTML = `
+        <div class="slider-bg"></div>
+        <div class="lang-icon nl-icon active" data-lang="nl">
+            <i class="fas ${link.nlIcon}"></i>
+        </div>
+        <div class="lang-icon la-icon" data-lang="la">
+            <i class="fas ${link.laIcon}"></i>
+        </div>
+    `;
+
+        li.appendChild(toggleWrapper);
+        navLinks.appendChild(li);
       } else {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = link.url;
         a.textContent = link.text;
 
-        // Check if the current path matches the link URL or its directory
         if (link.url !== "#") {
           const cleanLinkUrl = link.url.replace(/^\//, "");
           const linkDir = cleanLinkUrl.split("/")[0];

@@ -1,0 +1,17 @@
+{
+    "__comment__": "This file contains the language strings for the Fysiodex website. It is structured as a JSON object with language codes as keys and their corresponding translations as values.",
+  "nl": {
+    "__comment__": "Dutch language strings for the Fysiodex website.",
+    "__comment2__": "HOMEPAGE",
+    "welcome": "Welkom bij Fysiodex",
+    "subtitle": "De plek voor alles over fysiotherapie.",
+    "about": "Over Fysiodex"
+  },
+  "la": {
+    "__comment__": "Latin language strings for the Fysiodex website.",
+    "__comment1__": "HOMEPAGE",
+    "welcome": "Salve ad Physiodex",
+    "subtitle": "Locus omnium de physiotherapia.",
+    "about": "De Physiodex"
+  }
+}
