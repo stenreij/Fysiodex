@@ -36,7 +36,6 @@ function setLanguage(lang) {
         }
     }
     
-    // Update icon active states (voor kleur)
     // Update icon active status (color)
     if (nlIcon && laIcon) {
         if (lang === 'nl') {
