@@ -147,7 +147,7 @@ body {
 
 /* Extra sectie (diensten) */
 .extra {
-  background: rgba(23, 102, 170, 0.04);
+  background: rgba(23, 102, 170, 0.08);
   padding: 4rem 0;
   width: 100%;
   margin: 0;
@@ -188,14 +188,14 @@ body {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
-  border: 1px solid rgba(23, 102, 170, 0.1);
+  border: none;
   overflow: hidden;
   cursor: pointer;
 }
 
 /* Banner bovenkant met afbeelding */
 .card-banner {
-  height: 200px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -253,8 +253,8 @@ body {
 
 /* Hover effect */
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 30px -12px rgba(23, 102, 170, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px -12px rgba(23, 101, 170, 0.329);
 }
 
 /* Keuze sectie */

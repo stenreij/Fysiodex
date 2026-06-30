@@ -37,6 +37,7 @@ function setLanguage(lang) {
     }
     
     // Update icon active states (voor kleur)
+    // Update icon active status (color)
     if (nlIcon && laIcon) {
         if (lang === 'nl') {
             nlIcon.classList.add('active');
@@ -48,6 +49,11 @@ function setLanguage(lang) {
     }
     
     applyTranslations();
+}
+
+function toggleLanguage() {
+    const newLang = currentLanguage === 'nl' ? 'la' : 'nl';
+    setLanguage(newLang);
 }
 
 function initLanguageToggle() {
@@ -71,8 +77,8 @@ function initLanguageToggle() {
     
     setLanguage(currentLanguage);
     
-    nlIcon.addEventListener('click', () => setLanguage('nl'));
-    laIcon.addEventListener('click', () => setLanguage('la'));
+    nlIcon.addEventListener('click', toggleLanguage);
+    laIcon.addEventListener('click', toggleLanguage);
 }
 
 initLanguageToggle();

@@ -247,11 +247,6 @@
 }
 
 /* Hover effect */
-.lang-icon:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/* Hover effect */
 .lang-toggle-wrapper:hover {
     background: rgba(255, 255, 255, 0.25);
 }
