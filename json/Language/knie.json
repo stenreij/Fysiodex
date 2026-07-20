@@ -1,0 +1,58 @@
+{
+  "__comment__": "This file contains the language strings for the Fysiodex website Kneepages. It is structured as a JSON object with language codes as keys and their corresponding translations as values.",
+  "nl": {
+    "__comment__": "Dutch language strings for the Fysiodex website.",
+    
+    "page_title": "Fysiodex - Knie Specialisatie",
+    "page_header": "Knie Specialisatie",
+    "de_knie": "De Knie",
+    
+    "card1_title": "Anatomie & Fysiologie",
+    "card2_title": "Pathologie & Diagnostiek",
+    "card3_title": "Behandeling",
+    
+    "subtopic_anatomie": "Anatomie & Fysiologie",
+    "subtopic_fractuur": "Fractuur, Zwelling & Bursitis",
+    "subtopic_vkb_akb": "Voorste & Achterste Kruisband (VKB & AKB)",
+    "subtopic_meniscus": "Meniscus",
+    "subtopic_collaterale_ligamenten": "Collaterale Ligamenten (SMCL & LLC)",
+    "subtopic_postero_complexen": "Postero Complexen (PMC, PLC)",
+    "subtopic_gonartrose": "Gonartrose",
+    "subtopic_jumpersknee": "Jumpersknee (Patellatendinopathie)",
+    "subtopic_itbs": "Iliotibiaalbandsyndroom (ITBS)",
+    "subtopic_patellafemoraal": "Patellafemoraalpijnsyndroom",
+    "subtopic_groeiproblematiek": "Groeiproblematiek",
+    
+    "behandeling_oefentherapie": "Oefentherapie",
+    "behandeling_kamer": "Therapie in de behandelkamer"
+    
+  },
+
+  "la": {
+    "__comment__": "Latin language strings for the Fysiodex website.",
+    
+    "page_title": "Fysiodex - Articulatio Genu",
+    "page_header": "Articulatio Genu",
+    "de_knie": "Articulatio Genu",
+    
+    "card1_title": "Anatomia & Physiologia",
+    "card2_title": "Pathologia & Diagnostica",
+    "card3_title": "Curatio",
+    
+    "subtopic_anatomie": "Anatomia & Physiologia",
+    "subtopic_fractuur": "Fractura, Tumefactio & Bursitis",
+    "subtopic_vkb_akb": "Ligamentum Cruciatum Anterius & Posterius",
+    "subtopic_meniscus": "Meniscus",
+    "subtopic_collaterale_ligamenten": "Ligamenta Collateralia (SMCL & LLC)",
+    "subtopic_postero_complexen": "Complexus Posteriores (PMC, PLC)",
+    "subtopic_gonartrose": "Gonarthrosis",
+    "subtopic_jumpersknee": "Morbus Jumpersknee (Tendinopathia Patellaris)",
+    "subtopic_itbs": "Syndroma Tractus Iliotibialis (ITBS)",
+    "subtopic_patellafemoraal": "Syndroma Doloris Patellofemoralis",
+    "subtopic_groeiproblematiek": "Problemata Incrementi",
+    
+    "behandeling_oefentherapie": "Therapia Exercitationum",
+    "behandeling_kamer": "Therapia in Cubiculo"
+    
+  }
+}

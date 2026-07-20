@@ -5,13 +5,44 @@ let laIcon = null;
 let toggleWrapper = null;
 let translations = {};
 
-fetch('/json/language.json')
-    .then(response => response.json())
-    .then(data => {
-        translations = data;
+// Define the translation files to load
+const translationFiles = [
+    '/json/language/home.json',      
+    '/json/language/knie.json',  
+
+    // Add more translation files as needed
+];
+
+// Fetch and load all translation files
+async function loadTranslations() {
+    try {
+        const allTranslations = await Promise.all(
+            translationFiles.map(async (file) => {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    console.warn(`Kon ${file} niet laden, wordt overgeslagen`);
+                    return {};
+                }
+                return await response.json();
+            })
+        );
+
+        // Merge all translations into a single object
+        translations = {};
+        allTranslations.forEach(translationChunk => {
+            Object.keys(translationChunk).forEach(lang => {
+                if (!translations[lang]) {
+                    translations[lang] = {};
+                }
+                Object.assign(translations[lang], translationChunk[lang]);
+            });
+        });
+
         applyTranslations();
-    })
-    .catch(error => console.error('Error loading translations:', error));
+    } catch (error) {
+        console.error('Error loading translations:', error);
+    }
+}
 
 function applyTranslations() {
     document.querySelectorAll('[data-translate]').forEach(el => {
@@ -80,4 +111,6 @@ function initLanguageToggle() {
     laIcon.addEventListener('click', toggleLanguage);
 }
 
+// Start met laden
+loadTranslations();
 initLanguageToggle();
