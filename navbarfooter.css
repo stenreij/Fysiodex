@@ -107,7 +107,7 @@
 
 .submenu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100%);
     left: 50%;
     transform: translateX(-50%) translateY(5px);
     background: var(--primary-blue);
