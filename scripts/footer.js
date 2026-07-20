@@ -14,7 +14,7 @@ fetch(jsonPathFooter)
     document.getElementById('footer-social-ig').href = data.social.instagram;
     document.getElementById('footer-social-li').href = data.social.linkedin;
     
-    // Quick links
+    // SiteLinks
     const quickLinksList = document.getElementById('footer-quicklinks');
     quickLinksList.innerHTML = data.quickLinks.map(link => 
       `<li><a href="${link.url}">${link.name}</a></li>`

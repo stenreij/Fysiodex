@@ -7,14 +7,21 @@
     <title>Fysiodex - Homepage</title>
     <link rel="icon" type="image/png" href="img/favicon/faviconfysiodex.png" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="navbarfooter.css" />
-    <!-- <link rel="stylesheet" href="footer.css" /> -->
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
     <nav class="navbar" role="navigation" aria-label="Hoofdnavigatie">
-        <div class="nav-container"></div>
+        <div class="nav-container">
+            <!-- Hamburger knop (alleen zichtbaar op mobiel) -->
+            <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </nav>
 
     <main id="main-content">
@@ -184,7 +191,7 @@
                 </div>
             </div>
             <div class="footer-section links">
-                <h3>Snelle links</h3>
+                <h3>Links</h3>
                 <ul id="footer-quicklinks"></ul>
             </div>
             <div class="footer-section">
