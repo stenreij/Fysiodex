@@ -177,13 +177,17 @@ body {
 
 /* CARDS */
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .card {
+  flex: 0 1 calc(33.333% - 1.5rem);
+  max-width: 350px;
+  min-width: 250px;
   background: var(--white);
   border-radius: 16px;
   text-decoration: none;
@@ -194,6 +198,27 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+}
+
+/* Op tablets 2 per rij */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 1 calc(50% - 1.5rem);
+  }
+}
+
+/* Op mobiel 1 per rij */
+@media (max-width: 640px) {
+  .cards-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
 }
 
 /* Banner card */

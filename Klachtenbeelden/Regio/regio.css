@@ -1,3 +1,7 @@
+/* ============================================
+   REGIO.CSS - Voor alle regio-pagina's
+   ============================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -19,25 +23,45 @@
   width: 100%;
 }
 
+/* ============================================
+   HEADER MET TITEL + AFBEELDING
+   ============================================ */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
 h1 {
   text-align: center;
-  margin-bottom: 2.5rem;
   color: var(--primary);
   font-weight: 600;
   font-size: 2.2rem;
+  margin: 0;
 }
 
-/* 2 cards per row */
+.knie-header-image {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ============================================
+   3 CARDS PER ROW - ALLE ZELFDE KLEUR
+   ============================================ */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   position: relative;
 }
 
-/* Card layout */
+/* Card layout - alle hoeken rond */
 .card {
-  background: var(--card-bg);
+  background: var(--blue-light);
   box-shadow: var(--shadow);
   overflow: hidden;
   padding: 0;
@@ -47,53 +71,14 @@ h1 {
   position: relative;
   min-height: 350px;
   transition: var(--transition);
-  border-radius: 0;
+  border-radius: var(--border-radius);
 }
 
-/* Achtergrondkleuren per kaart */
-.card-1 {
-  border-top-left-radius: var(--border-radius);
-}
-
-.card-2 {
-  border-top-right-radius: var(--border-radius);
-}
-
-.card-3 {
-  border-bottom-left-radius: var(--border-radius);
-}
-
-.card-4 {
-  border-bottom-right-radius: var(--border-radius);
-}
-
-.card-1, .card-4 {
-  background: var(--blue-light);
-}
-
-.card-2, .card-3 {
-  background: var(--blue-light2);
-}
-
-.card-1:hover, .card-4:hover {
-  background: var(--blue-light2);
-}
-
-.card-2:hover, .card-3:hover {
-  background: var(--blue-light);
-}
-
-
-
+/* Hover - iets lichtere blauw */
 .card:hover {
+  background: #a3c7df;
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 /* Titel wrapper gecentreerd */
@@ -152,7 +137,7 @@ h1 {
 }
 
 .subtopics a:hover {
-  color: var(--dark-text);
+  color: var(--primary-blue);
 }
 
 .subtopics li:hover {
@@ -164,7 +149,7 @@ h1 {
   font-weight: bold;
 }
 
-/* Hover-overgangen */
+/* Hover-overgangen - titel verdwijnt, links verschijnen */
 .card:hover .card-title-wrapper {
   opacity: 0;
   pointer-events: none;
@@ -175,23 +160,79 @@ h1 {
   pointer-events: auto;
 }
 
-/* Middenvlak voor "De Knie" */
+/* ============================================
+   CENTERED BOX (plaatje onderaan)
+   ============================================ */
 .centered-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  text-align: center;
-  color: var(--dark);
+  padding: 1rem 0;
 }
 
 .knie-image {
-    max-width: 100%;
-    height: auto;
-    max-height: 250px;
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: contain;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .centered-box {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card {
+    min-height: 280px;
+  }
+  
+  .centered-box {
+    grid-column: 1;
+  }
+  
+  .header-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .knie-header-image {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+    margin: 1.5rem auto;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .subtopics a {
+    font-size: 0.85rem;
+  }
 }

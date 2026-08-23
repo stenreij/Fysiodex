@@ -12,16 +12,6 @@
     "card3_title": "Behandeling",
     
     "subtopic_anatomie": "Anatomie & Fysiologie",
-    "subtopic_fractuur": "Fractuur, Zwelling & Bursitis",
-    "subtopic_vkb_akb": "Voorste & Achterste Kruisband (VKB & AKB)",
-    "subtopic_meniscus": "Meniscus",
-    "subtopic_collaterale_ligamenten": "Collaterale Ligamenten (SMCL & LLC)",
-    "subtopic_postero_complexen": "Postero Complexen (PMC, PLC)",
-    "subtopic_gonartrose": "Gonartrose",
-    "subtopic_jumpersknee": "Jumpersknee (Patellatendinopathie)",
-    "subtopic_itbs": "Iliotibiaalbandsyndroom (ITBS)",
-    "subtopic_patellafemoraal": "Patellafemoraalpijnsyndroom",
-    "subtopic_groeiproblematiek": "Groeiproblematiek",
     
     "behandeling_oefentherapie": "Oefentherapie",
     "behandeling_kamer": "Therapie in de behandelkamer"
@@ -40,16 +30,6 @@
     "card3_title": "Curatio",
     
     "subtopic_anatomie": "Anatomia & Physiologia",
-    "subtopic_fractuur": "Fractura, Tumefactio & Bursitis",
-    "subtopic_vkb_akb": "Ligamentum Cruciatum Anterius & Posterius",
-    "subtopic_meniscus": "Meniscus",
-    "subtopic_collaterale_ligamenten": "Ligamenta Collateralia (SMCL & LLC)",
-    "subtopic_postero_complexen": "Complexus Posteriores (PMC, PLC)",
-    "subtopic_gonartrose": "Gonarthrosis",
-    "subtopic_jumpersknee": "Morbus Jumpersknee (Tendinopathia Patellaris)",
-    "subtopic_itbs": "Syndroma Tractus Iliotibialis (ITBS)",
-    "subtopic_patellafemoraal": "Syndroma Doloris Patellofemoralis",
-    "subtopic_groeiproblematiek": "Problemata Incrementi",
     
     "behandeling_oefentherapie": "Therapia Exercitationum",
     "behandeling_kamer": "Therapia in Cubiculo"
