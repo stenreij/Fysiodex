@@ -1,0 +1,119 @@
+{
+  "__comment__": "This file contains the language strings for the Fysiodex website Knee anatomy page. It is structured as a JSON object with language codes as keys and their corresponding translations as values.",
+  "nl": {
+    "__comment__": "Dutch language strings for the Fysiodex website.",
+    "page_title": "Fysiodex - Knie Specialisatie",
+    "page_header": "Knie Specialisatie",
+
+    "kniegewricht": "Het kniegewricht",
+    "botten": "botten",
+    "kapsels": "kapsels",
+    "banden": "banden",
+    "menisci": "menisci",
+    "spieren": "spieren",
+    "pezen": "pezen",
+    "bloedvaten": "bloedvaten",
+    "zenuwen": "zenuwen",
+
+    "Deknie": "De knie",
+    "deknie": "de knie",
+
+    "botstructuren": "Botstructuren",
+    "Femur": "Dijbeen",
+    "femur": "dijbeen",
+    "bovenste": "bovenste",
+    "Tibia": "Scheenbeen",
+    "tibia": "scheenbeen",
+    "onderste": "onderste",
+    "Patella": "Knieschijf",
+    "patella": "knieschijf",
+    "pees": "pees",
+
+    "gewrichtsopbouw": "Gewrichtsopbouw",
+    "Kraakbeen": "Kraakbeen",
+    "kraakbeen": "kraakbeen",
+    "Kapsel": "Kapsel",
+    "kapsel": "kapsel",
+
+    "buigen": "buigen",
+    "strekken": "strekken",
+    "bindweefsel": "bindweefsel",
+    "gewricht": "gewricht",
+    "synoviaal membraan": "Synoviaal membraan",
+    "gewrichtsvloeistof": "Gewrichtsvloeistof",
+    "Gewrichtsvlakken": "Gewrichtsvlakken",
+    "glasachtigkraakbeen": "glasachtig kraakbeen",
+    "avasculariteit": "bloedvaten",
+    "denervatie": "zenuwen",
+
+    "Banden": "Banden",
+    "Vkb": "Voorste kruisband",
+    "Akb": "Achterste kruisband",
+    "naarvoren": "naar voren schuift",
+    "naarachter": "naar achteren schuift",
+    "Binnenband": "Binenband",
+    "Buitenband": "Buitenband",
+    "binnen": "binnen",
+    "buiten": "buiten"
+    
+  },
+
+  "la": {
+    "__comment__": "Latin language strings for the Fysiodex website.",
+    "page_title": "Fysiodex - Articulatio Genu",
+    "page_header": "Knie Specialisatie",
+
+    "kniegewricht": "Articulatio genus",
+    "botten": "ossa",
+    "kapsels": "capsulae",
+    "banden": "ligamenta",
+    "menisci": "menisci",
+    "spieren": "musculi",
+    "pezen": "tendines",
+    "bloedvaten": "arteriae/venae",
+    "zenuwen": "nervi",
+
+
+    "Deknie": "Art. genus",
+    "deknie": "art. genus",
+
+    "botstructuren": "Ossale structuren",
+    "Femur": "Femur",
+    "femur": "femur",
+    "bovenste": "proximale",
+    "Tibia": "Tibia",
+    "tibia": "tibia",
+    "onderste": "distale",
+    "Patella": "Patella",
+    "patella": "patella",
+    "pees": "tendon",
+
+    "gewrichtsopbouw": "Structura articularis",
+    "Kraakbeen": "Cartilago",
+    "kraakbeen": "cartilageneuze weefsel",
+    "Kapsel": "Capsula",
+    "kapsel": "capsula",
+
+    "buigen": "flexie",
+    "strekken": "extensie",
+    "bindweefsel": "fascia",
+    "gewricht": "articulatio",
+    "synoviaal membraan": "Membrana synovialis",
+    "gewrichtsvloeistof": "synovia",
+    "Gewrichtsvlakken": "Facies articulares",
+    "glasachtigkraakbeen": "cartilago hyalina",
+    "avasculariteit": "arteriae/venae (avasculariteit)",
+    "denervatie": "nervi (denervatie)",
+
+    "Banden": "Ligamenta",
+    "Vkb": "Ligamentum cruciatum anterius",
+    "Akb": "Ligamentum cruciatum posterius",
+    "naarvoren": "anterior transleert",
+    "naarachter": "posterior transleert",
+    "Binnenband": "Mediale collaterale ligament",
+    "Buitenband": "Laterale collaterale ligament",
+    "binnen": "valgus",
+    "buiten": "varus"
+
+  }
+}

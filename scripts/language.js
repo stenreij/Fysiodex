@@ -7,10 +7,13 @@ let translations = {};
 
 // Define the translation files to load
 const translationFiles = [
-    '/json/language/home.json',      
-    '/json/language/knie.json',  
+    '/json/language/home.json',     
+    //KNIE 
+    '/json/language/Knie/knie.json',  
+    '/json/language/Knie/anatomie.json',
 
-    // Add more translation files as needed
+    // OTHER GROUPS
+    
 ];
 
 // Fetch and load all translation files
