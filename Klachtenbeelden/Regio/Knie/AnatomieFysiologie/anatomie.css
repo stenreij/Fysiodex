@@ -294,11 +294,8 @@ table tbody tr:nth-child(even) {
 .image-column .knie-image {
     max-width: 100%;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(23, 101, 170, 0.4);
-    animation: borderPulse 3s ease-in-out infinite;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 
 /* CAROUSEL STYLING */

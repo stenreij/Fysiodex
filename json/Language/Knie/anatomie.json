@@ -35,8 +35,11 @@
     "Kapsel": "Kapsel",
     "kapsel": "kapsel",
 
+    "buiging": "buiging",
     "buigen": "buigen",
+    "hetbuigen": "buigen",
     "strekken": "strekken",
+    "hetstrekken": "het strekken",
     "bindweefsel": "bindweefsel",
     "gewricht": "gewricht",
     "synoviaal membraan": "Synoviaal membraan",
@@ -48,14 +51,51 @@
 
     "Banden": "Banden",
     "Vkb": "Voorste kruisband",
+    "vkb": "voorste kruisband",
     "Akb": "Achterste kruisband",
+    "akb": "achterste kruisband",
     "naarvoren": "naar voren schuift",
     "naarachter": "naar achteren schuift",
-    "Binnenband": "Binenband",
+    "Binnenband": "Binnenband",
+    "binnenband": "binnenband",
     "Buitenband": "Buitenband",
+    "buitenband": "buitenband",
     "binnen": "binnen",
-    "buiten": "buiten"
-    
+    "binnenste": "binnenste",
+    "Binnenste": "Binnenste",
+    "buiten": "buiten",
+    "buitenste": "buitenste",
+    "Buitenste": "Buitenste",
+
+    "Meniscussen": "Meniscussen",
+    "meniscussen": "meniscussen",
+    "vezelig": "vezelig",
+
+    "Vascularisatie": "Doorbloeding",
+    "vascularisatie": "doorbloeding",
+    "scheur": "scheur",
+    "scheuren": "scheuren",
+    "haarvaatnetwerk": "haarvatennetwerk uit slijmvlies",
+
+    "Spieren": "Spieren",
+    "Pezen": "Pezen",
+    "scheenbeenknobbel": "scheenbeenknobbel",
+    "Musculatuur": "Spieren",
+    "oppervlakkig": "oppervlakkig",
+    "diep": "diep",
+    "achterzijde": "achterzijde",
+    "voorzijde": "voorzijde", 
+
+    "Bezenuwing": "Bezenuwing",
+    "slagaders": "slagaders",
+    "hetkniegewricht": "kniegewricht",
+    "bezenuwd": "bezenuwd",
+    "aders": "aders",
+    "Aders": "Aders",
+    "slagader": "slagader",
+    "veschuiving": "verschuiving",
+    "gestrekt": "gestrekt"
+
   },
 
   "la": {
@@ -94,8 +134,11 @@
     "Kapsel": "Capsula",
     "kapsel": "capsula",
 
+    "buiging": "flexie",
     "buigen": "flexie",
+    "hetbuigen": "flecteren",
     "strekken": "extensie",
+    "hetstrekken": "extensie",
     "bindweefsel": "fascia",
     "gewricht": "articulatio",
     "synoviaal membraan": "Membrana synovialis",
@@ -107,13 +150,52 @@
 
     "Banden": "Ligamenta",
     "Vkb": "Ligamentum cruciatum anterius",
+    "vkb": "ligamentum cruciatum anterius",
     "Akb": "Ligamentum cruciatum posterius",
+    "akb": "ligamentum cruciatum posterius",
     "naarvoren": "anterior transleert",
     "naarachter": "posterior transleert",
     "Binnenband": "Mediale collaterale ligament",
+    "binnenband": "mediale collaterale ligament",
     "Buitenband": "Laterale collaterale ligament",
+    "buitenband": "laterale collaterale ligament",
     "binnen": "valgus",
-    "buiten": "varus"
+    "binnenste": "mediale",
+    "Binnenste": "Mediale",
+    "buiten": "varus",
+    "buitenste": "laterale",
+    "Buitenste": "Laterale",
+
+    "Meniscussen": "Menisci",
+    "meniscussen": "menisci",
+    "vezelig": "fibrocartilageneus",
+
+    "Vascularisatie": "Vascularisatie",
+    "vascularisatie": "vascularisatie",
+    "scheur": "laesie",
+    "scheuren": "laesies",
+    "haarvaatnetwerk": "capillair netwerk uit synovium",
+
+    "Spieren": "Musculi",
+    "Pezen": "Tendines",
+    "scheenbeenknobbel": "tuberositas tibiae",
+    "Musculatuur": "Musculatuur",
+    "oppervlakkig": "superficialis",
+    "diep": "profundus",
+    "achterzijde": "dorsale zijde",
+    "voorzijde": "ventrale zijde",
+
+    "Bezenuwing": "Innervatie",
+    "slagaders": "arteriae",
+    "hetkniegewricht": "art. genus",
+    "bezenuwd": "geïnnerveerd",
+    "aders": "venae",
+    "Aders": "Venae",
+    "slagader": "arteria",
+    "veschuiving": "translatie",
+    "gestrekt": "in extensie"
+
+
 
   }
 }
