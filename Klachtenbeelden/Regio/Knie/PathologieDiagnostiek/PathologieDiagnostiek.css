@@ -61,6 +61,16 @@
     line-height: 2.5;
 }
 
+.img-vak1 {
+    max-height: 250px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 /* ====== UITKLAPBARE SECTIES - CLEAN VERSIE ====== */
 .test-item-info {
@@ -224,7 +234,6 @@
 
 strong.benadrukking {
     color: #1766aa;
-    font-style: italic;
     font-weight: 600;
 }
 
@@ -315,7 +324,6 @@ ul li::marker {
 
 .benadrukking {
     color: #1766aa;
-    font-style: italic;
 }
 
 /* ====== TABELLEN ====== */
