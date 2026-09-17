@@ -108,7 +108,7 @@ container.addEventListener("mouseup", () => {
 const loader = new GLTFLoader();
 
 loader.load(
-  "../model/HumanModel.glb",
+  "../model/HumanModelV4.glb",
   (gltf) => {
     model = gltf.scene;
     scene.add(model);
@@ -132,14 +132,14 @@ loader.load(
 
     // Define clickable parts with routes and labels
     const clickableParts = {
-      "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd & Hals" },
+      "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd, Nek & Hals" },
       "Schouder&Bovenarm": { route: "./Regio/Schouder/schouder.html", label: "Schouder & Bovenarm" },
       "Wervelkolom": { route: "./Regio/Wervelkolom/wervelkolom.html", label: "Wervelkolom" },
-      "Torax&Buik&Inwendigeorganen": { route: "./Regio/Torax/torax.html", label: "Torax, Buik & Inwendige Organen" },
-      "Elleboog&Hand": { route: "./Regio/Elleboog/elleboog.html", label: "Elleboog & Hand" },
-      "Bekken&Bovenbeen": { route: "./Regio/Bekken/bekken.html", label: "Bekken & Bovenbeen" },
+      "Torax&Buik&Inwendigeorganen": { route: "./Regio/Torax/torax.html", label: "Thorax, Buik & Inwendige Organen" },
+      "Elleboog&Hand": { route: "./Regio/Elleboog/elleboog.html", label: "Elleboog, Pols & Hand" },
+      "Bekken&Bovenbeen": { route: "./Regio/Bekken/bekken.html", label: "Heup, Bekken & Bovenbeen" },
       "Knie": { route: "./Regio/Knie/knie.html", label: "Knie" },
-      "Onderbeen&Voet": { route: "./Regio/Onderbeen/onderbeen.html", label: "Onderbeen & Voet" },
+      "Onderbeen&Voet": { route: "./Regio/Onderbeen/onderbeen.html", label: "Onderbeen, Enkel & Voet" },
     };
 
     model.traverse((child) => {

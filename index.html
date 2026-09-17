@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fysiodex - Homepage</title>
-    <link rel="icon" type="image/png" href="img/favicon/faviconfysiodex.png"/>
+    <link rel="icon" type="image/png" href="img/favicon/faviconfysiodex.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
@@ -26,12 +26,40 @@
 
     <main id="main-content">
         <div class="hero-banner" role="banner" aria-label="Welkomstbanner">
+            <div class="hero-slides">
+                <div class="hero-slide active">
+                    <video autoplay muted playsinline preload="auto">
+                        <source src="video/Banner/banner1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="hero-slide">
+                    <video muted playsinline preload="auto">
+                        <source src="video/Banner/banner2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="hero-slide">
+                    <video muted playsinline preload="auto">
+                        <source src="video/Banner/banner3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="hero-slide">
+                    <video muted playsinline preload="auto">
+                        <source src="video/Banner/banner4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1 data-translate="welcome">Welkom bij Fysiodex</h1>
                 <p data-translate="subtitle">
                     De plek voor alles over fysiotherapie.
                 </p>
+            </div>
+            <div class="hero-dots">
+                <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
             </div>
         </div>
 
@@ -117,8 +145,8 @@
 
                     <a href="./Behandelingen/behandelingen.html" class="card" aria-label="Behandelingen bekijken">
                         <div class="card-banner">
-                            <img src="./img/behandeling.webp" alt="Behandelingen"
-                                data-translate-alt="behandelingen_alt" loading="lazy" />
+                            <img src="./img/behandeling.webp" alt="Behandelingen" data-translate-alt="behandelingen_alt"
+                                loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Behandelingen</h3>
@@ -222,6 +250,7 @@
 
     <script src="scripts/navbar.js"></script>
     <script src="scripts/footer.js"></script>
+    <script src="scripts/carousel.js"></script>
     <script src="scripts/language.js"></script>
 </body>
 

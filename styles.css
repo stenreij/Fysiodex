@@ -38,18 +38,82 @@ body {
   flex-direction: column;
 }
 
-/* Hero Banner */
+/* ============================================
+   HERO CAROUSEL
+   ============================================ */
 .hero-banner {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  min-height: 400px;
-  background: url(img/banner.webp) no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: rgb(226, 238, 255);
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    min-height: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    color: rgb(226, 238, 255);
+    background: rgba(255, 255, 255, 0);
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Video in slide */
+.hero-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Elke slide */
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* Dots navigatie */
+.hero-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 3;
+}
+
+.hero-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.hero-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-dot.active {
+    background: var(--blue-light2);
+    border-color: var(--blue-active);
+    transform: scale(1.25);
 }
 
 .overlay {
@@ -178,18 +242,18 @@ body {
 /* CARDS */
 .cards-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .card {
-  flex: 0 1 calc(33.333% - 1.5rem);
-  max-width: 350px;
-  min-width: 250px;
+  flex: 1 1 0;
+  max-width: 300px;
+  min-width: 100px;
   background: var(--white);
-  border-radius: 16px;
+  border-radius: 10px;
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
@@ -200,30 +264,54 @@ body {
   flex-direction: column;
 }
 
-/* Op tablets 2 per rij */
 @media (max-width: 1024px) {
-  .card {
-    flex: 0 1 calc(50% - 1.5rem);
-  }
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 0 1 calc(33.333% - 1rem);
+        max-width: calc(33.333% - 1rem);
+    }
+
+    .card-banner {
+        height: 180px;
+    }
 }
 
-/* Op mobiel 1 per rij */
-@media (max-width: 640px) {
-  .cards-container {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .card {
-    flex: 0 1 100%;
-    max-width: 100%;
-  }
+/* Mobiel - 2 per rij */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+    }
+
+    .card-banner {
+        height: 160px;
+    }
+}
+
+/* Kleine telefoons - 1 per rij */
+@media (max-width: 480px) {
+    .cards-container {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+
+    .card-banner {
+        height: 200px;
+    }
 }
 
 /* Banner card */
 .card-banner {
-  height: 200px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   position: relative;
