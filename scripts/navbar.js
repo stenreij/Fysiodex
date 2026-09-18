@@ -11,9 +11,6 @@ fetch(jsonPathNavbar)
         const navLogo = document.createElement("a");
         navLogo.href = data.logo.url;
         navLogo.className = "nav-logo";
-        if (currentPath === "/" || currentPath === "/index.html") {
-            navLogo.classList.add("active");
-        }
 
         const logoImg = document.createElement("img");
         logoImg.src = data.logo.image;

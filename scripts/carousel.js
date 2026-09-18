@@ -22,7 +22,9 @@
             if (video) {
                 if (isActive) {
                     video.currentTime = 0;
-                    video.play().catch(() => {});
+                    video.play().catch((err) => {
+                        console.log('Video play error:', err);
+                    });
                 } else {
                     video.pause();
                 }
@@ -50,7 +52,7 @@
         goToSlide(next);
     }
 
-    // Listen for video 'ended' events to automatically go to the next slide
+    // 'ended' events
     slides.forEach((slide) => {
         const video = slide.querySelector('video');
         if (video) {
@@ -63,10 +65,10 @@
         }
     });
 
-    // Start with the first video
+    // Start
     goToSlide(0);
 
-    // Dots click events
+    // Dots
     dots.forEach((dot) => {
         dot.addEventListener('click', () => {
             const index = parseInt(dot.dataset.slide, 10);
@@ -74,7 +76,7 @@
         });
     });
 
-    // Pause video when the page is not visible
+    // Pause videos when the page is hidden and play when visible
     document.addEventListener('visibilitychange', () => {
         const activeVideo = slides[currentIndex]?.querySelector('video');
         if (document.hidden) {

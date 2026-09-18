@@ -39,7 +39,7 @@ body {
 }
 
 /* ============================================
-   HERO CAROUSEL
+   VIDEO CAROUSEL
    ============================================ */
 .hero-banner {
     position: relative;
@@ -244,14 +244,15 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .card {
   flex: 1 1 0;
-  max-width: 300px;
-  min-width: 100px;
+  max-width: 250px;
+  min-width: 250px;
   background: var(--white);
   border-radius: 10px;
   text-decoration: none;

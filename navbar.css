@@ -26,6 +26,12 @@
     position: relative;
     z-index: 101;
     line-height: 1;
+    transition: transform 0.25s ease;
+    transform-origin: center;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
 }
 
 .nav-logo img.hero-logo {
