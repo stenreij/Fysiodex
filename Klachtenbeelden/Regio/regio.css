@@ -1,31 +1,18 @@
-/* ============================================
-   REGIO.CSS - Voor alle regio-pagina's
-   ============================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 :root {
   --primary: #2b6cb0;
-  --secondary: #2c5282;
-  --accent: #4299e1;
-  --light: #f7fafc;
-  --dark: #1a202c;
   --border-radius: 12px;
-  --transition: all 0.3s ease;
-  --card-bg: #ffffff;
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 30px -12px rgba(23, 101, 170, 0.329);
 }
 
 .container {
-  max-width: 1200px;
+  flex: 1;
+  max-width: 1210px;
   margin: 3rem auto;
   padding: 0 1rem;
-  width: 100%;
 }
 
-/* ============================================
-   HEADER MET TITEL + AFBEELDING
-   ============================================ */
+/* HEADER */
 .header-wrapper {
   display: flex;
   align-items: center;
@@ -35,8 +22,7 @@
   flex-wrap: wrap;
 }
 
-h1 {
-  text-align: center;
+.header-wrapper h1 {
   color: var(--primary);
   font-weight: 600;
   font-size: 2.2rem;
@@ -49,190 +35,100 @@ h1 {
   object-fit: contain;
 }
 
-/* ============================================
-   3 CARDS PER ROW - ALLE ZELFDE KLEUR
-   ============================================ */
+/* CARDS */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  position: relative;
+  gap: 3rem;
 }
 
-/* Card layout - alle hoeken rond */
 .card {
-  background: var(--blue-light);
+  background: #fff;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 350px;
-  transition: var(--transition);
-  border-radius: var(--border-radius);
-}
-
-/* Hover - iets lichtere blauw */
-.card:hover {
-  background: #a3c7df;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Titel wrapper gecentreerd */
-.card-title-wrapper {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: var(--transition);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Titel stijl */
-.card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--dark);
-  padding: 1rem;
-}
-
-/* Subtopics wrapper gecentreerd */
-.subtopics-wrapper {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Subtopics lijst stijl */
-.subtopics {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  max-width: 240px;
-  text-align: left;
-  line-height: 1.5rem;
-}
-
-.subtopics li {
-  display: flex;
-  align-items: center;
-  transition: var(--transition);
-}
-
-.subtopics a {
+  flex-direction: column;
   text-decoration: none;
-  color: var(--dark);
+  color: inherit;
+  transition: all 0.3s ease;
 }
 
-.subtopics a:hover {
-  color: var(--primary-blue);
+/* Homepage-uitstraling: grotere lift + blauwe gloed */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
 }
 
-.subtopics li:hover {
-  transform: translateX(10px);
+.card-banner {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
 }
 
-.subtopics li::before {
-  color: var(--accent);
-  font-weight: bold;
+.card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Hover-overgangen - titel verdwijnt, links verschijnen */
-.card:hover .card-title-wrapper {
-  opacity: 0;
-  pointer-events: none;
+/* Homepage-uitstraling: image zoom bij hover */
+.card:hover .card-banner img {
+  transform: scale(1.05);
 }
 
-.card:hover .subtopics-wrapper {
-  opacity: 1;
-  pointer-events: auto;
+.card-content {
+  padding: 1.375rem;
 }
 
-/* ============================================
-   CENTERED BOX (plaatje onderaan)
-   ============================================ */
-.centered-box {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0;
+.card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.55rem;
 }
 
-.knie-image {
-  max-width: 100%;
-  height: auto;
-  max-height: 350px;
-  object-fit: contain;
+.card-content p {
+  font-size: 0.935rem;
+  line-height: 1.5;         /* ← homepage heeft dit wel */
+  color: #333;
+  margin: 0;
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 1024px) {
+/* RESPONSIVE */
+@media (max-width: 900px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-  
-  .centered-box {
-    grid-column: 1 / -1;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .cards-container {
     grid-template-columns: 1fr;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
   }
-  
-  .card {
-    min-height: 280px;
-  }
-  
-  .centered-box {
-    grid-column: 1;
-  }
-  
+
   .header-wrapper {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
-  h1 {
+
+  .header-wrapper h1 {
     font-size: 1.8rem;
   }
-  
+
   .knie-header-image {
     max-height: 60px;
   }
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 0 0.75rem;
-    margin: 1.5rem auto;
+/* Touch devices - geen hover-effecten */
+@media (hover: none) {
+  .card:hover {
+    transform: none;
   }
-  
-  .card-title {
-    font-size: 1.2rem;
-  }
-  
-  .subtopics a {
-    font-size: 0.85rem;
+
+  .card:hover .card-banner img {
+    transform: none;
   }
 }
