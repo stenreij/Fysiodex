@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page_title">Fysiodex - Pathologie en Diagnostiek</title>
+    <link rel="icon" type="image/png" href="../../../../img/favicon/faviconfysiodex.png" />
+    <link rel="stylesheet" href="../../../../styles.css">
+    <link rel="stylesheet" href="../../../../navbar.css">
+    <link rel="stylesheet" href="../../../../footer.css">
+    <link rel="stylesheet" href="../../regio.css">
+    <link rel="stylesheet" href="./pathologieDiagnostiek.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container"></div>
+    </nav>
+
+    <div class="container">
+
+        <div class="page-header">
+            <h1 data-translate="page_header">Pathologie & Diagnostiek</h1>
+            <p data-translate="page_intro">Klik op een onderwerp voor meer informatie.</p>
+        </div>
+
+        <div class="pathologie-grid">
+
+            <a href="Categorie/fractuurZwelling.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-bone"></i></div>
+                <h3 data-translate="cat_fractuur">Fractuur, Zwelling & Bursitis</h3>
+                <p data-translate="cat_fractuur_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/vkbakb.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-bandage"></i></div>
+                <h3 data-translate="cat_vkbakb">Voorste & Achterste Kruisband (VKB & AKB)</h3>
+                <p data-translate="cat_vkbakb_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/meniscus.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-circle-notch"></i></div>
+                <h3 data-translate="cat_meniscus">Meniscus</h3>
+                <p data-translate="cat_meniscus_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/collateraleLigamenten.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-link"></i></div>
+                <h3 data-translate="cat_collaterale">Collaterale Ligamenten (SMCL & LLC)</h3>
+                <p data-translate="cat_collaterale_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/posteroComplexen.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 data-translate="cat_postero">Postero Complexen (PMC, PLC)</h3>
+                <p data-translate="cat_postero_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/gonartrose.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-joint"></i></div>
+                <h3 data-translate="cat_gonartrose">Gonartrose</h3>
+                <p data-translate="cat_gonartrose_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/jumperskneePD.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-running"></i></div>
+                <h3 data-translate="cat_jumpersknee">Jumpersknee (Patellatendinopathie)</h3>
+                <p data-translate="cat_jumpersknee_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/iliotibiaalbandsyndroom.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-arrows-alt-h"></i></div>
+                <h3 data-translate="cat_itbs">Iliotibiaalbandsyndroom (ITBS)</h3>
+                <p data-translate="cat_itbs_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/patellafemoraalpijnsyndroom.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-bolt"></i></div>
+                <h3 data-translate="cat_pfps">Patellafemoraalpijnsyndroom</h3>
+                <p data-translate="cat_pfps_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+            <a href="Categorie/groeiproblematiek.html" class="pathologie-card" data-modal>
+                <div class="pathologie-icon"><i class="fas fa-child"></i></div>
+                <h3 data-translate="cat_groei">Groeiproblematiek</h3>
+                <p data-translate="cat_groei_desc">Klik op dit onderwerp voor meer informatie.</p>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Eén modal, wordt hergebruikt voor alle categorieën -->
+    <div class="pathologie-modal" id="pathologie-modal">
+        <div class="pathologie-modal-content">
+            <button class="pathologie-modal-close" aria-label="Sluiten">&times;</button>
+            <iframe id="pathologie-iframe" src="" title="Categorie"></iframe>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-divider"></div>
+
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 id="footer-company-name"></h3>
+                <p id="footer-tagline"></p>
+                <div class="footer-social">
+                    <a href="#" id="footer-social-fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" id="footer-social-ig"><i class="fab fa-instagram"></i></a>
+                    <a href="#" id="footer-social-li"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul id="footer-quicklinks"></ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p id="footer-address"></p>
+                <p id="footer-phone"></p>
+                <p id="footer-email"></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p id="footer-copyright"></p>
+        </div>
+    </footer>
+
+    <script src="../../../../scripts/language.js"></script>
+    <script src="../../../../scripts/footer.js"></script>
+    <script src="../../../../scripts/navbar.js"></script>
+    <script src="../../../../scripts/specialisatie.js"></script>
+</body>
+
+</html>
