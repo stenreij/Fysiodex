@@ -1,0 +1,485 @@
+/* ====== BASIS STYLING ====== */
+.container-theorie {
+    max-width: 1200px;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 0;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+
+.text-section {
+    font-size: 1.1rem;
+}
+
+/* ====== KOPJES ====== */
+.text-section h1 {
+    color: #1766aa;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.text-section h2 {
+    color: #1766aa;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.text-section h3 {
+    color: #1766aa;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+.symptomen {
+  background-color: var(--blue-light);
+  padding: 1rem 0;
+}
+
+.symptomen ul{
+    font-size: 1.1rem;
+}
+
+.symptomen-container {
+    max-width: 1200px;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 0;
+    color: #1a1a1a;
+}
+
+.symptomen-container ul {
+    padding-left: 1.5rem;
+    line-height: 2.5;
+}
+
+.img-vak1 {
+    max-height: 250px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ====== UITKLAPBARE SECTIES - CLEAN VERSIE ====== */
+.test-item-info {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ccdef6;
+    padding-bottom: 2rem;
+}
+
+.test-toggle-info {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: #1766aa;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.test-toggle-info .toggle-text {
+    transition: transform 0.2s ease;
+}
+
+.test-toggle-info:hover {
+    color: #115490;
+}
+
+.test-toggle-info:hover .toggle-text {
+    transform: translateX(12px);
+}
+
+.test-toggle-info h2 {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.test-content-info {
+    padding: 1rem 0 0 0;
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.test-item-info.active .test-content-info {
+    display: block;
+}
+
+/* Pijl icoon */
+.test-toggle-info .arrow {
+    color: #1766aa;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.test-item-info.active .test-toggle-info .arrow {
+    transform: rotate(180deg);
+}
+
+/* NIET-UITKLAPBARE TEST (zelfde stijl als uitklapbare) */
+.test-static-info {
+    width: 100%;
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: #1766aa;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Zelfde spacing/structuur als de rest */
+.test-item-info.static {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ccdef6;
+    padding-bottom: 2rem;
+}
+
+/* Geen hover-effect of verplaatsing */
+.test-static-info:hover {
+    color: #1766aa;
+    cursor: default;
+}
+
+.test-static-info .toggle-text {
+    transform: none !important;
+}
+
+.test-static-info .arrow {
+    font-size: 0.9rem;
+    color: #1766aa;
+    opacity: 0.6;
+}
+
+/* 4 VAKKEN */
+.grid-tests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-block: 40px;
+}
+
+.grid-tests {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-block: 40px;
+}
+
+.grid-tests .vak {
+    background-color: #f9fbfe;       
+    padding: 24px 26px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.grid-tests .vak h4 {
+    color: #1766aa;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+.grid-tests .vak p,
+.grid-tests .vak ul {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+}
+
+.grid-tests .vak ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    margin-top: 6px;
+}
+
+.grid-tests .vak video {
+    width: 100%;
+    max-height: 220px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-top: 8px;
+}
+
+strong.benadrukking {
+    color: #1766aa;
+    font-weight: 600;
+}
+
+/* Sensiviteit en Specifiteit TEST */
+.test-parameters {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.test-parameters .value {
+    font-weight: bold;
+    background-color: #f0f9ff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: #1766aa;
+    text-align: center;
+    width: 100px;
+    margin-left: 25px;
+}
+
+.icon-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    color: #1766aa;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+ul li::marker {
+    color: #1766aa;
+}
+
+
+/* Stijl voor de samenvatting van de AKB test */
+.deeltest {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 4px solid #f4771f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Kopjes in de deeltest - duidelijke focus */
+.deeltest h4 {
+    color: #f4771f;
+    font-size: 1.3em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* ====== INHOUD STYLING ====== */
+.text-section p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.7;
+}
+
+.text-section ul {
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.text-section li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.text-section li::before {
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.benadrukking {
+    color: #1766aa;
+}
+
+/* ====== TABELLEN ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead tr {
+    background-color: #1766aa;
+    color: #ffffff;
+}
+
+table th,
+table td {
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+/* ====== ANIMATIES ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .container-theorie {
+        width: 90%;
+        padding: 0 1rem;
+    }
+
+    .text-section h2 {
+        font-size: 1.25rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+
+
+
+
+
+/* ====== TABS STYLING ====== */
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--blue-light);
+  width: 100%;
+}
+
+.tab-link {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #64748b;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.tab-link::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #1766aa;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.tab-link:hover {
+  color: #1766aa;
+}
+
+.tab-link:hover::before {
+  width: 30%;
+}
+
+.tab-link.active {
+  color: #1766aa;
+  font-weight: 600;
+}
+
+.tab-link.active::before {
+  width: 70%;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Responsive aanpassingen */
+@media (max-width: 768px) {
+  .tab-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+    margin: 2rem auto 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .tab-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tab-link {
+    padding: 0.875rem 1.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
