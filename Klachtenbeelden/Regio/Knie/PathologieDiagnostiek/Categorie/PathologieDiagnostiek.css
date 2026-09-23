@@ -40,11 +40,11 @@
 }
 
 .symptomen {
-  background-color: var(--blue-light);
-  padding: 1rem 0;
+    background-color: var(--blue-light);
+    padding: 1rem 0;
 }
 
-.symptomen ul{
+.symptomen ul {
     font-size: 1.1rem;
 }
 
@@ -67,12 +67,11 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
-
-/* ====== UITKLAPBARE SECTIES - CLEAN VERSIE ====== */
+/* ====== UITKLAPBARE SECTIES ====== */
 .test-item-info {
     margin-bottom: 2rem;
     border-bottom: 2px solid #ccdef6;
@@ -138,7 +137,7 @@
     transform: rotate(180deg);
 }
 
-/* NIET-UITKLAPBARE TEST (zelfde stijl als uitklapbare) */
+/* Niet-uitklapbare test (zelfde stijl als uitklapbare) */
 .test-static-info {
     width: 100%;
     padding: 0.75rem 0;
@@ -154,14 +153,12 @@
     position: relative;
 }
 
-/* Zelfde spacing/structuur als de rest */
 .test-item-info.static {
     margin-bottom: 2rem;
     border-bottom: 2px solid #ccdef6;
     padding-bottom: 2rem;
 }
 
-/* Geen hover-effect of verplaatsing */
 .test-static-info:hover {
     color: #1766aa;
     cursor: default;
@@ -177,30 +174,25 @@
     opacity: 0.6;
 }
 
-/* 4 VAKKEN */
-.grid-tests {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-block: 40px;
-}
-
+/* ====== 4 VAKKEN GRID (2×2) ====== */
 .grid-tests {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-block: 40px;
+    grid-auto-rows: 1fr;
+    gap: 20px;
 }
 
 .grid-tests .vak {
-    background-color: #f9fbfe;       
-    padding: 24px 26px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    background-color: #f9fbfe;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     color: #222;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    min-width: 0;
+    height: 100%;
 }
 
 .grid-tests .vak h4 {
@@ -226,10 +218,10 @@
 
 .grid-tests .vak video {
     width: 100%;
-    max-height: 220px;
+    max-height: 250px;
     border-radius: 8px;
     object-fit: cover;
-    margin-top: 8px;
+    margin-top: 2em;
 }
 
 strong.benadrukking {
@@ -237,7 +229,7 @@ strong.benadrukking {
     font-weight: 600;
 }
 
-/* Sensiviteit en Specifiteit TEST */
+/* Sensitiviteit en Specificiteit */
 .test-parameters {
     display: grid;
     grid-template-columns: auto 2fr;
@@ -278,7 +270,6 @@ ul li::marker {
     color: #1766aa;
 }
 
-
 /* Stijl voor de samenvatting van de AKB test */
 .deeltest {
     background-color: #ffffff;
@@ -289,7 +280,6 @@ ul li::marker {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Kopjes in de deeltest - duidelijke focus */
 .deeltest h4 {
     color: #f4771f;
     font-size: 1.3em;
@@ -313,13 +303,6 @@ ul li::marker {
 .text-section li {
     margin-bottom: 0.75rem;
     position: relative;
-}
-
-.text-section li::before {
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
 }
 
 .benadrukking {
@@ -353,12 +336,11 @@ table tbody tr:nth-child(even) {
     background-color: #f8fafc;
 }
 
-
 /* ====== ANIMATIES ====== */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-5px);
+        transform: translateY(8px);
     }
 
     to {
@@ -367,119 +349,116 @@ table tbody tr:nth-child(even) {
     }
 }
 
+/* ====== TABS STYLING ====== */
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: var(--blue-light);
+    width: 100%;
+}
+
+.tab-link {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #64748b;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.tab-link::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #1766aa;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.tab-link:hover {
+    color: #1766aa;
+}
+
+.tab-link:hover::before {
+    width: 30%;
+}
+
+.tab-link.active {
+    color: #1766aa;
+    font-weight: 600;
+}
+
+.tab-link.active::before {
+    width: 70%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-    .container-theorie {
+    .container-theorie,
+    .symptomen-container {
         width: 90%;
         padding: 0 1rem;
     }
 
     .text-section h2 {
-        font-size: 1.25rem;
+        font-size: 1.6rem;
+    }
+
+    .text-section h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Grid tests: 1 kolom op mobiel */
+    .grid-tests {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-block: 24px;
+    }
+
+    .grid-tests .vak {
+        padding: 18px 20px;
     }
 
     table {
         display: block;
         overflow-x: auto;
     }
-}
 
+    /* Tabs scrollbaar op mobiel */
+    .tab-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+        margin: 2rem auto 1.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
 
+    .tab-nav::-webkit-scrollbar {
+        display: none;
+    }
 
-
-
-
-
-/* ====== TABS STYLING ====== */
-.tab-nav {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  background-color: var(--blue-light);
-  width: 100%;
-}
-
-.tab-link {
-  padding: 1rem 2rem;
-  cursor: pointer;
-  background: transparent;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #64748b;
-  border: none;
-  position: relative;
-  transition: all 0.3s ease;
-  z-index: 1;
-}
-
-.tab-link::before {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  width: 0;
-  height: 3px;
-  background: #1766aa;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-.tab-link:hover {
-  color: #1766aa;
-}
-
-.tab-link:hover::before {
-  width: 30%;
-}
-
-.tab-link.active {
-  color: #1766aa;
-  font-weight: 600;
-}
-
-.tab-link.active::before {
-  width: 70%;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-/* Responsive aanpassingen */
-@media (max-width: 768px) {
-  .tab-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 0.5rem;
-    margin: 2rem auto 1.5rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  
-  .tab-nav::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .tab-link {
-    padding: 0.875rem 1.5rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .tab-link {
+        padding: 0.875rem 1.5rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
 }
