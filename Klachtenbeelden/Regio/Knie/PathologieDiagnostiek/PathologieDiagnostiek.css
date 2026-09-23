@@ -7,6 +7,11 @@
     --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     --card-shadow-hover: 0 8px 24px rgba(23, 102, 170, 0.15);
     --icon-size: 64px;
+
+    /* Icoon-stijl homepage */
+    --icon-bg: #e8f1fa;
+    --icon-bg-hover: rgba(23, 102, 170, 0.15);
+    --icon-color: var(--primary-blue);
 }
 
 /* Container */
@@ -72,6 +77,9 @@
     box-shadow: var(--card-shadow-hover);
 }
 
+/* ============================================
+   ICON — homepage-stijl (icoon blijft zelfde kleur)
+   ============================================ */
 .pathologie-icon {
     position: absolute;
     top: calc(var(--icon-size) / -2);
@@ -79,25 +87,28 @@
     transform: translateX(-50%);
     width: var(--icon-size);
     height: var(--icon-size);
-    background: var(--primary-blue);
+    background: var(--icon-bg);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(23, 102, 170, 0.25);
-    transition: all 0.3s ease;
+    box-shadow: 0 0 0 6px var(--white);
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .pathologie-card:hover .pathologie-icon {
-    transform: translateX(-50%) scale(1.08);
-    background: var(--blue-hover);
+    background: var(--icon-bg-hover);
+    transform: translateX(-50%) scale(1.05);
 }
 
 .pathologie-icon i {
-    color: var(--white);
+    color: var(--icon-color);
     font-size: 1.5rem;
 }
 
+/* ============================================
+   TEKST
+   ============================================ */
 .pathologie-card h3 {
     font-size: clamp(0.85rem, 1.1vw, 1rem);
     font-weight: 700;
