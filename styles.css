@@ -29,8 +29,6 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Inter", sans-serif;
   background: var(--white);
   min-height: 100vh;
@@ -51,7 +49,6 @@ body {
     justify-content: center;
     overflow: hidden;
     color: rgb(226, 238, 255);
-    background: rgba(255, 255, 255, 0);
 }
 
 .hero-slides {
@@ -258,56 +255,9 @@ body {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s ease;
-  border: none;
   overflow: hidden;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
-}
-
-@media (max-width: 1024px) {
-    .cards-container {
-        flex-wrap: wrap;
-    }
-
-    .card {
-        flex: 0 1 calc(33.333% - 1rem);
-        max-width: calc(33.333% - 1rem);
-    }
-
-    .card-banner {
-        height: 180px;
-    }
-}
-
-/* Mobiel - 2 per rij */
-@media (max-width: 768px) {
-    .card {
-        flex: 0 1 calc(50% - 0.75rem);
-        max-width: calc(50% - 0.75rem);
-    }
-
-    .card-banner {
-        height: 160px;
-    }
-}
-
-/* Kleine telefoons - 1 per rij */
-@media (max-width: 480px) {
-    .cards-container {
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .card {
-        flex: 0 1 100%;
-        max-width: 100%;
-    }
-
-    .card-banner {
-        height: 200px;
-    }
 }
 
 /* Banner card */
@@ -398,11 +348,18 @@ body {
   padding: 0 1rem;
 }
 
-/* Better responsiveness */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 1024px) {
   .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 0 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
   }
 
   .card-banner {
@@ -438,17 +395,31 @@ body {
     font-size: clamp(0.9rem, 2vw, 1.2rem);
   }
 
+  .card {
+    flex: 0 1 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+  }
+
   .card-banner {
     height: 160px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
   .cards-container {
-    grid-template-columns: 1fr;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  .card-banner {
+    height: 200px;
   }
 
   .diensten h2 {
@@ -463,17 +434,10 @@ body {
     padding: 2rem 0;
   }
 
-  .card-banner {
-    height: 200px;
-  }
-
   .card-icon i {
     font-size: 0.9rem;
   }
-}
 
-/* Small screens */
-@media (max-width: 400px) {
   .container-content {
     padding: 0 0.75rem;
   }
@@ -497,14 +461,6 @@ body {
 
   .over-ons-icon i {
     font-size: 1.2rem;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-
-  .card-banner {
-    height: 180px;
   }
 }
 
