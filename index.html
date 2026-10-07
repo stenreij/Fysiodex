@@ -20,6 +20,7 @@
     </nav>
 
     <main id="main-content">
+        <!-- Hero -->
         <div class="hero-banner" role="banner" aria-label="Welkomstbanner">
             <div class="hero-slides">
                 <div class="hero-slide active">
@@ -39,16 +40,13 @@
                 </div>
                 <div class="hero-slide">
                     <video muted playsinline preload="metadata">
-                        <source src="video//Banner/banner4.mp4" type="video/mp4">
+                        <source src="video/Banner/banner4.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1 data-translate="welcome">Welkom bij Fysiodex</h1>
-                <p data-translate="subtitle">
-                    De plek voor alles over fysiotherapie.
-                </p>
             </div>
             <div class="hero-dots">
                 <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
@@ -58,155 +56,110 @@
             </div>
         </div>
 
-        <div class="container-content">
-            <section class="over-ons" aria-labelledby="over-ons-titel">
-                <h2 id="over-ons-titel">Over Fysiodex</h2>
-                <div class="over-ons-content">
-                    <article class="over-ons-item">
-                        <div class="over-ons-icon" aria-hidden="true">
-                            <i class="fas fa-book-reader" aria-hidden="true"></i>
-                        </div>
-                        <div class="over-ons-text">
-                            <h3>De Plek voor Fysiotherapeuten</h3>
-                            <p>
-                                Fysiodex is opgezet als de ultieme bron voor fysiotherapeuten,
-                                waar alles te vinden is over spiergezondheid,
-                                fysiotherapeutische technieken, en behandelingsopties. We
-                                zorgen voor de kennis die je nodig hebt voor een effectief
-                                herstelproces.
-                            </p>
-                        </div>
-                    </article>
+        <!-- Rol-keuze -->
+        <section class="role-cards" aria-labelledby="rol-titel">
+            <h2 id="rol-titel">Wie ben je?</h2>
 
-                    <article class="over-ons-item">
-                        <div class="over-ons-icon" aria-hidden="true">
-                            <i class="fas fa-bone" aria-hidden="true"></i>
-                        </div>
-                        <div class="over-ons-text">
-                            <h3>Leer Je Lichaam Kennen</h3>
-                            <p>
-                                Fysiodex biedt uitgebreide informatie over de werking van
-                                spieren, gewrichten en het herstelproces. Of je nu een
-                                professional bent of zelf geïnteresseerd bent, hier leer je
-                                hoe jouw lichaam functioneert en wat je kunt doen om het
-                                optimaal te ondersteunen.
-                            </p>
-                        </div>
-                    </article>
+            <div class="role-grid">
+                <button class="role-card" data-role="fysio" type="button" aria-label="Fysiotherapeut">
+                    <div class="card-banner">
+                        <img src="./img/preventie.webp" alt="Fysiotherapeuten" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Fysiotherapeut</h3>
+                        <p>Student, professional of gewoon nieuwsgierig? Duik in de wereld van fysiotherapie.</p>
+                    </div>
+                </button>
 
-                    <article class="over-ons-item">
-                        <div class="over-ons-icon" aria-hidden="true">
-                            <i class="fas fa-running" aria-hidden="true"></i>
-                        </div>
-                        <div class="over-ons-text">
-                            <h3>Gezonde Levensstijl</h3>
-                            <p>
-                                Bij Fysiodex bieden we begeleiding om je gezondheid op peil te
-                                houden. Dit doen we door praktische tips over voeding,
-                                beweging en mentale gezondheid. Leer hoe je fit kunt blijven
-                                en je lichaam het beste kunt onderhouden.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </div>
+                <button class="role-card" data-role="patient" type="button" aria-label="Patiënt">
+                    <div class="card-banner">
+                        <img src="./img/voeding.webp" alt="Patiënten" loading="lazy" />
+                    </div>
+                    <div class="card-content">
+                        <h3>Patiënt</h3>
+                        <p>Leer meer over je klachten en ontdek wat je zelf kunt doen aan herstel.</p>
+                    </div>
+                </button>
+            </div>
+        </section>
 
-        <div class="extra">
-            <section class="diensten" aria-labelledby="diensten-titel">
-                <h2 id="diensten-titel">
-                    Ontdek wat Fysiodex voor jou kan betekenen
-                </h2>
-                <p>
-                    Bij Fysiodex vind je alles wat je nodig hebt om je gezondheid te
-                    ondersteunen. Of je nu gericht advies zoekt over voeding, hulp bij
-                    lichamelijke klachten, of mentale ondersteuning wij staan voor je
-                    klaar.
-                </p>
+        <!-- Content voor fysiotherapeuten -->
+        <section id="content-fysio" class="role-content" hidden aria-labelledby="fysio-titel">
+            <div class="container-content">
+                <h2 id="fysio-titel">Duik in de fysiotherapie</h2>
                 <div class="cards-container">
                     <a href="./Klachtenbeelden/klachtenbeelden.html" class="card" aria-label="Klachtenbeelden bekijken">
                         <div class="card-banner">
-                            <img src="./img/klachtenbeelden.webp" alt="Klachtenbeelden"
-                                data-translate-alt="klachten_alt" loading="lazy" />
+                            <img src="./img/klachtenbeelden.webp" alt="Klachtenbeelden" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Klachtenbeelden</h3>
-                            <p>
-                                Ontdek de oorzaak van je klachten en werk gericht aan je
-                                herstel.
-                            </p>
+                            <p>Leer meer over anatomie, fysiologie, pathologie en diagnostiek.</p>
                         </div>
                     </a>
 
                     <a href="./Behandelingen/behandelingen.html" class="card" aria-label="Behandelingen bekijken">
                         <div class="card-banner">
-                            <img src="./img/behandeling.webp" alt="Behandelingen" data-translate-alt="behandelingen_alt"
-                                loading="lazy" />
+                            <img src="./img/behandeling.webp" alt="Behandelingen" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Behandelingen</h3>
-                            <p>
-                                Ontdek de behandelingen die Fysiodex biedt en vind de juiste
-                                aanpak voor jouw herstel.
-                            </p>
+                            <p>Krijg handvaten voor het beheersen van klachten en het bevorderen van herstel.</p>
                         </div>
                     </a>
 
-                    <a href="./preventie/preventie.html" class="card" aria-label="Preventie bekijken">
+                    <a href="./testjezelf/testjezelf.html" class="card" aria-label="Test je kennis bekijken">
                         <div class="card-banner">
-                            <img src="./img/preventie.webp" alt="Preventie" data-translate-alt="preventie_alt"
-                                loading="lazy" />
+                            <img src="./img/preventie.webp" alt="Test je kennis" loading="lazy" />
                         </div>
                         <div class="card-content">
-                            <h3>Preventie</h3>
-                            <p>
-                                Voorkom blessures en blijf gezond met preventieve adviezen en
-                                oefeningen.
-                            </p>
+                            <h3>Test je kennis</h3>
+                            <p>Daag jezelf uit met vragen over fysiotherapie.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Content voor patiënten -->
+        <section id="content-patient" class="role-content" hidden aria-labelledby="patient-titel">
+            <div class="container-content">
+                <h2 id="patient-titel">Onderzoek je klachten en vind de juiste aanpak</h2>
+                <div class="cards-container">
+                    <a href="./klachten/waar-heb-ik-last-van.html" class="card" aria-label="Waar heb ik last van?">
+                        <div class="card-banner">
+                            <img src="./img/klachtenbeelden.webp" alt="Waar heb ik last van?" loading="lazy" />
+                        </div>
+                        <div class="card-content">
+                            <h3>Blessures</h3>
+                            <p>Verstandig omgaan met blessures en het herstellen van je lichaam.</p>
                         </div>
                     </a>
 
                     <a href="./voeding/voeding.html" class="card" aria-label="Voeding bekijken">
                         <div class="card-banner">
-                            <img src="./img/voeding.webp" alt="Voeding" data-translate-alt="voeding_alt"
-                                loading="lazy" />
+                            <img src="./img/voeding.webp" alt="Voeding" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Voeding</h3>
-                            <p>
-                                Leer hoe je lichaam optimaal functioneert met de juiste
-                                voeding.
-                            </p>
+                            <p>Leer hoe je lichaam optimaal functioneert met de juiste voeding.</p>
                         </div>
                     </a>
 
-                    <a href="./psychosociaal/psychosociaal.html" class="card" aria-label="Psychosociaal bekijken">
+                    <a href="./psychosociaal/psychosociaal.html" class="card" aria-label="Mentaal bekijken">
                         <div class="card-banner">
-                            <img src="./img/psychosociaal.webp" alt="Psychosociaal"
-                                data-translate-alt="psychosociaal_alt" loading="lazy" />
+                            <img src="./img/psychosociaal.webp" alt="Mentaal" loading="lazy" />
                         </div>
                         <div class="card-content">
-                            <h3>Psychosociaal</h3>
-                            <p>
-                                Versterk je mentale weerbaarheid en leer omgaan met stress en
-                                uitdagingen.
-                            </p>
+                            <h3>Mentaal</h3>
+                            <p>Versterk je mentale weerbaarheid en leer omgaan met stress.</p>
                         </div>
                     </a>
-                </div>
-            </section>
-        </div>
 
-        <div class="container-content">
-            <section class="keuze" aria-labelledby="keuze-titel">
-                <h2 id="keuze-titel">Waarom kiezen voor Fysiodex?</h2>
-                <p>
-                    Persoonlijke aandacht, wetenschappelijk onderbouwde behandelingen en
-                    een betrokken team maken ons dé keuze voor jouw herstel en
-                    gezondheid.
-                </p>
-            </section>
-        </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer" role="contentinfo">
@@ -246,6 +199,7 @@
     <script src="scripts/navbar.js"></script>
     <script src="scripts/footer.js"></script>
     <script src="scripts/carousel.js"></script>
+    <script src="scripts/role-selector.js"></script>
     <script src="scripts/language.js"></script>
 </body>
 

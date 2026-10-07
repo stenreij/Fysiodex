@@ -6,34 +6,9 @@
   },
   "navLinks": [
     {
-      "type": "link",
-      "text": "Klachtenbeelden",
-      "url": "/Klachtenbeelden/klachtenbeelden.html"
-    },
-    {
-      "type": "link",
-      "text": "Behandelingen",
-      "url": "/Behandelingen/behandelingen.html"
-    },
-    {
-      "type": "link",
-      "text": "Preventie",
-      "url": "#"
-    },
-    {
-      "type": "submenu",
-      "text": "Voeding",
-      "url": "#",
-      "submenu": [
-        { "text": "Gezonde voeding", "url": "#" },
-        { "text": "Supplementen", "url": "#" },
-        { "text": "Dieetadvies", "url": "#" }
-      ]
-    },
-    {
-      "type": "link",
-      "text": "Psychosociaal",
-      "url": "#"
+      "type": "Over Fysiodex",
+      "text": "Over Fysiodex",
+      "url": "./overfysiodex/overfysiodex.html"
     },
     {
       "type": "toggle",
