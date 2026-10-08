@@ -108,7 +108,7 @@ container.addEventListener("mouseup", () => {
 const loader = new GLTFLoader();
 
 loader.load(
-  "../model/HumanmodelV4.glb",
+  "../../model/HumanmodelV4.glb",
   (gltf) => {
     model = gltf.scene;
     scene.add(model);

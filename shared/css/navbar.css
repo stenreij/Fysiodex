@@ -175,12 +175,19 @@
     transform: rotate(180deg);
 }
 
-/* LANGUAGE Slider */
+/* ============================================
+   LANGUAGE TOGGLE
+   ============================================ */
 .lang-toggle-item {
-    display: flex;
+    display: none !important;
     align-items: center;
     height: 100%;
     margin-left: 0.5rem;
+}
+
+/* Alleen tonen bij role-fysiotherapeut */
+body.role-fysiotherapeut .lang-toggle-item {
+    display: flex !important;
 }
 
 .lang-toggle-wrapper {
@@ -193,7 +200,6 @@
     cursor: pointer;
 }
 
-/* Language icon slider */
 .slider-bg {
     position: absolute;
     top: 4px;
@@ -206,12 +212,10 @@
     z-index: 0;
 }
 
-/* LA active */
 .lang-toggle-wrapper.la-active .slider-bg {
     transform: translateX(100%);
 }
 
-/* Iconen standard */
 .lang-icon {
     position: relative;
     width: 32px;
@@ -235,7 +239,6 @@
     color: #1766aa;
 }
 
-/* Hover effect */
 .lang-toggle-wrapper:hover {
     background: rgba(255, 255, 255, 0.25);
 }

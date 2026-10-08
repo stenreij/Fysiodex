@@ -1,4 +1,10 @@
-// scripts/language.js
+const isFysioPage = document.body.classList.contains('role-fysiotherapeut');
+
+// Reset language
+if (!isFysioPage) {
+    localStorage.setItem('fysiodex_language', 'nl');
+}
+
 let currentLanguage = localStorage.getItem('fysiodex_language') || 'nl';
 let nlIcon = null;
 let laIcon = null;
@@ -12,7 +18,7 @@ const translationFiles = [
     // KNIE
     '/fysiotherapeuten/json/knie/knie.json',
     '/fysiotherapeuten/json/knie/anatomie.json',
-    // OTHER GROUPS
+    // OTHER
 ];
 
 // Fetch and load all translation files
@@ -29,7 +35,6 @@ async function loadTranslations() {
             })
         );
 
-        // Merge all translations into a single object
         translations = {};
         allTranslations.forEach(translationChunk => {
             Object.keys(translationChunk).forEach(lang => {
@@ -58,9 +63,10 @@ function applyTranslations() {
 function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('fysiodex_language', lang);
-    document.body.className = `language-${lang}`;
 
-    // Animate slider
+    document.body.classList.remove('language-nl', 'language-la');
+    document.body.classList.add(`language-${lang}`);
+
     if (toggleWrapper) {
         if (lang === 'la') {
             toggleWrapper.classList.add('la-active');
@@ -69,7 +75,6 @@ function setLanguage(lang) {
         }
     }
 
-    // Update icon active status (color)
     if (nlIcon && laIcon) {
         if (lang === 'nl') {
             nlIcon.classList.add('active');
@@ -98,7 +103,6 @@ function initLanguageToggle() {
         return;
     }
 
-    // Zet de toggle state op basis van currentLanguage
     if (currentLanguage === 'la') {
         toggleWrapper.classList.add('la-active');
         laIcon.classList.add('active');
@@ -109,21 +113,17 @@ function initLanguageToggle() {
         laIcon.classList.remove('active');
     }
 
-    // Pas de vertalingen toe
     applyTranslations();
 
-    // Voeg event listeners toe
     nlIcon.addEventListener('click', toggleLanguage);
     laIcon.addEventListener('click', toggleLanguage);
 }
 
-// Wacht tot navbar geladen is (via custom event)
 document.addEventListener('navbarLoaded', () => {
     loadTranslations();
     initLanguageToggle();
 });
 
-// Fallback: als navbarLoaded nooit komt, probeer na 500ms
 setTimeout(() => {
     if (!toggleWrapper) {
         loadTranslations();
