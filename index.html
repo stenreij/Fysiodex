@@ -7,10 +7,10 @@
     <title>Fysiodex - Homepage</title>
     <meta name="description"
         content="Fysiodex is dé bron voor fysiotherapeuten en iedereen die meer wil leren over spiergezondheid, herstel, voeding en een gezonde levensstijl.">
-    <link rel="icon" type="image/png" href="img/favicon/faviconfysiodex.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" type="image/png" href="./shared/img/favicon/faviconfysiodex.png" />
+    <link rel="stylesheet" href="./shared/css/styles.css" />
+    <link rel="stylesheet" href="./shared/css/navbar.css" />
+    <link rel="stylesheet" href="./shared/css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
@@ -25,22 +25,22 @@
             <div class="hero-slides">
                 <div class="hero-slide active">
                     <video autoplay muted playsinline preload="metadata">
-                        <source src="video/Banner/banner1.mp4" type="video/mp4">
+                        <source src="./shared/video/banner/banner1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="hero-slide">
                     <video muted playsinline preload="metadata">
-                        <source src="video/Banner/banner2.mp4" type="video/mp4">
+                        <source src="./shared/video/banner/banner2.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="hero-slide">
                     <video muted playsinline preload="metadata">
-                        <source src="video/Banner/banner3.mp4" type="video/mp4">
+                        <source src="./shared/video/banner/banner3.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="hero-slide">
                     <video muted playsinline preload="metadata">
-                        <source src="video/Banner/banner4.mp4" type="video/mp4">
+                        <source src="./shared/video/banner/banner4.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -63,7 +63,7 @@
             <div class="role-grid">
                 <button class="role-card" data-role="fysio" type="button" aria-label="Fysiotherapeut">
                     <div class="card-banner">
-                        <img src="./img/preventie.webp" alt="Fysiotherapeuten" loading="lazy" />
+                        <img src="./shared/img/cards/fysiotherapeut.webp" alt="Fysiotherapeuten" loading="lazy" />
                     </div>
                     <div class="card-content">
                         <h3>Fysiotherapeut</h3>
@@ -72,7 +72,7 @@
 
                 <button class="role-card" data-role="patient" type="button" aria-label="Patiënt">
                     <div class="card-banner">
-                        <img src="./img/voeding.webp" alt="Patiënten" loading="lazy" />
+                        <img src="./shared/img/cards/patient.webp" alt="Patiënten" loading="lazy" />
                     </div>
                     <div class="card-content">
                         <h3>Patiënt</h3>
@@ -86,9 +86,10 @@
             <div class="container-content">
                 <h2 id="fysio-titel">Duik in de fysiotherapie</h2>
                 <div class="cards-container">
-                    <a href="./Klachtenbeelden/klachtenbeelden.html" class="card" aria-label="Klachtenbeelden bekijken">
+                    <a href="./fysiotherapeuten/Klachtenbeelden/klachtenbeelden.html" class="card"
+                        aria-label="Klachtenbeelden bekijken">
                         <div class="card-banner">
-                            <img src="./img/klachtenbeelden.webp" alt="Klachtenbeelden" loading="lazy" />
+                            <img src="./shared/img/cards/klachtenbeelden.webp" alt="Klachtenbeelden" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Klachtenbeelden</h3>
@@ -96,9 +97,10 @@
                         </div>
                     </a>
 
-                    <a href="./Behandelingen/behandelingen.html" class="card" aria-label="Behandelingen bekijken">
+                    <a href="./fysiotherapeuten/Behandelingen/behandelingen.html" class="card"
+                        aria-label="Behandelingen bekijken">
                         <div class="card-banner">
-                            <img src="./img/behandeling.webp" alt="Behandelingen" loading="lazy" />
+                            <img src="./shared/img/cards/behandeling.webp" alt="Behandelingen" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Behandelingen</h3>
@@ -106,9 +108,10 @@
                         </div>
                     </a>
 
-                    <a href="./testjezelf/testjezelf.html" class="card" aria-label="Test je kennis bekijken">
+                    <a href="./fysiotherapeuten/testjezelf/testjezelf.html" class="card"
+                        aria-label="Test je kennis bekijken">
                         <div class="card-banner">
-                            <img src="./img/preventie.webp" alt="Test je kennis" loading="lazy" />
+                            <img src="./shared/img/cards/voeding.webp" alt="Test je kennis" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Test je kennis</h3>
@@ -125,9 +128,10 @@
             <div class="container-content">
                 <h2 id="patient-titel">Onderzoek je klachten en vind de juiste aanpak</h2>
                 <div class="cards-container">
-                    <a href="./klachten/waar-heb-ik-last-van.html" class="card" aria-label="Waar heb ik last van?">
+                    <a href="./klachten/waarhebiklastvan.html" class="card" aria-label="Waar heb ik last van?">
                         <div class="card-banner">
-                            <img src="./img/klachtenbeelden.webp" alt="Waar heb ik last van?" loading="lazy" />
+                            <img src="./shared/img/cards/klachtenbeelden.webp" alt="Waar heb ik last van?"
+                                loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Blessures</h3>
@@ -137,7 +141,7 @@
 
                     <a href="./voeding/voeding.html" class="card" aria-label="Voeding bekijken">
                         <div class="card-banner">
-                            <img src="./img/voeding.webp" alt="Voeding" loading="lazy" />
+                            <img src="./shared/img/cards/voeding.webp" alt="Voeding" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Voeding</h3>
@@ -147,7 +151,7 @@
 
                     <a href="./psychosociaal/psychosociaal.html" class="card" aria-label="Mentaal bekijken">
                         <div class="card-banner">
-                            <img src="./img/psychosociaal.webp" alt="Mentaal" loading="lazy" />
+                            <img src="./shared/img/cards/psychosociaal.webp" alt="Mentaal" loading="lazy" />
                         </div>
                         <div class="card-content">
                             <h3>Mentaal</h3>
@@ -194,11 +198,11 @@
         </div>
     </footer>
 
-    <script src="scripts/navbar.js"></script>
-    <script src="scripts/footer.js"></script>
-    <script src="scripts/carousel.js"></script>
-    <script src="scripts/role-selector.js"></script>
-    <script src="scripts/language.js"></script>
+    <script src="./shared/scripts/navbar.js"></script>
+    <script src="./shared/scripts/footer.js"></script>
+    <script src="./shared/scripts/carousel.js"></script>
+    <script src="./shared/scripts/role-selector.js"></script>
+    <script src="./shared/scripts/language.js"></script>
 </body>
 
 </html>

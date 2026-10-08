@@ -1,0 +1,730 @@
+/* ============================================
+   ROOT VARIABELEN
+   ============================================ */
+:root {
+    --primary-blue: #1766aa;
+    --blue-hover: #1a7bc7;
+    --blue-active: #12548d;
+    --blue-light: #e6f0f8;
+    --blue-light2: #91b9e7;
+    --light-bg: #f0f9ff;
+    --white: #ffffff;
+    --dark-text: #1a1a1a;
+    --gray-text: #666666;
+    --gray-light: #f5f5f5;
+    --border-light: rgba(0, 0, 0, 0.05);
+    --accent: #ff006e;
+    --tech-blue: #1a3a6e;
+    --neon-blue: #4fc3f7;
+    --dark-bg: #0d1b2a;
+    --footer-hover: #ffd0b3;
+}
+
+/* ============================================
+   RESET & BASIS
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   VIDEO CAROUSEL / HERO
+   ============================================ */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px);
+    min-height: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    color: rgb(226, 238, 255);
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    will-change: opacity;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 3;
+}
+
+.hero-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.hero-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-dot.active {
+    background: var(--blue-light2);
+    border-color: var(--blue-active);
+    transform: scale(1.25);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(58, 58, 58, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 0.75rem;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    color: rgb(226, 238, 255);
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+.container-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   OVER-ONS SECTIE
+   ============================================ */
+.over-ons {
+    padding: clamp(2rem, 5vw, 5rem) 0;
+}
+
+.over-ons h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: clamp(1.5rem, 3vw, 3rem);
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.over-ons-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.over-ons-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.over-ons-icon {
+    flex-shrink: 0;
+    width: clamp(60px, 8vw, 80px);
+    height: clamp(60px, 8vw, 80px);
+    background: rgba(23, 102, 170, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.over-ons-icon i {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--primary-blue);
+}
+
+.over-ons-item:hover .over-ons-icon {
+    transform: scale(1.05);
+    background: rgba(23, 102, 170, 0.15);
+}
+
+.over-ons-text h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.over-ons-text p {
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* ============================================
+   UNIFORME CARD-BASIS
+   ============================================ */
+.role-card,
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(23, 102, 170, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+        filter 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+    position: relative;
+}
+
+.role-card .card-banner,
+.card .card-banner {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background: var(--blue-light);
+}
+
+.role-card .card-banner img,
+.card .card-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.role-card .card-banner::after,
+.card .card-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(23, 102, 170, 0) 40%,
+            rgba(23, 102, 170, 0.15) 100%);
+    pointer-events: none;
+}
+
+.role-card .card-content,
+.card .card-content {
+    padding: 1.75rem 1.5rem 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--white);   /* ← VOEG DIT TOE */
+}
+
+.role-card .card-content h3,
+.card .card-content h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.role-card .card-content p,
+.card .card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gray-text);
+    margin: 0;
+}
+
+/* ============================================
+   UNIFORME HOVER
+   ============================================ */
+.role-card:hover,
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px -12px rgba(23, 101, 170, 0.45);
+}
+
+.role-card:hover .card-banner img,
+.card:hover .card-banner img {
+    transform: scale(1.06);
+}
+
+/* ============================================
+   ROL-KEUZE SECTIE (homepage - "Wie ben je?")
+   ============================================ */
+.role-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    width: 100%;
+    background: var(--light-bg);
+    overflow: hidden;
+    scroll-margin-top: 80px;
+}
+
+.role-cards h2 {
+    font-size: clamp(3rem, 5.5vw, 4rem);
+    font-weight: 750;
+    color: var(--primary-blue);
+    text-align: center;
+    margin: 0 0 7rem 0;
+    width: 100%;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 950px;
+}
+
+/* Rol-kaart specifiek - RESET button styling */
+.role-card {
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    border: none;
+    background: none;
+}
+
+/* Actief: ALLEEN de actieve kaart krijgt een border */
+.role-card.active {
+    border: 2px solid var(--primary-blue);
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px -12px rgba(23, 102, 170, 0.45);
+}
+
+.role-card.active .card-banner img {
+    transform: scale(1.03);
+}
+
+.role-card.active:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px -12px rgba(23, 102, 170, 0.45);
+}
+
+/* Dim andere kaarten zodra er een .active is */
+.role-grid:has(.role-card.active) .role-card:not(.active) {
+    opacity: 0.55;
+    filter: grayscale(0.6);
+    box-shadow: 0 2px 8px rgba(23, 102, 170, 0.06);
+}
+
+.role-grid:has(.role-card.active) .role-card:not(.active):hover {
+    opacity: 0.8;
+    filter: grayscale(0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px -8px rgba(23, 102, 170, 0.2);
+}
+
+/* ============================================
+   ROL-CONTENT SECTIES (fysio / patiënt)
+   ============================================ */
+.role-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    width: 100%;
+    background: var(--white);
+    animation: fadeInContent 0.5s ease;
+    scroll-margin-top: 80px;
+}
+
+.role-content[hidden] {
+    display: none !important;
+}
+
+#content-fysio {
+    background: var(--white);
+}
+
+#content-patient {
+    background: var(--white);
+}
+
+.role-content h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: clamp(3rem, 5.5vw, 4rem);
+    font-weight: 750;
+    margin: 0 0 7rem 0;
+    max-width: 900px;
+    width: 100%;
+}
+
+.role-content .container-content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   CATEGORIE-CARDS
+   ============================================ */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.card {
+    flex: 1 1 0;
+    max-width: 420px;
+    min-width: 300px;
+}
+
+/* ============================================
+   EXTRA SECTIE (5 categorie-cards)
+   ============================================ */
+.extra {
+    background: rgba(23, 102, 170, 0.08);
+    padding: clamp(2rem, 5vw, 4rem) 0;
+    width: 100%;
+    margin: 0;
+}
+
+.diensten {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.diensten h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.diensten>p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto clamp(1.5rem, 3vw, 2rem) auto;
+    color: #000000;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    padding: 0 1rem;
+}
+
+/* ============================================
+   KEUZE SECTIE
+   ============================================ */
+.keuze {
+    padding: clamp(2rem, 5vw, 5rem) 0;
+    text-align: center;
+}
+
+.keuze h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.keuze p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    color: #000000;
+    padding: 0 1rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .role-grid {
+        gap: 2rem;
+    }
+
+    .cards-container {
+        gap: 2rem;
+    }
+
+    .card {
+        flex: 0 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+        min-width: 260px;
+    }
+
+    .role-card .card-banner,
+    .card .card-banner {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-content {
+        padding: 0 1.25rem;
+    }
+
+    .over-ons-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .over-ons-text {
+        text-align: center;
+    }
+
+    .hero-banner {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    .hero-content p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
+
+    .role-cards,
+    .role-content {
+        height: auto;
+        min-height: 100vh;
+        max-height: none;
+        padding: 4rem 1.25rem 3rem;
+        overflow: visible;
+    }
+
+    .role-cards h2,
+    .role-content h2 {
+        font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+        margin-bottom: 1.75rem;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .role-card .card-banner,
+    .card .card-banner {
+        height: 240px;
+    }
+
+    .role-card .card-content,
+    .card .card-content {
+        padding: 1.5rem 1.25rem 1.5rem;
+    }
+
+    .role-card .card-content h3,
+    .card .card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .role-card .card-content p,
+    .card .card-content p {
+        font-size: 0.98rem;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        max-width: 500px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 0 1 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .role-card .card-banner,
+    .card .card-banner {
+        height: 220px;
+    }
+
+    .role-cards,
+    .role-content {
+        padding: 3rem 0.75rem 2.5rem;
+    }
+
+    .role-cards h2,
+    .role-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .diensten h2 {
+        font-size: 1.5rem;
+    }
+
+    .over-ons h2 {
+        font-size: 1.75rem;
+    }
+
+    .keuze {
+        padding: 2rem 0;
+    }
+
+    .container-content {
+        padding: 0 0.75rem;
+    }
+
+    .hero-banner {
+        min-height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.85rem;
+    }
+
+    .over-ons-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .over-ons-icon i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-banner {
+        height: 70vh;
+        min-height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.5rem, 4vh, 2.5rem);
+    }
+
+    .hero-content p {
+        font-size: clamp(0.8rem, 2vh, 1.2rem);
+    }
+}
+
+@media (hover: none) {
+
+    .role-card:hover,
+    .card:hover {
+        transform: none;
+        box-shadow: 0 8px 24px rgba(23, 102, 170, 0.1);
+    }
+
+    .role-card:hover .card-banner img,
+    .card:hover .card-banner img {
+        transform: none;
+    }
+
+    .over-ons-item:hover .over-ons-icon {
+        transform: none;
+    }
+
+    .role-card.active:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 22px 44px -12px rgba(23, 102, 170, 0.45);
+    }
+
+    .role-grid:has(.role-card.active) .role-card:not(.active):hover {
+        opacity: 0.55;
+        filter: grayscale(0.6);
+        transform: none;
+        box-shadow: 0 2px 8px rgba(23, 102, 170, 0.06);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
