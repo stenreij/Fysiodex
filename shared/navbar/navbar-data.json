@@ -1,0 +1,20 @@
+{
+  "logo": {
+    "text": "Fysiodex",
+    "image": "/shared/img/logo/fysiodex.png",
+    "url": "/index.html"
+  },
+  "navLinks": [
+    {
+      "type": "Over Fysiodex",
+      "text": "Over Fysiodex",
+      "url": "/shared/pages/overfysiodex.html"
+    },
+    {
+      "type": "toggle",
+      "text": "NL/LA",
+      "nlIcon": "fa-user-md",
+      "laIcon": "fa-language"
+    }
+  ]
+}
