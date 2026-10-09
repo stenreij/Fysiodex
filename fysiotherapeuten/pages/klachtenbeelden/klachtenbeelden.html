@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script type="importmap">
-{
-    "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+        }
     }
-}
-</script>
+    </script>
 </head>
 
 <body class="role-fysiotherapeut">
@@ -27,20 +27,18 @@
         <div class="nav-container"></div>
     </nav>
 
-    <div class="intro">
-        <div class="container">
+    <div class="container">
+        <div class="intro">
             <h2>Ontdek het lichaam</h2>
             <p>Klik op een gebied om meer informatie te bekijken.</p>
         </div>
+
+        <div class="image-container">
+            <div id="model-container"></div>
+            <div id="hotspots"></div>
+        </div>
     </div>
 
-    <!-- 3D Container -->
-    <div class="image-container">
-        <div id="model-container"></div>
-        <div id="hotspots"></div>
-    </div>
-
-    <!-- Tooltip -->
     <div id="tooltip" class="tooltip"></div>
 
     <footer class="site-footer">

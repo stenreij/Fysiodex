@@ -5,7 +5,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 const container = document.getElementById("model-container");
 container.style.position = "relative";
 
-// Create tooltip element - toegevoegd aan CONTAINER in plaats van body
+// CREATE TOOLTIP
 const tooltip = document.createElement("div");
 tooltip.style.position = "absolute";
 tooltip.style.backgroundColor = "rgba(126, 193, 255, 0.06)";
@@ -25,7 +25,7 @@ container.appendChild(tooltip);
 const scene = new THREE.Scene();
 scene.background = null;
 
-// Camera
+// CAMERA
 const camera = new THREE.PerspectiveCamera(
   45,
   container.clientWidth / container.clientHeight,
@@ -35,7 +35,7 @@ const camera = new THREE.PerspectiveCamera(
 
 camera.position.set(0, 1, 3);
 
-// Renderer
+// RENDERER
 const renderer = new THREE.WebGLRenderer({
   antialias: true,
   alpha: true,
@@ -45,37 +45,37 @@ renderer.setSize(container.clientWidth, container.clientHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 container.appendChild(renderer.domElement);
 
-// Controls + zoom limits
+// CONTROLS
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enableZoom = false;
 controls.enablePan = true;
 controls.rotateSpeed = 1.0;
 
-// Lights
+// LIGHTING
 scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 2));
 
 const dirLight = new THREE.DirectionalLight(0xffffff, 2);
 dirLight.position.set(5, 10, 7);
 scene.add(dirLight);
 
-// Raycast setup
+// RAYCASTER
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
 let model = null;
 let hovered = null;
 
-// Drag detection
+// DRAG DETECTION
 let mouseDownPos = null;
 let isDragging = false;
 const DRAG_THRESHOLD = 5;
 
-// Last mouseposition before scroll
+// LAST MOUSE POSITION TRACKING
 let lastMouseX = 0;
 let lastMouseY = 0;
 
-// Mouse down
+// MOUSE DOWN
 container.addEventListener("mousedown", (event) => {
   mouseDownPos = {
     x: event.clientX,
@@ -84,7 +84,7 @@ container.addEventListener("mousedown", (event) => {
   isDragging = false;
 });
 
-// Mouse move
+// MOUSE MOVE
 container.addEventListener("mousemove", (event) => {
   if (mouseDownPos) {
     const dx = Math.abs(event.clientX - mouseDownPos.x);
@@ -96,7 +96,7 @@ container.addEventListener("mousemove", (event) => {
   }
 });
 
-// Mouse up
+// MOUSE UP
 container.addEventListener("mouseup", () => {
   mouseDownPos = null;
   setTimeout(() => {
@@ -104,7 +104,7 @@ container.addEventListener("mouseup", () => {
   }, 100);
 });
 
-// Load model
+// LOAD MODEL
 const loader = new GLTFLoader();
 
 loader.load(
@@ -126,11 +126,11 @@ loader.load(
 
     model.position.sub(center);
 
-    camera.position.set(0, 1, 3);
+    camera.position.set(0, 1, 2.5);
     controls.target.set(0, 0, 0);
     controls.update();
 
-    // Define clickable parts with routes and labels
+    // CLICKABLE PARTS
     const clickableParts = {
       "Hoofd&Hals": { route: "./Regio/Hoofd/hoofd.html", label: "Hoofd, Nek & Hals" },
       "Schouder&Bovenarm": { route: "./Regio/Schouder/schouder.html", label: "Schouder & Bovenarm" },
@@ -162,7 +162,7 @@ loader.load(
   (err) => console.error(err),
 );
 
-// Mouse tracking hover - RESPONSIVE
+// MOUSE MOVE HANDLER
 window.addEventListener("mousemove", (event) => {
   lastMouseX = event.clientX;
   lastMouseY = event.clientY;
@@ -175,20 +175,20 @@ window.addEventListener("mousemove", (event) => {
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
   }
   
-  // Responsieve tooltip positie
+  // RESPONSIVE TOOLTIP POSITIONING
   if (tooltip.style.display === "block") {
     const containerRect = container.getBoundingClientRect();
     const relativeX = event.clientX - containerRect.left;
     const relativeY = event.clientY - containerRect.top;
     
-    // Responsieve offsets (percentage van container)
+    // RESPONSIVE OFFSET BASED ON CONTAINER SIZE
     const offsetX = Math.max(15, containerRect.width * 0.05);
     const offsetY = Math.max(30, containerRect.height * 0.05);
     
     let leftPos = relativeX + offsetX;
     let topPos = relativeY - offsetY;
     
-    // Check of tooltip niet buiten container valt
+    // CHECK IF TOOLTIP GOES OUT OF BOUNDS AND ADJUST
     const tooltipWidth = tooltip.offsetWidth;
     const tooltipHeight = tooltip.offsetHeight;
     
@@ -207,7 +207,7 @@ window.addEventListener("mousemove", (event) => {
   }
 });
 
-// Scroll handler
+// SCROLL HANDLER
 window.addEventListener("scroll", () => {
   if (lastMouseX && lastMouseY) {
     const rect = container.getBoundingClientRect();
@@ -219,7 +219,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Click handler
+// CLICK HANDLER
 container.addEventListener("click", (event) => {
   if (isDragging) {
     console.log("Drag detected, ignoring click");
@@ -255,7 +255,7 @@ container.addEventListener("click", (event) => {
   }
 });
 
-// Hover effect with tooltip
+// HOVER CHECK
 function checkHover() {
   if (!model) return;
 
@@ -292,7 +292,7 @@ function checkHover() {
     hit.material.emissiveIntensity = 0.3;
   }
 
-  // Show tooltip with label
+  // ShHOW TOOLTIP
   if (hit.userData.label) {
     tooltip.textContent = hit.userData.label;
     tooltip.style.display = "block";
@@ -301,14 +301,14 @@ function checkHover() {
   container.style.cursor = "pointer";
 }
 
-// Resize handler
+// RESIZING HANDLER
 window.addEventListener("resize", () => {
   camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(container.clientWidth, container.clientHeight);
 });
 
-// Animation loop
+// ANIMATION LOOP
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
